@@ -1,0 +1,142 @@
+/* Modules & Vars */
+
+// Mixins
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Vars
+$opensans: 'opensans_uvm';
+$montserrat :'montserrat_uvm';
+
+$img-path: '../img/';
+
+/*
+Colors
+*/
+
+$black: #000000;
+$black-20: rgba(0, 0, 0, 0.2);
+$black-40: rgba(0, 0, 0, 0.4);
+$black-60: rgba(0, 0, 0, 0.6);
+$black-80: rgba(0, 0, 0, 0.8);
+$black-90: rgba(0, 0, 0, 0.9);
+
+$white: #ffffff;
+$white-20: rgba(255, 255, 255, 0.2);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-60: rgba(255, 255, 255, 0.6);
+$white-80: rgba(255, 255, 255, 0.8);
+$white-90: rgba(255, 255, 255, 0.9);
+
+$red0: #ff4950; /*Ocaciones cuando el rojo se tiene que ver tenue*/
+$red1: #D9272E;
+$red1-20: rgba(217, 39, 46, 0.2);
+$red1-40: rgba(217, 39, 46, 0.4);
+$red1-60: rgba(217, 39, 46, 0.6);
+$red1-80: rgba(217, 39, 46, 0.8);
+$red1-90: rgba(217, 39, 46, 0.9);
+$red2: #B72029;
+
+$red3: #f6333a;
+$red4:#d1292f;
+$red5: #b22227;
+$red6:#8c1b20;
+$red7:#641417;
+
+/*El orden de los grises va desde el mas claro al mas oscuro*/
+$gray1: #EEEEEE;
+$gray2: #DDDDDD;
+$gray3: #CCCCCC;
+$gray4: #B8B8B8;
+$gray5: #999999;
+$gray6: #888888;
+$gray7: #777777;
+$gray8: #666666;
+$gray9: #545454;
+$gray10: #444444;
+$gray11: #333333;
+$gray12: #222222;
+
+/*Grises con opacidad  al 80*/
+$gray9-80: rgba(84, 84, 84, 0.8);
+$gray1-80: rgba(238, 238, 238, 0.8);
+
+
+/*Para los botones*/
+$green1: #2EA61E;
+$green2: #228918;
+$green1-80: rgba(46, 166, 30, 0.8);
+
+/*Colores por tipo de noticia*/
+$rectory: rgb(168, 25, 24);
+$rectory-80: rgba(168, 25, 24, 0.8);
+
+$cultural: rgb(255, 0, 127);
+$cultural-80: rgba(255, 0, 127, 0.8);
+
+$sports: rgb(26, 188, 156);
+$sports-80: rgba(26, 188, 156, 0.8);
+
+$international: rgb(255, 64, 0);
+$international-80: rgba(255, 64, 0, 0.8);
+
+$institutional: rgb(216, 29, 43);
+$institutional-80: rgba(216, 29, 43, 0.8);
+
+$social: rgb(127, 0, 255);
+$social-80: rgba(127, 0, 255, 0.8);
+
+$veterinary: rgb(159,24,110);
+$veterinary-80: rgba(159,24,110, 0.8);
+
+$graduates: rgb(239, 175, 18);
+$graduates-80: rgba(239, 175, 18, 0.8);
+
+$admissions: rgb(24, 166, 56);
+$admissions-80: rgba(24, 166, 56, 0.8);
+
+
+$facebook:#3b5998;
+$twitter:#33ccff;
+$google:#c63d2d;
+$linkedin:#4875b4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

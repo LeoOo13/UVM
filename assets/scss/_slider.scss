@@ -1,0 +1,203 @@
+/* CSS used here will be applied after bootstrap.css */
+
+.collapse-form{
+	display: block;
+	overflow: hidden;
+	height: 70px;
+}
+
+.slider-i5, .slider-c54, .slider-i13, .slider-c19, .slider-c20, .slider-c28{
+	
+	.swiper-slide{
+		img{width:100%; height: auto;}
+	}
+	.swiper-button-prev, .swiper-button-next{
+		background: none; font-size: 45px; color: $white; line-height: 1; width: 45px;
+		&:before {
+			height: 45px; height: 45px;
+		}
+	}
+	.thumb {
+		width: 25%;
+		cursor: pointer;
+		float: left;
+		padding:0 0.5%;
+
+		img {
+			width: 100%;
+			margin: 2px;
+		}
+	}
+}
+.carousel {
+    margin-top: 20px;
+}
+
+.item {
+
+	img {
+		width: 100%;	
+	}
+	
+}
+
+.carousel-inner{
+	max-width:1180px;
+	margin:0 auto;
+}
+
+.thumbcarousel {
+	.carousel-inner{
+		max-width:980px;
+		margin:0 auto;
+	}
+}
+
+.carousel-control{
+	background-image: none !important;
+}
+
+.container{
+	&.triangle{
+		position: relative;
+		padding: 15px;
+	    margin: 1em 0 3em;
+	    color: #000;
+	    
+	    &:after
+	    {
+	    	content: "";
+		    position: absolute;
+		    bottom: -15px;
+		    left: 50px;
+		    border-width: 15px 15px 0;
+		    border-style: solid;
+		    display: block;
+		    width: 0;
+	    }
+
+		&.top{
+
+    		&:after{
+    			top: -15px;
+    			right: -50%;
+			    bottom: auto;
+			    left: -50%;
+			    margin:0 auto;
+			    border-width: 0 15px 15px;
+			    
+    		}
+
+		}
+
+		&.gray{
+
+			background: $gray3;
+
+    		&:after{
+    			border-color: $gray3 transparent;
+    		}
+		}
+	}
+}
+
+.fixed-element{ position:fixed; width:100%; top:0; left:0; z-index:99999;}
+
+
+@media ( max-width: 767px ){
+
+	.fixed-menu-section{
+		display: none;
+
+		&.active{
+			display:block;
+		}
+	}
+	.mobile-open-pop{
+
+	    &.active{
+	    	width: 100%;
+		    position: fixed;
+		    height: 100%;
+		    background-color: $gray1;
+		    z-index: 9999;
+		    zoom: 1;
+		    overflow: auto;
+		    top: 0;
+		    margin-top:0;
+		    padding:0;
+	    }
+	}
+	.nav-section{
+		-webkit-transform: translate3d(0, 0, 0) translateX(-800px);
+	    transform: translate3d(0, 0, 0) translateX(-800px);
+	    -webkit-transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	    transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+		&.mobile-active{
+			-webkit-transform: translate3d(0, 0, 0) translateX(0);
+    		transform: translate3d(0, 0, 0) translateX(0);
+
+    		.cancel-zone{
+				#menu-back-container{display:none;}
+    		}
+
+    		#menu-soy{display:none;}
+
+    		&.mobile-menu-soy{
+				.cancel-zone{
+					#menu-close-container{display:none;}
+					#menu-back-container{display:block;}
+				}
+
+				#menu-soy{display:block;}
+				.not-on-menu-soy{display:none;}
+			}
+		}
+
+
+	}
+}
+
+#funcionamientos-estructura{
+	.description{
+		>h3{display:inline-block;}
+		>a{display:inline-block;}
+		>strong{display:block;}
+	}
+}
+.description{
+	&.function{
+		&:before{background-color: #B3B3B3;}
+		.estructura{
+			background-color: #B3B3B3;
+			padding: 0;
+
+			.ejemplo{background-color: #B3B3B3;}
+		}
+	}
+	.estructura{
+		background-color: #f1f1f1;
+		list-style-type: none;
+		padding:20px 10px;
+		li{ list-style-type : none; }
+		.ejemplo{
+			padding:10px 20px;
+			background-color: #98EA5D;
+			display:block;
+		}
+		.data{
+			background-color: #E29EAB;
+			padding:10px 20px;
+			display:block;
+		}
+	}
+}
+
+#map-canvas{
+	height:400px;
+}
+
+iframe.video{
+	display: block;
+	width: 100%;
+}
