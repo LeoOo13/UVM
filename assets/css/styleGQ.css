@@ -4,3 +4,8 @@
 #wrapper .component-c7 .up-text-cont .quote-zone .normal-quote, #wrapper .component-c7a .up-text-cont .quote-zone .normal-quote{
     line-height: 40px;
 }
+
+div#componet-c15{
+	margin-right: 0;
+    margin-left: 0;
+}
