@@ -4,3 +4,32 @@
 #wrapper{
 	padding: 0;
 }
+div#componet-c15{
+	margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+/* C7 */
+#wrapper .component-c7 .up-text-cont .quote-zone .normal-quote, #wrapper .component-c7a .up-text-cont .quote-zone .normal-quote{
+    line-height: 40px;
+}
+header.line-red {
+    margin-left: 15px;
+}
+/* Fin C7 */
+
+/* C14 */
+#wrapper .btn{
+    text-shadow: none;
+}
+body #wrapper{
+    color: #333;
+    font-family: "opensans_uvm";
+}
+/* Fin C14 */
+
+/* C14 */
+.int strong{
+    line-height: 43px;
+}
+/* Fin C14 */
