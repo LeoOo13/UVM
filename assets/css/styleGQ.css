@@ -1,7 +1,7 @@
 .aui,
 .aui body,
 .aui li{
-	line-height: initial;
+	line-height: inherit;
 }
 .aui .portlet, 
 .aui .portlet-borderless-container{
