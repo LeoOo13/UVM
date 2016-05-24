@@ -1,6 +1,6 @@
 .aui,
 .aui body{
-	line-height: auto;
+	line-height: initial;
 }
 #wrapper{
 	padding: 0;
