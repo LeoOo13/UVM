@@ -47,3 +47,8 @@ body #wrapper{
     line-height: 43px;
 }
 /* Fin C14 */
+/* Fin C20 */
+.btn.btn-modal.close{
+   box-shadow: none;
+}
+/* Fin C20 */
