@@ -8,6 +8,18 @@
     padding: 0;
     margin-bottom: 0;
 }
+.aui #wrapper .portlet-topper{
+    padding: 0;
+}
+.aui #wrapper .portlet-topper h1.portlet-title {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 2.2;
+    margin: 0;
+}
+.aui #wrapper .portlet-topper h1.portlet-title ::before{
+    display: none;
+}
 .aui .portlet-content, 
 .aui .portlet-minimized .portlet-content-container{
     border: 0;
