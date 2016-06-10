@@ -21,11 +21,11 @@
 		width: 25%;
 		cursor: pointer;
 		float: left;
-		padding:0 0.5%;
+		padding: 1px 0;
 
 		img {
 			width: 100%;
-			margin: 2px;
+			margin: 4px auto;
 		}
 	}
 }
@@ -107,7 +107,7 @@
 @media ( max-width: 767px ){
 
 	.fixed-menu-section{
-		display: none;
+		display: none; margin: 0 auto 30px auto;
 
 		&.active{
 			display:block;
@@ -118,7 +118,7 @@
 	    &.active{
 	    	width: 100%;
 		    position: fixed;
-		    height: 100%;
+		    height: 100% !important;
 		    background-color: $gray1;
 		    z-index: 9999;
 		    zoom: 1;
@@ -193,7 +193,25 @@
 	}
 }
 
-#map-canvas{
+.iframe{
+	&.map-iframe{
+		height:400px;
+	}
+	.map-window{
+		max-width:280px;
+		h3{ color: $red1; font-size:16px;}
+	}
+}
+
+.componente-mi{
+	.row{
+		margin:0;
+	}
+	.iframe{
+		height:400px;
+	}
+}
+#map-canvas, #map-canvas-single{
 	height:400px;
 }
 
