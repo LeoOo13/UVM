@@ -1,12 +1,17 @@
 .aui,
 .aui body,
 .aui li{
-	line-height: inherit;
+    line-height: inherit;
 }
 .aui .portlet, 
 .aui .portlet-borderless-container{
-	padding: 0;
-	margin-bottom: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+.aui .portlet-content, 
+.aui .portlet-minimized .portlet-content-container{
+    border: 0;
+    padding: 0;
 }
 .aui body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -16,10 +21,10 @@
     background-color: #fff; 
 }
 #wrapper{
-	padding: 0;
+    padding: 0;
 }
 div#componet-c15{
-	margin-right: 0px!important;
+    margin-right: 0px!important;
     margin-left: 0px!important;
 }
 
