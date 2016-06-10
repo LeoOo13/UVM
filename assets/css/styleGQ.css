@@ -8,7 +8,7 @@
     padding: 0;
     margin-bottom: 0;
 }
-.aui #wrapper .portlet-topper{
+.aui #wrapper.uvm-main-container .block-uvm header.portlet-topper{
     padding: 0;
 }
 .aui #wrapper .portlet-topper h1.portlet-title {
@@ -17,7 +17,7 @@
     line-height: 2.2;
     margin: 0;
 }
-.aui #wrapper .portlet-topper h1.portlet-title ::before{
+body #wrapper.uvm-main-container .block-uvm header.portlet-topper:before{
     display: none;
 }
 .aui .portlet-content, 
