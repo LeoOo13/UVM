@@ -69,3 +69,10 @@ body #wrapper{
    box-shadow: none;
 }
 /* Fin C20 */
+
+/*C40*/
+body #wrapper.uvm-main-container section .content > div, body #wrapper.uvm-main-container section .component-wrapper > div.component-c40{
+    padding-top: 30px;
+    margin: 0;
+}
+/*Fin C40*/
