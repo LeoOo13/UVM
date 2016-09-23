@@ -1,7 +1,7 @@
 var funcionamientos = ( function( window, undefined ) {
 	
 	var isComparador = false;
-	var sliders = [null]; //Variable que contendrá los sliders
+	var sliders = []; //Variable que contendrá los sliders
 
 	function initExpandForm(){
 		$('.component-f1').find('form').addClass('collapse-form');
@@ -10,22 +10,6 @@ var funcionamientos = ( function( window, undefined ) {
 			$(this).parents('form').removeClass('collapse-form');
 		});	
 
-	}
-
-	//Esta función inyectará a las páginas con body.template-all-in ciertos elementos que no son necesario replicar en el armado de las plantillas como los menú y los footer
-	function finitInyeccionPlantillas(){
-		var template_header = '    <!-- M1 --> <!-- M1a --> <nav class="navbar-header-min"> <div class="container"> <div class="row"> <!-- M1 logo --> <div class="col-md-3 main-logo"> <span class="logo"> <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a> </span> </div> <!-- FIN M1 logo --> <div class="col-md-9 superior-bar"> <div class="container"> <div class="col-sm-12 col-md-8 aditional-topics"> <ul> <li> <a class="special" href="#">Aspirantes</a> </li> <li> <a class="active" href="#">Alumnos</a> </li> <li> <a href="#">Egresados</a> </li> <li> <a href="#">Académicos</a> </li> <li> <a href="#">Administrativos</a> </li> <li> <a href="#">Empresas</a> </li> </ul> </div> <div class="col-sm-12 col-md-4 less-imp-topics"> <ul> <li> <a href="#"> <span class="icon i-chat"></span> </a> </li> <li> <a href="#"> <span class="icon i-telephone"></span> </a> </li> <li> <a href="#"> <span class="icon i-mail"></span> </a> </li> <li class="language"> <a href="#" class="option-1"> <span class="icon i-world"></span> <span class="current">Español</span> <span class="icon i-angle-down"></span> </a> <div class="data-languages"> <div> <span class="icon i-world"></span> <span class="type">Idioma</span> <span class="icon i-angle-down"></span> </div> <a href="#" class="option-1"> <span class="type">Español</span> </a> <a href="#"> <span class="type">Inglés</span> </a> </div> </li> <li class="search"> <a href="#"> <span class="icon i-search"></span> </a> <div class="data-write"> <form> <input type="text" placeholder="Buscar en UVM"> <button type="submit">Buscar</button> </form> </div> </li> </ul> </div> </div> </div> <div class="col-md-12 mobile-head"> <div class="container"> <div class="col-xs-2"> <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a> </div> <div class="col-xs-6 logo-container"> <span class="logo"> <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a> </span> </div> <div class="col-xs-2"> <a href="#" class="icon i-search"></a> </div> <div class="col-xs-2"> <a href="#" class="icon i-quicklink menu-mobile-ql"></a> </div> <div class="mobile-search-container col-sm-12 col-xs-12"> <div class="data-write"> <form> <input type="text" placeholder="Buscar en UVM"> <button type="submit">Buscar</button> </form> </div> </div> </div> </div> </div> </div> </nav> <!-- FIN M1a --> <!-- M1b --> <nav class="nav-section"> <div class="container"> <ul class="clearfix"> <li class="col-xs-12 cancel-zone"> <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span> <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span> </li> <li class="col-xs-12 col-md-2 menu-change-soy not-on-menu-soy not-desktop-menu" id="menu-change-soy"> <a class="anchor-a">Soy aspirante</a> </li> <li class="not-on-menu-soy not-desktop-menu"> <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm"> <a href="#">Acerca de UVM</a> <div class="submenu clearfix"> <div class="col-md-3 big-news"> <div class="in-content"> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> </div> </div> <div class="col-md-9 opc-1"> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> </div> </div> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos"> <a href="#">Programas Académicos</a> <div class="submenu clearfix"> <div class="col-md-3 big-news"> <div class="in-content"> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> </div> </div> <div class="col-md-9 opc-2"> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Aguascalientes</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> </div> </div> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia"> <a href="#">Academia</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm"> <a href="#">¿Por qué UVM?</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus"> <a href="#">Campus</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas"> <a href="#">Financiamiento y Becas</a> </li> </ul> <ul class="clearfix topicss" id="menu-soy"> <li class="col-xs-12" data-soy="publico-en-general"> <a href="#">Soy Público en General</a> </li> <li class="col-xs-12 col-md-2" data-soy="aspirante"> <a href="#">Soy Aspirante</a> </li> <li class="col-xs-12 col-md-2" data-soy="alumno"> <a href="#">Soy Alumno</a> </li> <li class="col-xs-12 col-md-2" data-soy="egresado"> <a href="#">Soy Egresado</a> </li> <li class="col-xs-12 col-md-2" data-soy="staff"> <a href="#">Soy Staff</a> </li> <li class="col-xs-12 col-md-2" data-soy="padre-de-familia"> <a href="#">Soy Padre de Familia</a> </li> <li class="col-xs-12 col-md-2" data-soy="organizacion"> <a href="#">Soy Organización</a> </li> </ul> <div class="container change-lenguage not-on-menu-soy"> <div class="col-xs-6 l-espanol"> <a href="#">Español</a> </div> <div class="col-xs-6 l-english"> <a href="#">English</a> <span class="circle-form"> <span class="glyphicon glyphicon-globe"></span> </span> </div> </div> </div> </nav> <!-- FIN M1b --> <!-- QL --> <nav class="component-ql"> <div class="button-container"><span class="glyphicon glyphicon-remove menu-mobile-ql"></span></div><ul> <li> <a href="#" class="topic-links"> <span class="icon i-compass"></span> <p>Conoce tus habilidades</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-dates"></span> <p>Visita tu campus</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-calc"></span> <p>Calcula tu colegiatura</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-signlist"></span> <p>Inicia tu inscripción</p> </a> </li> </ul> </nav> <!-- FIN QL --> <!-- BR --> <div class="container"> <section class="block-uvm"> <div class="component-wrapper"> <div class="row component-br"> <p><a href=""><span class="glyphicon glyphicon-home"></span></a></p> <p><a href="">Experiencia estudiantil</a></p> <p><a href="">Noticias</a></p> </div> </div> </section> </div> <!-- FIN BR --> <!-- FIN M1 -->';
-		var template_header_home = '  <!-- M1 HOME--> <div class="container"> <div class="row header-home"> <div class="col-sm-12"> <div class="col-sm-12 cont-slider-home"> <img src="../../assets/img/back-home.jpg"> </div> <div class="col-sm-12 cont-nav-home"> <!-- M1a --> <nav class="navbar-header-min"> <div class="container"> <div class="row"> <div class="col-md-12 superior-bar"> <div class="container"> <div class="col-sm-12 col-md-8 aditional-topics"> <ul> <li> <a class="special" href="#">Aspirantes</a> </li> <li> <a href="#">Alumnos</a> </li> <li> <a href="#">Egresados</a> </li> <li> <a href="#">Académicos</a> </li> <li> <a href="#">Administrativos</a> </li> <li> <a href="#">Empresas</a> </li> </ul> </div> <div class="col-sm-12 col-md-4 less-imp-topics"> <ul> <li> <a href="#"> <span class="icon i-chat"></span> </a> </li> <li> <a href="#"> <span class="icon i-telephone"></span> </a> </li> <li> <a href="#"> <span class="icon i-mail"></span> </a> </li> <li class="language"> <a href="#" class="option-1"> <span class="icon i-world"></span> <span class="current">Español</span> <span class="icon i-angle-down"></span> </a> <div class="data-languages"> <div> <span class="icon i-world"></span> <span class="type">Idioma</span> <span class="icon i-angle-down"></span> </div> <a href="#" class="option-1"> <span class="type">Español</span> </a> <a href="#"> <span class="type">Inglés</span> </a> </div> </li> <li class="search"> <a href="#"> <span class="icon i-search"></span> </a> <div class="data-write"> <form> <input type="text" placeholder="Buscar en UVM"> <button type="submit">Buscar</button> </form> </div> </li> </ul> </div> </div> </div> <div class="col-md-12 mobile-head"> <div class="container"> <div class="col-xs-2"> <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a> </div> <div class="col-xs-6 logo-container"> <span class="logo"> <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a> </span> </div> <div class="col-xs-2"> <a href="#" class="icon i-search"></a> </div> <div class="col-xs-2"> <a href="#" class="icon i-quicklink menu-mobile-ql"></a> </div> <div class="mobile-search-container col-sm-12 col-xs-12"> <div class="data-write"> <form> <input type="text" placeholder="Buscar en UVM"> <button type="submit">Buscar</button> </form> </div> </div> </div> </div> <!-- M1 logo --> <div class="col-sm-4 main-logo col-sm-offset-4"> <h1 class="logo"> <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a> </h1> </div> <!-- FIN M1 logo--> </div> </div> </nav> <!-- FIN M1a --> <!-- M1b --> <nav class="nav-section"> <div class="container"> <ul class="clearfix"> <li class="col-xs-12 cancel-zone"> <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span> <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span> </li> <li class="col-xs-12 col-md-2 menu-change-soy not-on-menu-soy not-desktop-menu" id="menu-change-soy"> <a class="anchor-a">Soy aspirante</a> </li> <li class="not-on-menu-soy not-desktop-menu"> <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm"> <a href="#">Acerca de UVM</a> <div class="submenu clearfix"> <div class="col-md-3 big-news"> <div class="in-content"> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> </div> </div> <div class="col-md-9 opc-1"> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-4"> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Aguascalientes (4)</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> <div class="particular-item"> <p class="inner-item">Yucatán (4)</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> </div> </div> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos"> <a href="#">Programas Académicos</a> <div class="submenu clearfix"> <div class="col-md-3 big-news"> <div class="in-content"> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> <p>Ve nuestros centros especializados</p> <a href="" class="btn btn-red">CONOCE MÁS</a> </div> </div> <div class="col-md-9 opc-2"> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Aguascalientes</p> <ul class="children-item"> <li> <a href="#">Cumbres</a> </li> <li> <a href="#">Centro</a> </li> <li> <a href="#">Otumba</a> </li> <li> <a href="#">Tlaltipac</a> </li> <li> <a href="#">Tlaltipac</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> <div class="col-md-3"> <div class="particular-item"> <p class="inner-item">Yucatán</p> <ul class="children-item"> <li> <a href="#">Mérida</a> </li> </ul> </div> </div> </div> </div> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia"> <a href="#">Academia</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm"> <a href="#">¿Por qué UVM?</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus"> <a href="#">Campus</a> </li> <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas"> <a href="#">Financiamiento y Becas</a> </li> </ul> <ul class="clearfix topicss" id="menu-soy"> <li class="col-xs-12" data-soy="publico-en-general"> <a href="#">Soy Público en General</a> </li> <li class="col-xs-12 col-md-2" data-soy="aspirante"> <a href="#">Soy Aspirante</a> </li> <li class="col-xs-12 col-md-2" data-soy="alumno"> <a href="#">Soy Alumno</a> </li> <li class="col-xs-12 col-md-2" data-soy="egresado"> <a href="#">Soy Egresado</a> </li> <li class="col-xs-12 col-md-2" data-soy="staff"> <a href="#">Soy Staff</a> </li> <li class="col-xs-12 col-md-2" data-soy="padre-de-familia"> <a href="#">Soy Padre de Familia</a> </li> <li class="col-xs-12 col-md-2" data-soy="organizacion"> <a href="#">Soy Organización</a> </li> </ul> <div class="container change-lenguage not-on-menu-soy"> <div class="col-xs-6 l-espanol"> <a href="#">Español</a> </div> <div class="col-xs-6 l-english"> <a href="#">English</a> <span class="circle-form"> <span class="glyphicon glyphicon-globe"></span> </span> </div> </div> </div> </nav> <!-- FIN M1b --> <!-- QL --> <nav class="component-ql"> <div class="button-container"><span class="glyphicon glyphicon-remove menu-mobile-ql"></span></div> <ul> <li> <a href="#" class="topic-links"> <span class="icon i-compass"></span> <p>Conoce tus habilidades</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-dates"></span> <p>Visita tu campus</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-calc"></span> <p>Calcula tu colegiatura</p> </a> </li> <li> <a href="#" class="topic-links"> <span class="icon i-signlist"></span> <p>Inicia tu inscripción</p> </a> </li> </ul> </nav> <!-- FIN QL --> </div> </div> </div> </div> <!-- FIN M1 HOME -->';
-		var template_footer = '    <!-- FT1 --> <footer> <div class="container"> <div class="col-sm-3 footer-logo"> <a href="#" tittle="Universidad del Valle de México"> <img src="../../assets/img/white-uvm.png"> </a> </div> <div class="col-xs-12 col-sm-4 col-sm-3"> <p class="footer-tittle">Links de Ayuda</p> <p> <a href="#">Trabaja con nosotros</a> </p> <p> <a href="#">Preguntas frecuentes</a> </p> <p> <a href="#">Mapa de sitio</a> </p> </div> <div class="col-xs-12 col-sm-4 col-sm-3 contac"> <p class="footer-tittle">Contáctanos</p> <p> <a href="#"><span class="icon i-telephone"></span> <span>1 800 704 7043</span></a> </p> <p> <a href="#"><span class="icon i-mail"></span> <span>hola@universidaduvm.mx</span></a> </p> <p> <a href="#"><span class="icon i-chat"></span> <span>Chat</span></a> </p> <p> <a href="#"><span class="icon i-id"></span> <span>Directorio UVM</span></a> </p> <p> <a href="#"><span class="icon i-man"></span> <span>Buzón del rector</span></a> </p> </div> <div class="col-xs-12 col-sm-4 col-sm-3 social-media"> <p class="footer-tittle">Social Media</p> <p> <a href="#"><span class="icon i-facebook"></span> <span>Facebook</span></a> </p> <p> <a href="#"><span class="icon i-twitter"></span> <span>Twitter</span></a> </p> <p> <a href="#"><span class="icon i-linkedin"></span> <span>Linked in</span></a> </p> <p> <a href="#"><span class="icon i-youtube"></span> <span>Youtube</span></a> </p> <p> <a href="#"><span class="icon i-rss"></span> <span>Blog</span></a> </p> </div> <div class="col-xs-12 esr"> <div> <img src="../../assets/img/white-esr.png"> </div> </div> </div> <div class="footer-legals"> <div class="container"> <div class="row"> <div class="col-sm-12 col-sm-8"> <p>D.R.© Universidad del Valle de México, México. 2016 Laureate International Universities</p> </div> <div class="col-sm-12 col-sm-4 privacy-links"> <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p> </div> </div> </div> </div> </footer> <!-- FIN FT1 -->';
-
-		if ($('body').hasClass('template-all-in')){
-			
-			var header = ($('body').hasClass('home')) ? template_header_home : template_header;
-
-			$('body').find('.uvm-main-container')
-				.prepend(header)
-				.append(template_footer);
-		}
 	}
 
 	function initCalendario(){
@@ -116,8 +100,7 @@ var funcionamientos = ( function( window, undefined ) {
 
 	var componentsSelect = [
 		{ selector : '.component-d4', active : '.select-field', data : null },
-		{ selector : '.component-cp', active : '.select-field', data : 'thumb' },
-		{ selector : '.component-cp-prepa', active : '.select-field', data : 'thumb' }
+		{ selector : '.component-cp', active : '.select-field', data : 'thumb' }
 	];
 
 	var componentsForm = [
@@ -235,21 +218,16 @@ var funcionamientos = ( function( window, undefined ) {
 
 	function initFormGeneral(){
 
-  		componentsForm.forEach(function(component) {
-  			var $components = $(component.selector);
-  			if ($components.length > 0){
-
-  				$components.each(function(index){
-  					initForm($(this));
-  				});
-  				
+  		componentsForm.forEach(function(selector) {
+  			if ($(selector.selector).length > 0){
+  				initForm(selector);
   			}
   		});
 
   		function initForm(selector){
-  			var $form = $(selector);
-  			var $success = $(selector).find(' .cont-send-alert');
-			var $fail = $(selector).find(' .cont-failed-alert');
+  			var $form = $( selector.selector );
+  			var $success = $( selector.selector + ' .cont-send-alert');
+			var $fail = $( selector.selector + ' .cont-failed-alert');
 
   			$success.hide();
   			$fail.hide();
@@ -262,10 +240,10 @@ var funcionamientos = ( function( window, undefined ) {
 
   		function postForm(selector){
 
-			var self = $(selector).serialize();
-			var $success = $( selector).find(' .cont-send-alert');
-			var $fail = $( selector).find(' .cont-send-alert');
-			var $form = $( selector).find('form');
+			var self = $(selector.selector).serialize();
+			var $success = $( selector.selector + ' .cont-send-alert');
+			var $fail = $( selector.selector + ' .cont-failed-alert');
+			var $form = $( selector.selector + ' form');
 
 			$success.hide();
   			$fail.hide();
@@ -310,14 +288,7 @@ var funcionamientos = ( function( window, undefined ) {
   		//Realizamos el posicionamiento del scroll
 		$('html, body').animate({
 			scrollTop: element.offset().top - adicion
-		}, 500, function(){
-			if($('body').hasClass('fixed-scroll')){
-				setTimeout(function(){
-					$('body').removeClass('fixed-scroll');
-				}, 100);
-			}
-		});
-
+		}, 500);
   	}
 
   	function popClass(element){
@@ -340,7 +311,6 @@ var funcionamientos = ( function( window, undefined ) {
 			}
 
 			//Buscar elemento que lo activo para removerle la clase
-			console.log(elementRemoveClass);
 			var $parent_active = elementRemoveClass.parent().find('.active');
 
 			if ($parent_active.length > 0)
@@ -375,9 +345,9 @@ var funcionamientos = ( function( window, undefined ) {
 
   /*Funciónes por componentes*/
 
-	function mComponentMenu(){
 
-		inyectarPopUp();
+
+	function mComponentMenu(){
 
 		var menu = $('.nav-section .container >ul >li');
 		var submenu = $('.nav-section .container >ul >li .submenu .opc-1 .particular-item');
@@ -439,13 +409,6 @@ var funcionamientos = ( function( window, undefined ) {
 
 		});
 
-	}
-
-	function inyectarPopUp(){
-		var $nav = $('nav.nav-section'),
-			htmlPop = '<div class="back-black" id="bg-popup"></div>';
-
-		$(htmlPop).insertAfter($nav);
 	}
 
 	function mComponentSlideDown(){
@@ -586,36 +549,10 @@ var funcionamientos = ( function( window, undefined ) {
   		});
 
   		function initMenu(selector){
-  			addMobileInputSearch();
-  			addMobileQLAction();
   			componentActions(selector);
 
 
   		}
-
-  		//PARA MENÚ MOBILE
-  		function addMobileInputSearch(){
-
-  			$(".mobile-head").on( "click", '.i-search', function(e) {
-  				e.preventDefault();
-	  			$('.mobile-search-container').toggleClass('active')
-	  			$(this).toggleClass('active');
-			});
-
-  		}
-
-  		//Mostrar QL en mobile
-  		function addMobileQLAction(){
-
-  			$("nav").on( "click", '.menu-mobile-ql', function(e) {
-  				e.preventDefault();
-	  			$('.component-ql').toggleClass('active')
-	  			$('.i-signlist').toggleClass('active');
-	  			$('#bg-popup').toggleClass('mobile-active');
-			});
-
-  		}
-
 
   		function componentActions(selector){
 
@@ -632,16 +569,10 @@ var funcionamientos = ( function( window, undefined ) {
 		  			$(this).parent().parent().toggleClass('active');
 			});
 
-			$(selector.selector).on( "click", '.language .data-languages >div', function(e) {
-		  			$(this).parent().parent().siblings().removeClass('active');
-		  			$(this).parent().parent().toggleClass('active');
-			});
-
   			$(selector.selector).on( "click", '.search a', function(e) {
   				e.preventDefault();
 	  			$(this).parent().siblings().removeClass('active');
 	  			$(this).parent().toggleClass('active');
-	  			$(this).parent().closest('.navbar-header-min').toggleClass('active');
 			});
   		}
   	}
@@ -657,44 +588,29 @@ var funcionamientos = ( function( window, undefined ) {
   		{ selector : '.component-c63', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
   		{ selector : '.component-c63a', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
   		{ selector : '.component-c64', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
-  		{ selector : '.component-c64a', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
-  		{ selector : '.component-c64b', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
-  		{ selector : '.component-c64c', active : '>div', 'showFirst' : true, scrollToButtonsArea: true },
   		{ selector : '.component-c67', active : '>div', 'showFirst' : false },
   		{ selector : '.component-c68', active : '>div', 'showFirst' : false, scrollToActiveButton: true },
   		{ selector : '.component-c20', active : '>div', 'showFirst' : false},
-  		{ selector : '.component-c20b', active : '>div', 'showFirst' : false},
-  		{ selector : '.component-c20c', active : '>div', 'showFirst' : false},
-  		{ selector : '.component-c21a', active : '>div', 'showFirst' : false},
   		{ selector : '.component-c15', active : '.cont-btn', 'showFirst' : false},
   		{ selector : '.component-c61', active :'>div', 'showFirst' : true, scrollToButtonsArea: true},
   		{ selector : '.component-c57', active :'>div', 'showFirst' : true, scrollToButtonsArea: true},
   		{ selector : '.component-c50', active : '.more', 'showFirst' : false},
-  		{ selector : '.component-c72', active : 'li a', 'showFirst' : false},
-  		{ selector : '.component-c5b', active : '>div', 'showFirst': false},
-  		{ selector : '.component-c5c', active : '>div', 'showFirst': false}
-  		
-  	];
-
-  	var componentsPopUp = [
-  		{ selector : '.component-pha', active : '>div' , 'showFirst': true}
+  		{ selector : '.component-c72', active : 'li a', 'showFirst' : false}
   	];
 
   	var componentsCerrar = [
   		{ selector : '.component-c22', active : '>div'},
   		{ selector : '.component-c49', active : '>div'},
   		{ selector : '.component-ah', active : '>div'},
-  		{ selector : '.component-ac', active : '>div'}
+  		{ selector : '.component-ac', active : '>div'},
+  		{ selector : '.component-pha', active : '>div'}
   	];
 
   	var componentsPestana = [
   		{ selector : '.component-c27', active : '>a'},
   		{ selector : '.component-c48', active : '>a'},
   		{ selector : '.component-m3', active :' >div.cont-button'},
-  		{ selector : '.component-m4', active :' >div.cont-button'},
-  		{ selector : '.component-m4a', active :' >div.cont-button'},
-  		{ selector : '.component-m5', active :' >div.cont-button'},
-  		{ selector : '.component-m6', active :' >div.cont-button'}
+  		{ selector : '.component-m4', active :' >div.cont-button'}
   	];
 
   	var componentsSlider = [
@@ -721,484 +637,105 @@ var funcionamientos = ( function( window, undefined ) {
 
   		function initSlider(selector){
 
-  			var $sliders = $(selector.selector);
+  			var $slides = $(selector.selector + ' .swiper-wrapper .swiper-slide');
 
-  			$sliders.each(function(sliderIndex){
-	  			var $slides = $(this).find('.swiper-wrapper .swiper-slide');
-	  			var html_gallery = '';
+	  		$slides.each(function(i, e) {
 
-		  		$slides.each(function(i, e) {
+	  			var $element = $(e);
+	  			var image = $element.data("img");
+	  			var excerpt = $element.data("excerpt");
 
-		  			var $element = $(e);
-		  			var image = $element.data("img");
-		  			var excerpt = $element.data("excerpt");
+	  			var insert = '<img src="'+image+'"/>';
 
-		  			$(this).attr("data-slide-index", i);
+	  			if(excerpt){
+	  				insert+= '<p>'+excerpt+'</p>';
+	  			}
+				
+				$element.append(insert);
 
-		  			var insert = '<img src="'+image+'"/>';
+				if(selector.thumbnail){
+					var insert = '<div class="swiper-slide thumb"><img src="'+image+'"></div>';
+					$(selector.selector + ' .gallery-thumbs .swiper-wrapper').append(insert);
+				}
+			});	
 
-		  			if(excerpt){
-		  				insert+= '<p>'+excerpt+'</p>';
-		  			}
-					
-					$element.append(insert);
+		    if(selector.thumbnail){
 
-					if(selector.thumbnail){
-						html_gallery += '<div class="swiper-slide thumb" data-slide-main-index="'+ i +'"><img src="'+image+'"></div>';
-					}
-				});	
-  			
-			    if(selector.thumbnail){
+		    	var galleryTop = new Swiper(selector.selector + ' .gallery-top', {
+			        nextButton: '.swiper-button-next',
+			        prevButton: '.swiper-button-prev',
+			        spaceBetween: 10,
+			        loop:true,
+			        loopedSlides: 5, //looped slides should be the same     
+			    });
+			    var galleryThumbs = new Swiper(selector.selector + ' .gallery-thumbs', {
+			        spaceBetween: 10,
+			        slidesPerView: 4,
+			        touchRatio: 0.2,
+			        loop:true,
+			        loopedSlides: 5, //looped slides should be the same
+			        slideToClickedSlide: true
+			    });
+			    
+			    galleryTop.params.control = galleryThumbs;
+			    galleryThumbs.params.control = galleryTop;
 
-			    	$(this).find('.gallery-thumbs .swiper-wrapper').append(html_gallery);
-			    	var total = $(this).find('.gallery-thumbs').length;
-			    	var galleryTop = [];
-			    	var galleryThumbs = [];
+		    }
+		    else{
 
-
-					    $(this).find('.gallery-top').addClass('swiper-'+sliderIndex);
-					    $(this).find('.gallery-thumbs').addClass('swiper-'+sliderIndex);
-					    var i = sliders.length;
-					    var j = sliders.length+1;
-					    var slider_id = 'slider' + i;
-					    var slider_thumbs_id = 'slider' + j;
-
-					    $(this).find('.gallery-top.swiper-'+sliderIndex)
-					    	.attr('id', slider_id)
-					    	.attr('data-slider-id', i);
-
-					    $(this).find('.gallery-thumbs.swiper-'+sliderIndex)
-					    	.attr('id', slider_thumbs_id)
-					    	.attr('data-slider-id', j);
-	    				// $('.s'+index).swiper();
-
-	    				// Galería general
-	    				var topgall = new Swiper($('#' + slider_id), {
-					        nextButton: '#' + slider_id + ' .swiper-button-next',
-							prevButton: '#' + slider_id + ' .swiper-button-prev'
-							/*onSlideChangeStart: function(swiper){
-								//console.log('Cambio Inicial', swiper)
-							},
-							onSlideChangeEnd: function(swiper){
-								//console.log('Cambio Final', swiper.activeIndex, sliders[j].activeIndex )
-								if (sliders[j].activeIndex != swiper.activeIndex){
-									sliders[j].slideTo(swiper.activeIndex);
-								}
-							},
-							onSlideNextStart: function(swiper){
-								//console.log('ASDF', swiper.activeIndex)
-							}*/
-					    });
-
-					  	sliders.push ( topgall );
-
-					  	// Galerias de thumbs
-					  	var thumbgall = new Swiper($('#' + slider_thumbs_id), {
-					        spaceBetween: 10,
-					        slidesPerView: 4,
-					        touchRatio: 0.2,
-					        loop:false,
-					        //loopedSlides: 5,
-					        slideToClickedSlide: true,
-
-					        centeredSlides: true
-							/*onSlideChangeStart: function(swiper){
-								
-								var active_slide = (swiper.activeIndex) ? swiper.activeIndex : 0;
-								var active_main_slide = swiper.slides[active_slide].getAttribute('data-slide-main-index');
-								
-								sliders[i].slideTo(active_main_slide);
-							}*/
-					    });
-
-					    sliders.push ( thumbgall );
-
-					    sliders[i].params.control = sliders[j];
-					    sliders[j].params.control = sliders[i];
+	  			//creamos un nuevo swiper en nuestro arreglo de sliders por cada .swipercontainer
+	  			$(selector.selector + ' .swiper-container').each(function(){
+	  				$(this).attr('data-slider-id', sliders.length);
+			  		sliders.push(new Swiper(this, {
+				        pagination: selector.selector + ' .swiper-pagination',
+				        paginationClickable: true,
+				        nextButton: selector.selector + ' .swiper-button-next',
+			        	prevButton: selector.selector + ' .swiper-button-prev',
+			        	autoHeight : true
+				    }));
+	  			})
 
 
 
-					//console.log(sliders);
+		  		
 
-			    }
-			    else{
+		    }
 
-		  			//creamos un nuevo swiper en nuestro arreglo de sliders por cada .swipercontainer
-		  			$(this).find('.swiper-container').not('.gallery-thumbs').each(function(){
-		  				var slider_id = 'slider' + sliders.length;
-
-		  				$(this)
-		  					.attr('id', slider_id)
-		  					.attr('data-slider-id', sliders.length);
-
-				  		sliders.push(new Swiper(this, {
-					        pagination: '#' + slider_id + ' .swiper-pagination',
-					        paginationClickable: true,
-					        nextButton: '#' + slider_id + ' .swiper-button-next',
-				        	prevButton: '#' + slider_id + ' .swiper-button-prev',
-				        	autoHeight : true
-					    }));
-		  			})
-
-			  		
-
-			    }
-			});
 	  	}
   	}
 
 
   	function updateMobileOptions(){
-		var selects = ['#vertical1', '#licenciatura1', '#vertical2', '#licenciatura2', '#opcion-comparador1', '#opcion-comparador2'];
-		var stepToShow = [1,2,3,4,1,2];
+		var selects = ['#vertical1', '#licenciatura1', '#vertical2', '#licenciatura2'];
 
-		var selectsMobile = ['#component-comparador .step-2 .line-carrer', '#component-comparador .step-3 .pick-carrer', '#component-comparador .step-4 .line-carrer', '#component-comparador .step-5 .pick-carrer', '#component-comparador-prepa .step-2 .pick-carrer', '#component-comparador-prepa .step-3 .pick-carrer'];
+		var selectsMobile = ['.step-2 .line-carrer', '.step-3 .pick-carrer', '.step-4 .line-carrer', '.step-5 .pick-carrer'];
 
 		selects.forEach(function( selector, key ) {
+		var options = $(selector +' select option');
+			$(selectsMobile[key]).html('');
+			
+			var step = key + 1;
 
-			if($(selector).length>0){
-
-				var options = $(selector +' select option');
-				$(selectsMobile[key]).html('');
-				
-				var step =  stepToShow[key];
-
-				var values = $.map(options ,function(option) {
-
-					if(option.value!=0){	
-
-						var $option = $(option);
-						var titulo = $option.text();
-						var html = '<li data-selector="'+selector+'" data-value="'+option.value+'" data-step="'+step+'"><a href="#">';
-						
-						if($option.data('thumb') !='undefined'){                 
-			            	html+='<img src="'+$option.data('thumb')+'" alt="'+titulo+'">';
-			            }
-			            html+='<p>'+titulo+'</p></a>';
-			           	html+='</li>';
-
-			           	$(selectsMobile[key]).append(html);
-
-			         }
-		  
-				});
-			}
-		
-		});
-		
-	}
-
-function initComparadorPreparatoria(){
-
-	var sliderMobile = null;
-	var planesId = [];
-	var steps = $('#component-cpm-prepa .step');
-	initComparador();
-
-	function initComparador(){
-		var $component = $('.component-cp-prepa');
-
-  		if($component.length>0){
-
-  			isComparador = true;
-  			initComparadorDesktop();
-  			setTimeout(function(){ 
-  				appendMobileComparador();
-  			 }, 1000);
-
-  		}
-	}
-
-	function appendMobileComparador(){
-		var $component = $('#component-comparador-prepa');
-
-		// PARA CUANDO LO JALA DEL TEMPLATE
-		// $.get( "../../templates/comparador-prepa-mobile.html", function( data ) {
-		// 	console.log(data);
-		//   	$component.append( data );
-		//   	initComparadorMobile();
-		// });
-
-		var data ='<div class="component-wrapper visible-block-xs hidden-sm hidden-md hidden-lg" id="component-cpm-prepa"> <section class="block-uvm"> <div class="component-wrapper"> <div class="row component-cpm"> <div class="step step-1" data-step="1"> <header> <h2>Te ayudamos a decidir</h2> <p>¿Dos o tres años? ¿Bachillerato o prepa?</p> </header> <!-- Paso 1 --> <div class="in-content"> <div class="limit-content"> <button class="btn btn-red actionStep" data-show="2">Compara</button> </div> </div> </div> <div class="step step-2" data-step="2"> <!-- Paso 2 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="1"> Regresar </button> </div> <div class="heading-programs"> <h2>Opción 1</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">¿Prepa? ¿Dos o tres años?</p> <ul class="pick-carrer"> </ul> </div> </div> </div> <div class="step step-3" data-step="3"> <!-- Paso 3 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="2"> Regresar a Opción 1 </button> </div> <div class="heading-programs"> <h2>Opción 2</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">¿Bachillerato? ¿Dos o tres años?</p> <ul class="pick-carrer"> </ul> </div> </div> </div> <div class="step step-4" data-step="4"> <div class="swiper-button-next glyphicon glyphicon-chevron-right"></div> <div class="swiper-button-prev glyphicon glyphicon-chevron-left"></div> <div class="swiper-container"> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="3"> Regresar a elegir </button> </div> <div class="heading-programs swiper-pagination"></div> <div class="swiper-wrapper"> <div class="swiper-slide video-slide"> <!-- Paso 10 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="row component-c14"> <div class="col-sm-4"> <div class="iframe"> <div class="iframe-sec cont-iframe"> </div> <div class="description-iframe"> <p class="tittle-i"></p> <p class="subtittle-i"></p> <p class="date-i"></p> </div> </div> </div> <div class="col-sm-4"> <p class="t-center t-descripcion"></p> </div> </div> </div> <div class="halff"> <p class="title"></p> <div class="row component-c14"> <div class="col-sm-4"> <div class="iframe"> <div class="iframe-sec cont-iframe"> </div> <div class="description-iframe"> <p class="tittle-i"></p> <p class="subtittle-i"></p> <p class="date-i"></p> </div> </div> </div> <div class="col-sm-4"> <p class="t-center t-descripcion"></p> </div> </div> </div> </div> </div> </div> <div class="swiper-slide two"> <!-- Paso 7 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="duracion"></div> <div class="clearfix"> <div class="data-write send"> <div class="btn-cont materias-url"> <a class="btn btn-red" target="_blank">Consulta Materias</a> </div> <div class="btn-cont calendario-url"> <a class="btn btn-red" target="_blank">Consulta Calendario</a> </div> </div> <div class="excerpt"> <p>*La orientación estratégica de la carrera, fundamentada en nuevos modelos de negocio y certificaciones internacionales brindan una clara ventaja competitiva a nuestros egresados.</p> </div> </div> </div> <div class="halff"> <p class="title"></p> <div class="duracion"></div> <div class="clearfix"> <div class="data-write send"> <div class="btn-cont materias-url"> <a class="btn btn-red" target="_blank">Consulta Materias</a> </div> <div class="btn-cont calendario-url"> <a class="btn btn-red" target="_blank">Consulta Calendario</a> </div> </div> <div class="excerpt"> <p>*La orientación estratégica de la carrera, fundamentada en nuevos modelos de negocio y certificaciones internacionales brindan una clara ventaja competitiva a nuestros egresados.</p> </div> </div> </div> </div> </div> </div> <div class="swiper-slide por-que-uvm-slide"> <header> <h2>¿Por qué elegir UVM?</h2> <p>Te brindamos las mejores opciones pensando en ti</p> </header> <div class="in-content"> </div> </div> <div class="swiper-slide campus-slide"> <!-- Paso 12 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <span class="big-red">¿Dónde podrás estudiarla?</span> <div class="row component-t3 campus-container"> </div> </div> <div class="halff"> <p class="title"></p> <span class="big-red">¿Dónde podrás estudiarla?</span> <div class="row component-t3 campus-container"> </div> </div> </div> </div> </div> <div class="swiper-slide colegiatura-slide"> <!-- Paso 13 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="colegiatura-container"> <strong>Colegiaturas desde:</strong> <p class="lite">$ <strong class="green"></strong> mensuales</p> </div> <div class="links-container"> <a href="#" data-title="CALCULAR COLEGIATURA" class="calcular"></a> <a href="#" data-title="IR A PÁGINA DEL PROGRAMA" class="programa"></a> </div> </div> <div class="halff"> <p class="title"></p> <div class="colegiatura-container"> <strong>Colegiaturas desde:</strong> <p class="lite">$ <strong class="green"></strong> mensuales</p> </div> <div class="links-container"> <a href="#" data-title="CALCULAR COLEGIATURA" class="calcular"></a> <a href="#" data-title="IR A PÁGINA DEL PROGRAMA" class="programa"></a> </div> </div> </div> <div class="btn-cont"> <button class="btn btn-red actionStep" data-show="5">Más información</button> </div> </div> </div> </div> </div> </div> <div class="step step-5" data-step="5"> <!-- Paso 4 --> <div class="btn-cont"> <button class="btn btn-special beginSlide actionStep" data-show="4"> Regresar a comparar </button> </div> <div class="in-content"> <div class="limit-content"> <span class="big-red">¿Quieres saber más?</span> <p class="inst">Recibe por correo el comparativo completo con costos y opciones de financiamiento.</p> <div class="form-gray-bg"> <form> <div class="data-write"> <input placeholder="Juán Fernández"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="04455 3471 0988"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="juan@correo.com"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="Hermosillo"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write send"> <div class="btn-cont"> <button class="btn btn-green">Envíamelo</button> </div> </div> </form> </div> <button class="btn btn-red actionStep" data-show="1">Regresar al inicio</button> </div> </div> </div> </div> </div> </section> </div>';
-		$component.append( data );
-		initComparadorMobile();
-	}
-
-	function initComparadorDesktop(){
-
-		var $content = $('.component-cp-prepa .elemento-componente-comparador');
-	  	
-	  	componentActions();
-
-	  	// ESCONDER DE ENTRADA LOS ELEMENTOS DEL COMPARADOR
-		$content.hide();
-
-		function componentActions(){
-
-			$('.component-cp-prepa .cont-select').on('change', 'select', function() {
-				updateMobileOptions();
-
-		 		if(validOptions()){
-			 		gethtmlInfo($('#opcion-comparador1 select').val() , $('#opcion-comparador2 select').val());
-			 		
-			 		$content.show();
-
-					hideAllB(steps);
-					showStep(3);
-
-			 	}
-			 	else{
-			 		$content.hide();
-			 	}
-
-			 	
-			});
-		}
-	}
-
-	function initComparadorMobile(){
-
-		var $elementUVM = $('.component-cp3 .incontent-cp3').clone();
-		$('.por-que-uvm-slide .in-content').html($elementUVM);
-
-		steps = $('#component-cpm-prepa .step');
-		componentActions();
-		updateMobileOptions();
-		initSlider('#component-cpm-prepa');
-
-		hideAllB(steps);
-		showStep(0);
-		
-		function componentActions(){
-
-			$('#component-cpm-prepa').on( "click", '.actionStep', function(e) {
-	  				
-				var show = $(this).data('show')-1;
-				var hide = $(this).parent().parent('.step').index();
-				hideStep(hide);
-				showStep(show);
-			});
-
-			$('#component-cpm-prepa .line-carrer, #component-cpm-prepa .pick-carrer').on( "click", '>li', function(e) {
-				e.preventDefault();
-				$($(this).data('selector') + ' select').val($(this).data('value')).change();
-
-				addActiveClass($(this));
-
-				var hide = $(this).data('step');
-				var show = hide+1;
-				hideStep(hide);
-				showStep(show);
-				// beginSlide(0);
-			});
-
-			$('.step').on( 'click' , '.beginSlide', function(){
-				beginSlide(0);
-			});
-		}
-	}
-
-
-	function validOptionsPlanes(){
-		var $selects = $('.component-cp-prepa .component-cp1 .final-select select');
-		var valid = true;
-
-		planesId = [];
-
-		$selects.each(function(i, e) {
-			planesId.push($(e).val());
-			if($(e).val()=='' || $(e).val()== 0){
-				valid = false;
-				return;
-			}
-		});
-
-		return valid;
-	}
-
-	function validOptions(){
-		var selects = ['#opcion-comparador1', '#opcion-comparador2'];
-		var valid = true;
-		selects.forEach(function(selector) {
-
-			if($(selector + ' select').val()=='' || $(selector + ' select').val()== 0){
-				valid = false;
-				return;
-			}
-		});
-
-		return valid;
-	}
-	
-	function gethtmlInfo(opc1, opc2){
-		var $container = $('.component-cp-prepa .elemento-componente-comparador .component-cp1');
-		var source = $container.data('source');
-		var licenciaturas =[opc1, opc2];
-		var innerContainers = [''];
-		var meta = {};
-		$.each( licenciaturas, function( key, val ) {
-			console.log(source);
-			$.getJSON( source , {
-		    id: val
-		  },function( data ) {
-
-			meta = data;
-
-
-			}).always(function() {
-				console.log(meta);
-
-				var $main = $('.component-cp1 .content-cp').eq(key);
-				var $main2 = $('.component-cp2 .content-cp').eq(key);
-
-				console.log($main);
-				var $mainmobile1 = $('.step-4 .one .divided-c .halff').eq(key);
-				var $mainDuracionMobile = $('.step-4 .two .divided-c .halff').eq(key);
-				var $mainmobile3 = $('.step-4 .three .divided-c .halff').eq(key);
-				var $mainVideoMobile = $('.step-4 .video-slide .divided-c .halff').eq(key);
-				
-				$main.children('.cont-img').html('<img src="'+meta.thumb+'"/>');
-				$main.children('.mode-description').html(meta.descripcion);
-				$main.children('.duracion').html('<p><strong>Duración</strong></p>');
-
-				$main.find('.video-container .cont-iframe').html('<iframe class="video" data-tipo="general" src="'+meta.video.video+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>');
-				$main.find('.description-iframe .tittle-i').html(meta.video.titulo);
-				$main.find('.description-iframe .subtittle-i').html(meta.video.subtitulo);
-				$main.find('.description-iframe .date-i').html(meta.video.extra);
-				$main.find('.excerpt p').html(meta.extra);
-
-				$main.find('.materias-url a').prop('href', meta.url.materia);
-				$main.find('.calendario-url a').prop('href', meta.url.calendario);
-				
-
-				$mainDuracionMobile.children('.title').html('<strong>'+meta.titulo+'<strong>');
-				$mainDuracionMobile.children('.duracion').html('<p><strong>Duración</strong></p>');
-
-				$mainDuracionMobile.find('.materias-url a').prop('href', meta.url.materia);
-				$mainDuracionMobile.find('.calendario-url a').prop('href', meta.url.calendario);
-				$mainDuracionMobile.find('.excerpt p').html(meta.extra);
-
-				$mainVideoMobile.children('.title').html('<strong>'+meta.titulo+'<strong>');
-				$mainVideoMobile.find('.iframe-sec').html('<iframe class="video" data-tipo="general" src="'+meta.video.video+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>');
-				$mainVideoMobile.find('.description-iframe .tittle-i').html(meta.video.titulo);
-				$mainVideoMobile.find('.description-iframe .subtittle-i').html(meta.video.subtitulo);
-				$mainVideoMobile.find('.description-iframe .date-i').html(meta.video.extra);
-				$mainVideoMobile.find('.t-descripcion').html(meta.descripcion);
-
-				$.each(meta.duracion, function(key1, duracion){
-					$main.children('.duracion').append('<p>'+duracion.titulo+' '+ duracion.duracion +'</p>');
-					$mainDuracionMobile.children('.duracion').append('<p>'+duracion.titulo+' '+ duracion.duracion +'</p>');
-				});
-
-				var $campusContainer = $main2.find('.campus-container');
-				var $campusContainerM = $('.step-4 .campus-slide .divided-c .halff').eq(key).find('.campus-container');
-
-				$campusContainer.html('');
-				$campusContainerM. html('');
-				
-				$.each(meta.campus, function(key, campus){
-
-					var campusHTML = '<div class="col-sm-6">';
-					campusHTML+='<ul>';
-					campusHTML+='<li class="tittle"><p>'+ campus.titulo+ '</p></li>';
+			var values = $.map(options ,function(option) {
+				if(option.value!=0){	
+					var $option = $(option);
+					var titulo = $option.text();
+					var html = '<li data-selector="'+selector+'" data-value="'+option.value+'" data-step="'+step+'"><a href="#">';
 					
-					$.each(campus.campus, function(key, sede){
-					
-						campusHTML+='<li><a href="'+sede.liga+'">'+ sede.titulo+ '</a></li>';
+					if($option.data('thumb') !='undefined'){                 
+		            	html+='<img src="'+$option.data('thumb')+'" alt="'+titulo+'">';
+		            }
+		            html+='<p>'+titulo+'</p></a>';
+		           	html+='</li>';
 
-					});
-
-					campusHTML+='</ul>';
-					campusHTML+='</div>';
-
-
-					$campusContainer.append(campusHTML);
-					$campusContainerM.append(campusHTML);
-				});
-
-				var $colegiaturaContainer = $main2.find('.colegiatura-container');
-	            var $colegiaturaContainerM = $('.step-4 .colegiatura-slide .divided-c .halff').eq(key).find('.colegiatura-container');
-
-	            $colegiaturaContainer.find('.lite strong').html(meta.colegiatura.monto);
-	            $colegiaturaContainerM.find('.lite strong').html(meta.colegiatura.monto);
-	            
-	            var $ligaColegiatura = $main2.find('.links-container .calcular');
-				$ligaColegiatura.html($ligaColegiatura.data('title'));
-				$ligaColegiatura.prop('href', meta.colegiatura.colegiatura);
-				
-				var $ligaPrograma = $main2.find('.links-container .programa');
-				$ligaPrograma.html($ligaPrograma.data('title'));
-				$ligaPrograma.prop('href', meta.colegiatura.programa);
-
-				$mainmobile3.children('.title').html('<strong>'+meta.titulo+'<strong>');
-
-				sliderMobile.update();
-
+		           	$(selectsMobile[key]).append(html);
+		         }
+	  
 			});
-		});
-	}
-
-
-  	function appendSlidesPuntos(count){
-
-		$('.step-6 .swiper-slide.punto').remove();
-
-		var $slider = $('.step-6 .swiper-container .swiper-slide.two');
-		var slideP = '<div class="swiper-slide punto">';
-		slideP+='<div class="in-content">';
-		slideP+='<div class="divided-c">';
-		slideP+='<div class="halff">';
-		slideP+='<p class="title"></p>';
-		slideP+='<div class="cont-points-container">';
-		slideP+='</div>';
-		slideP+='</div>';
-		slideP+='<div class="halff">';
-		slideP+='<p class="title"></p>';
-		slideP+='<div class="cont-points-container">';
-		slideP+='</div>';
-		slideP+='</div>';
-		slideP+='</div>';
-		slideP+='</div>';
-		slideP+='</div>';
-
-		var slides = slideP.repeat(count);
-
-		$(slides).insertAfter($slider);
 		
-		sliderMobile.update();
+		});
+		
 	}
-
-	function addActiveClass(element){
-		element.addClass('active').siblings().removeClass('active');
-	}
-
-
-	function initSlider(selector){
-
-  		sliderMobile = new Swiper(selector +' .step .swiper-container', {
-	        pagination: selector + ' .swiper-pagination',
-	        paginationClickable: true,
-	        nextButton: '.swiper-button-next',
-        	prevButton: '.swiper-button-prev',
-        	autoHeight : true
-	    });
-
-  	}
-
-  	function beginSlide(index){
-  		sliderMobile.slideTo(index);
-  	}
-
-  	function showStep(index){
-		var element = steps.eq(index);
-		showCurrentContent(element, false);
-	}
-
-	function hideStep(index){
-		var element = steps.eq(index);
-		element.hide();
-	}
-  }
 
 function initComparadorGeneral(){
 
@@ -1223,37 +760,30 @@ function initComparadorGeneral(){
 
 	function appendMobileComparador(){
 		var $component = $('#component-comparador');
+		$.get( "template/comparador-mobile.html", function( data ) {
+		  	$component.append( data );
+		  	initComparadorMobile();
+		});
 
-		// PARA CUANDO LO JALA DEL TEMPLATE
-		// $.get( "../../templates/comparador-mobile.html", function( data ) {
-		//   	$component.append( data );
-		//   	initComparadorMobile();
-		// });
-
-		var data='<div class="container visible-block-xs hidden-sm hidden-md hidden-lg" id="component-cpm"> <section class="block-uvm"> <div class="component-wrapper"> <div class="row component-cpm"> <div class="step step-1" data-step="1"> <div class="in-content"> <div class="limit-content"> <p class="inst">Para poder tener una decisión más acertada te ofrecemos comparar entre distintas carreras. Solo tienes que seguir estos sencillos pasos:</p> <ol> <li>Primero selecciona una vertical</li> <li>Después una carrera de esa vertical</li> <li>Ahora selecciona la vertical que quieres comparar</li> <li>Selecciona ahora una carrera de esta vertical y compara</li> </ol> <button class="btn btn-red actionStep" data-show="2">Empieza</button> </div> </div> </div> <div class="step step-2" data-step="2"> <!-- Paso 2 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="1"> Regresar a Instrucciones </button> </div> <div class="heading-programs"> <h2>Vertical 1</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">Pimero selecciona una vertical</p> <ul class="line-carrer"> </ul> </div> </div> </div> <div class="step step-3" data-step="3"> <!-- Paso 3 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="2"> Regresar a Vertical 1 </button> </div> <div class="heading-programs"> <h2>Carrera 1</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">Despúes una carrera de esa vertical</p> <ul class="pick-carrer"> </ul> </div> </div> </div> <div class="step step-4" data-step="4"> <!-- Paso 4 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="3"> Regresar a Carrera 1 </button> </div> <div class="heading-programs"> <h2>Vertical 2</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">Pimero selecciona una vertical</p> <ul class="line-carrer"> </ul> </div> </div> </div> <div class="step step-5" data-step="5"> <!-- Paso 5 --> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="4"> Regresar a Vertical 2 </button> </div> <div class="heading-programs"> <h2>Carrera 2</h2> </div> <div class="in-content"> <div class="limit-content"> <p class="inst">Despúes una carrera de esa vertical</p> <ul class="pick-carrer"> </ul> </div> </div> </div> <div class="step step-6" data-step="6"> <div class="swiper-button-next glyphicon glyphicon-chevron-right"></div> <div class="swiper-button-prev glyphicon glyphicon-chevron-left"></div> <div class="swiper-container"> <div class="btn-cont"> <button class="btn btn-special actionStep" data-show="5"> Regresar a elegir </button> </div> <div class="heading-programs swiper-pagination"></div> <div class="swiper-wrapper"> <div class="swiper-slide one"> <!-- Paso 6 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <p class="t-center t-descripcion"></p> </div> <div class="halff"> <p class="title"></p> <p class="t-center t-descripcion"></p> </div> </div> </div> </div> <div class="swiper-slide video-slide"> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="row component-c14"> <div class="col-sm-4"> <div class="iframe"> <div class="iframe-sec cont-iframe"> </div> <div class="description-iframe"> <p>Escucha la experiencia de:</p> <p class="tittle-i"></p> <p class="subtittle-i"></p> <p class="date-i"></p> </div> </div> </div> </div> </div> <div class="halff"> <p class="title"></p> <div class="row component-c14"> <div class="col-sm-4"> <div class="iframe"> <div class="iframe-sec cont-iframe"> </div> <div class="description-iframe"> <p>Escucha la experiencia de:</p> <p class="tittle-i"></p> <p class="subtittle-i"></p> <p class="date-i"></p> </div> </div> </div> </div> </div> </div> </div> </div> <div class="swiper-slide two"> <!-- Paso 7 --> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="duracion"></div> <div class="clearfix"> <div class="data-write select-field" data-key="0"></div> </div> </div> <div class="halff"> <p class="title"></p> <div class="duracion"></div> <div class="clearfix"> <div class="data-write select-field" data-key="1"></div> </div> </div> </div> </div> </div> </div> </div> </div> <div class="step step-7" data-step="7"> <!-- Paso 4 --> <div class="btn-cont"> <button class="btn btn-special beginSlide actionStep" data-show="6"> Regresar a comparar </button> </div> <div class="in-content"> <div class="limit-content"> <span class="big-red">¿Quieres saber más?</span> <p class="inst">Recibe por correo el comparativo completo con costos y opciones de financiamiento.</p> <div class="form-gray-bg"> <form> <div class="data-write"> <input placeholder="Juán Fernández"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="04455 3471 0988"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="juan@correo.com"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write"> <input placeholder="Hermosillo"> <label class="icon-label"><span class="glyphicon glyphicon-star"></span></label> </div> <div class="data-write send"> <div class="btn-cont"> <button class="btn btn-green">Envíamelo</button> </div> </div> </form> </div> <button class="btn btn-red actionStep" data-show="1">Regresar al inicio</button> </div> </div> </div> </div> </div> </section> </div>';
-		$component.append( data );
-		initComparadorMobile();
 	}
 
 	function initComparadorDesktop(){
 		var $content = $('.component-cp .cont-information');
 	  	var $content1 = $('.component-cp .cont-information .component-cp1');
 	  	var $content2 = $('.component-cp .cont-information .component-cp-info');
-	  	var $content3 = $('.cuestionario-container');
 	  	
 	  	componentActions();
 
 		$content.hide();
 		$content1.hide();
 		$content2.hide();
-		$content3.hide();
 
 		function componentActions(){
 
 			$('.component-cp .cont-select').on('change', 'select', function() {
 				updateMobileOptions();
 
-		 		if(validOptions()){
+		 	if(validOptions()){
 			 		gethtmlInfo($('#licenciatura1 select').val() , $('#licenciatura2 select').val());
 			 		
 			 		$content.show();
@@ -1267,7 +797,6 @@ function initComparadorGeneral(){
 			 		$content.hide();
 			 		$content1.hide();
 			 		$content2.hide();
-			 		$content3.hide();
 			 	}
 
 			 	
@@ -1279,11 +808,9 @@ function initComparadorGeneral(){
 			 	if(validOptionsPlanes()){
 			 		gethtmlInfo2(planesId[0] , planesId[1]);
 			 		$content2.show();
-			 		$content3.show();
 			 	}
 			 	else{
 			 		$content2.hide();
-			 		$content3.hide();
 			 	}
 
 			});
@@ -1322,10 +849,6 @@ function initComparadorGeneral(){
 				hideStep(hide);
 				showStep(show);
 				// beginSlide(0);
-			});
-
-			$('.line-carrer, .pick-carrer').on( "click", '>li a', function(e) {
-				e.preventDefault();
 			});
 
 			$('.step').on( 'click' , '.beginSlide', function(){
@@ -1388,7 +911,7 @@ function initComparadorGeneral(){
 
 
 			}).always(function() {
-
+				console.log(meta);
 				var $main = $('.component-cp1 .content-cp').eq(key);
 
 				var $mainmobile1 = $('.step-6 .one .divided-c .halff').eq(key);
@@ -1407,7 +930,7 @@ function initComparadorGeneral(){
 				$mainmobile2.children('.duracion').html('<p><strong>Duración</strong></p>');
 
 				$mainmobile4.children('.title').html('<strong>'+meta.titulo+'<strong>');
-				$mainmobile4.find('.iframe-sec').html('<iframe class="video" data-tipo="general" src="'+meta.video.video+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>');
+				$mainmobile4.find('.iframe-sec').html('<iframe class="video" data-tipo="general" width="754" height="424" src="'+meta.video.video+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>');
 				$mainmobile4.find('.description-iframe .tittle-i').html(meta.video.titulo);
 				$mainmobile4.find('.description-iframe .subtittle-i').html(meta.video.subtitulo);
 				$mainmobile4.find('.description-iframe .date-i').html(meta.video.extra);
@@ -1441,8 +964,6 @@ function initComparadorGeneral(){
 			var source = $container.data('source');
 			var planes =[pid1, pid2];
 			var meta = {};
-
-			appendSlidesExtra();
 
 			$.each( planes, function( key, val ) {
 
@@ -1490,12 +1011,6 @@ function initComparadorGeneral(){
 					
 
 					var $puntosContainerM = $($puntosM[key1]).find('.divided-c .halff').eq(key);
-
-					if(key1==0){
-						$puntosContainer.empty();
-						$puntosContainerM.find('.cont-points-container').empty();
-					}
-
 					$puntosContainer.append(puntoHTML);
 					$puntosContainerM.find('.cont-points-container').append(puntoHTML);
 
@@ -1552,17 +1067,6 @@ function initComparadorGeneral(){
 
 			});
 		});
-	}
-
-	function appendSlidesExtra(){
-		var extra ='<div class="swiper-slide campus-slide"> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <span class="big-red">¿Dónde podrás estudiarla?</span> <div class="row component-t3 campus-container"> </div> </div> <div class="halff"> <p class="title"></p> <span class="big-red">¿Dónde podrás estudiarla?</span> <div class="row component-t3 campus-container"> </div> </div> </div> </div> </div> <div class="swiper-slide colegiatura-slide"> <div class="in-content"> <div class="divided-c"> <div class="halff"> <p class="title"></p> <div class="colegiatura-container"> <strong>Colegiaturas desde:</strong> <p class="lite">$ <strong class="green"></strong> mensuales</p> </div> <div class="links-container"> <a href="#" data-title="CALCULAR COLEGIATURA" class="calcular"></a> <a href="#" data-title="IR A PÁGINA DEL PROGRAMA" class="programa"></a> </div> </div> <div class="halff"> <p class="title"></p> <div class="colegiatura-container"> <strong>Colegiaturas desde:</strong> <p class="lite">$ <strong class="green"></strong> mensuales</p> </div> <div class="links-container"> <a href="#" data-title="CALCULAR COLEGIATURA" class="calcular"></a> <a href="#" data-title="IR A PÁGINA DEL PROGRAMA" class="programa"></a> </div> </div> </div> <div class="btn-cont"> <button class="btn btn-red actionStep" data-show="7">Más información</button> </div> </div> </div>';
-		$('.step-6 .swiper-slide.punto').remove();
-		
-		var $slider = $('.step-6 .swiper-container .swiper-slide.two');
-
-		$(extra).insertAfter($slider);
-		
-		sliderMobile.update();
 	}
 
   	function appendSlidesPuntos(count){
@@ -1776,11 +1280,11 @@ function initComparadorGeneral(){
 			
 			if(element.parent().hasClass('buttons-zone')){
 				var index = $(selector.selector + ' .buttons-zone ' + selector.active ).index(element);
-				var b = $( selector.selector + ' .tab-zone >a, '+selector.selector + ' .tab-zone >div.cont-button' );
+				var b = $( selector.selector + ' .tab-zone >a');
 			}
 			else{
 				var index = $(selector.selector + ' .tab-zone '+ selector.active ).index(element);
-				var b = $(selector.selector + ' .buttons-zone >a, ' +selector.selector + ' .buttons-zone >div.cont-button');
+				var b = $(selector.selector + ' .buttons-zone >a');
 			}
 
 			addActiveClass(element);
@@ -1801,24 +1305,16 @@ function initComparadorGeneral(){
 			element.addClass('active').siblings().removeClass('active');
 		}
 
-
 		function appendMenuElements(){
 
 	  		var $menuElements = $(selector.selector + ' .buttons-zone' + selector.active);
-	  		var active = false;
+
 	  		$menuElements.each(function(i, e) {
 	  			var $element = $(e).clone();
 	  			$(e).addClass('hidden-xs');
 				var tab = tabs.eq(i);
-
 				$element.insertBefore(tab).addClass('hidden-md hidden-lg hidden-sm visible-xs-block');
-
-				if(i==0){
-					$(selector.selector + ' .tab-zone >div.cont-button').eq(0);
-				}
 			});	
-
-
 	  	}
 
 	}
@@ -1840,52 +1336,6 @@ function initComparadorGeneral(){
 
 		closeElement($component, $elementToHide);
 
-	}
-
-	function initComponentsSelectorPopUp(){
-
-  		componentsPopUp.forEach(function(selector) {
-  			if ($(selector.selector).length > 0){
-	  			mComponentSelectorPopUp(selector);
-	  		}
-  		});	
-  	}
-
-  	function mComponentSelectorPopUp(selector) {
-
-	    mComponentCerrar(selector);
-
-
-	    function mComponentCerrar(selector){
-		
-			var $component = $(selector.selector);
-			var $elementToHide = $(selector.selector + selector.active );
-
-			closeElement($component, $elementToHide, $component);
-		}
-
-		function closeElement(component, elementToHide, elementRemoveClass){
-			component.on( "click", ".close", function() {
-			  elementToHide.hide();
-
-
-			  	if(typeof elementRemoveClass != 'undefined'){
-					//elementRemoveClass.removeClass('active');
-					removerClase(elementRemoveClass, 'active');
-				}
-
-				//Buscar elemento que lo activo para removerle la clase
-				var $parent_active = elementRemoveClass.parent().find('.active');
-
-				if ($parent_active.length > 0)
-				{
-					removerClase($parent_active, 'active');
-				}
-			});
-
-		}
-
-		
 	}
 
   	function initMobileComponentsSelectorPop(){
@@ -1912,16 +1362,13 @@ function initComparadorGeneral(){
 	    }
 
 	    botonesContainer.on( "click", selector.active, function(e) {
+	    	console.log('ASDF')
 
 	    	e.preventDefault();
 		 	var index = $(selector.selector + ' .buttons-zone ' + selector.active).index(this);
-		 	
-		 	// ESCONDER A CUALQUIER ELEMENTO "HERMANO" ANTES DE ABRIRLO
-		 	$(selector.selector + ' .cont-expanded .expanded-link').hide();
 		 	addActiveClass($(this));
 		 	
 		 	var element = tabs.eq(index);
-
 
 		 	updateSliders(element); //Actualización de sliders
 
@@ -1943,22 +1390,21 @@ function initComparadorGeneral(){
 		 	}
 		});
 
-
 		closeElement($component, $elementToHide, $elementToHide.parent());
 
 		//Función para actualizar Sliders en el elemento
 		function updateSliders(element){
 
 			sliders_inside = element.find('.swiper-container');
-			console.log(sliders_inside.length);
+
 			//Ciclo para cada slider
 			for (var i = 0; i < sliders_inside.length; i++) {
 				var i_slider = $(sliders_inside[i]).data('slider-id'); 
-				console.log(i_slider);
-				// Si se tiene el indice del slider y ese indice existe en el arreglo de sliders, se posiciona en 0 y con diferenciacion de tiempo se ejecuta una actualización del slider
+				
+				// Si se tiene el indice del slider y ese indice existe en el arreglo de sliders, con diferenciacion de tiempo se ejecuta una actualización del slider
 				if (i_slider && sliders[i_slider]){
-					sliders[i_slider].slideTo(0);
-					setTimeout(sliders[i_slider].update, 400);
+					
+					setTimeout(sliders[i_slider].update, 100);
 					
 					/*setTimeout((function(i){
 						console.log('A', i)
@@ -2014,57 +1460,16 @@ function initComparadorGeneral(){
 
   function scrollMenu(){
   	var initialPosition;
-  	var initialHeight;
 
   	 if($('.component-m2').length>0){
   	 	var initialPosition = $('.component-m2').offset();
-  	 		initialPosition.top -= $('.component-m2').height();
-  	 	initialHeight = $('.component-m2').height();
   	 }
 
 	$(window).scroll(function(){
         if($('.component-m2').length>0){
-
-        	if ($(this).scrollTop() > initialPosition.top){
-
-        		$('.component-m2').addClass('fixed-element')
-        	}
-        	else{
-        		$('.component-m2').removeClass('fixed-element')
-        	}
-
-        	if(!$('body').hasClass('fixed-scroll')){
-        		setCurrentElement();
-        	}
+        	$(this).scrollTop()>initialPosition.top ? ($('.component-m2').addClass('fixed-element')) : ($('.component-m2').removeClass('fixed-element'));
         }  
     });
-
-  }
-
-  function setCurrentElement(){
-
-  	var current_id = null;
-
-  	$('.fixed-menu-section').each(function(){
-	    if (
-	       $(this).offset().top < window.pageYOffset
-	    && $(this).offset().top + $(this).height() > window.pageYOffset
-	    ) {
-	        //window.location.hash = $(this).attr('id');
-
-	    	current_id = $(this).attr('id');
-
-	    	if(window.location.hash != '#' + current_id)
-		    	setHash('#' + current_id);
-	    }
-	});
-
-  	var hash = current_id;
-  	//window.location.hash.replace('#', '');
-
-  	$('.component-m2 ul li a').removeClass('active');
-    $('.menu-a-'+hash).addClass('active');
-
   }
 
   function mComponentM2(){
@@ -2083,68 +1488,33 @@ function initComparadorGeneral(){
   		$menuElements.each(function(i, e) {
   			var $element = $(e);
   			var $section = $($element.data("container"));
-  			var insert = '<a href="'+$element.data("container")+'" class="menu-a-'+$element.data("container").replace('#', '')+'">'+$element.data("title")+'</a>';
+  			var insert = '<a href="'+$element.data("container")+'">'+$element.data("title")+'</a>';
+			
 			$element.append(insert);
-			$('<div class="fixed-menu-a header-title hidden-sm visible-xs-block hidden-md" data-container="'+$element.data("container")+'">'+insert+'</div>').insertBefore($section);
 			$section.addClass('fixed-menu-section');
+			$($section.parent()).prepend('<div class="fixed-menu-a header-title hidden-sm visible-xs-block hidden-md" data-container="'+$element.data("container")+'">'+insert+'</div>');
 		});	
   	}
 
   	function openElement(){
 
-  		$(".fixed-menu-a").on("click", "a", function(e) {
+  		$(".fixed-menu-a").on("click","a",function(e) {
   			e.preventDefault(); //Evitamos que el anchor haga el brinco al div
 
-			var id_element = $(this).parent().data('container');
-			var $element = $(id_element);
-
-			hideOthers(id_element);
-
+			var $element = $($(this).parent().data('container'));
 			$element.toggleClass('active');
 			addActiveClass($(this).parent());
 
 			//Si tiene la clase active hacemos scroll;
 			if($(this).parent().hasClass('active')){
-				goToElement($(this));
+				scrollToElement($(this));
 			}
 
 			setHash($(this).attr('href')); //Seteamos el anchor en la url
 		});
 
-		$(".component-m2 ul li").on("click", "a", function(e) {
-  			e.preventDefault(); //Evitamos que el anchor haga el brinco al div
-  			$('body').addClass('fixed-scroll');
-  			$('.component-m2 ul li a').removeClass('active');
-
-  			$(this).toggleClass('active');
-			var hash = $(this).parent().data('container');
-			var $element = $(hash);
-			goToElement($element);
-
-			setHash(hash); //Seteamos el anchor en la url
-		});
-
   	}
 
-  	function goToElement($element){
-  		scrollToElement($element);
-  	}
-
-  	function hideOthers(id_element){
-		$('.fixed-menu-section').not(id_element).each(function(){
-			$(this).removeClass('active')
-				.prev('.fixed-menu-a').removeClass('active');
-		});
-  	}
-
-
-  	function addActiveClass(element){
-		element.toggleClass('active');
-	}
-
-  }
-
-  	//Función para setear un hash en el history sin afectar la url (evitar brincos)
   	function setHash(link){
   		var hashlink = link.split('#');
 
@@ -2154,6 +1524,12 @@ function initComparadorGeneral(){
   			history.pushState({}, '', link);
   		}
   	}
+
+  	function addActiveClass(element){
+		element.toggleClass('active');
+	}
+
+  }
 
  	//Función para devolver el calculo de dimensiones para los videos
 	function calcularDimensionesVideo(ancho, tipo){
@@ -2229,10 +1605,8 @@ function initComparadorGeneral(){
     fscrollMenu : scrollMenu,
     fcomponentM2 : mComponentM2,
     finitMobileComponentsSelectorPop : initMobileComponentsSelectorPop,
-    finitComponentsSelectorPopUp : initComponentsSelectorPopUp,
     finitComponentCerrar : initComponentCerrar,
     finitComparadorGeneral : initComparadorGeneral,
-    finitComparadorPreparatoria : initComparadorPreparatoria,
     finitSliderGeneral : initSliderGeneral,
     fComponentSlideDown : mComponentSlideDown,
     finitFormGeneral : initFormGeneral,
@@ -2244,8 +1618,7 @@ function initComparadorGeneral(){
     finitMenuM1 : initMenuM1,
     finitFAQ: initFAQ,
     finitMenuInteractivo : initMenuInteractivo,
-    fexpandForm : initExpandForm,
-    finitInyeccionPlantillas: finitInyeccionPlantillas
+    fexpandForm : initExpandForm
   };
   
 } )( window );
@@ -2254,17 +1627,15 @@ function initComparadorGeneral(){
 $(function() {
 
 	function init(){
-
-		funcionamientos.finitInyeccionPlantillas(); //inyeccion plantillas 
-
+		funcionamientos.fComponentMenu();
 		funcionamientos.finitComponentPestana(); //pestañas
 		funcionamientos.fComponentC29(); //selects
+		funcionamientos.fMobileMenu();
+		funcionamientos.fscrollMenu();
 		funcionamientos.fcomponentM2();
 		funcionamientos.finitMobileComponentsSelectorPop();
-		funcionamientos.finitComponentsSelectorPopUp();
 		funcionamientos.finitComponentCerrar();
 		funcionamientos.finitComparadorGeneral();
-		funcionamientos.finitComparadorPreparatoria();
 		funcionamientos.finitSliderGeneral();
 		funcionamientos.fComponentSlideDown();
 		funcionamientos.finitFormGeneral();
@@ -2278,19 +1649,8 @@ $(function() {
 		funcionamientos.finitMenuInteractivo();
 		funcionamientos.fexpandForm();
 
-		funcionamientos.fComponentMenu(); //menu
-		funcionamientos.fMobileMenu();
-		funcionamientos.fscrollMenu();
-
 	}
 
 	init();
 
 });
-
-function NuevoError(mensaje){
-	this.name = "UVM Error";
-    this.message = mensaje;
-}
-
-NuevoError.prototype = new Error();

@@ -97,10 +97,6 @@ var comparador = ( function( window, undefined ) {
 			// beginSlide(0);
 		});
 
-		$('.line-carrer >li, .pick-carrer >li').on( "click", 'a', function(e) {
-			e.preventDefault();
-		});
-
 		$('.step').on( 'click' , '.beginSlide', function(){
 			beginSlide(0);
 		});
