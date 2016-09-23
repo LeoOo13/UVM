@@ -71,7 +71,7 @@ var mapaUVM = (function () {
 
 				var map = new google.maps.Map(document.getElementById(mapId), mapOptions);
 				map.setOptions({ minZoom: 3 });
-				mapas.push({ id : mapId ,mapa: map, markers: [], infowindows:[] });
+				mapas.push({ id : mapId ,mapa: map, markers: [] });
 
 				google.maps.event.addListenerOnce(mapas[i].mapa, 'idle', function(){
 				    console.log('finish loading');
@@ -92,10 +92,8 @@ var mapaUVM = (function () {
 				mapaUVM.reset(i);
 
 			},
-			closeInfoWindows : function(i){
-				mapas[i].infowindows.forEach(function(infowindow) {
-					infowindow.close();
-				});
+			closeInfoWindows : function(){
+				marker.infowindow.close();
 			},
 			reset: function(i){
 				if($(".component-c57 .component-c9 .iframe").length>0){
@@ -166,13 +164,10 @@ var mapaUVM = (function () {
 							content: infoText
 						});
 
-
 						marker.addListener('click', function() {
-							mapaUVM.closeInfoWindows(index);
 						    infowindow.open(mapas[index].mapa, marker);
 						});
 
-						mapas[index].infowindows[count] = infowindow; 
 						mapas[index].markers[count] = marker;  
 
 						bounds.extend(myLatlng);

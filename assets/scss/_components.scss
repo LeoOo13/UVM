@@ -824,7 +824,7 @@
 			ul{
 				padding-left:145px;
 				li{
-					color: $red1; margin: 10px auto;
+					color: $red1;
 					&.tittle{
 						list-style: none;
 						font-size: 23px;
@@ -1806,8 +1806,6 @@
 
 	.component-c13{
 		display: flex;
-		display: -ms-flexbox;
-		-ms-flex-pack: center;
 	    align-items: center;
 	    flex-wrap: wrap;
 	    + .component-c13 {
@@ -2504,16 +2502,9 @@
 	}
 	.component-t9d{
 		>div{
-			padding: 0 30px;
-			min-height: initial;
-
-			-webkit-column-count: 2; /* Chrome, Safari, Opera */
-			-moz-column-count: 2; /* Firefox */
+			padding:0 30px;
 			column-count: 2;
-			
 			column-gap: 50px;
-			-webkit-column-gap: 50px;
-			-moz-column-gap: 50px;
 		}
 	}
 
@@ -2565,13 +2556,7 @@
 				border-top: 5px solid $red1;
 				.cont-list{
 					padding:50px 30px;
-
-					-webkit-column-count: 2; /* Chrome, Safari, Opera */
-					-moz-column-count: 2; /* Firefox */
 					column-count: 2;
-					
-					-webkit-column-gap: 50px; /* Chrome, Safari, Opera */
-					-moz-column-gap: 50px; /* Firefox */
 					column-gap: 50px;
 					strong{
 						padding-left: 30px;
@@ -4441,22 +4426,6 @@
 		}
 	}
 	.component-m2 {
-		&+.m2-fixed-space{
-			display: none;
-			width: 100%;
-			height: 60px;
-			padding: 0;
-			margin: 0;
-			background: none;
-			position: relative;
-		}
-
-		&.fixed-element{
-			&+.m2-fixed-space{
-				display: block;
-			}
-		}
-
 		&.seven-secc{
 			.container{
 				ul{
@@ -4664,7 +4633,7 @@
 				margin-bottom: 25px;
 			}
 			.text-content {
-				padding: 15px 15px 10px;
+				margin: 15px auto 10px auto;
 			}
 			.cont-expanded{
 				padding:0;
@@ -4897,12 +4866,6 @@
 			}
 			.expanded-link {
 				margin-bottom: 25px;
-				.component-c58{
-					padding:0;
-					>div{
-						padding:0;
-					}
-				}
 			}
 		}
 	}
@@ -5024,11 +4987,10 @@
 				}
 			}
 			.text-content {
-				padding: 0;
+				padding: 15px 20px;
 			}
 			.expanded-link {
 				margin-bottom: 25px;
-				padding: 15px 20px;
 			}
 		}
 	}
@@ -5738,29 +5700,7 @@
 			}
 		}
 	}
-	.component-c5b{
-		.buttons-zone{
-			>div{
-				&.active{
-					border: 5px solid $red1;
-						&:before{
-							content: '';
-							width: 0;
-						     height: 0;
-						     border-right: 23px solid transparent;
-						     border-bottom: 23px solid transparent;
-						     border-left: 23px solid transparent;
-						     border-top: 23px solid $red1;
-						     position: absolute;
-						     bottom: -46px;
-						     display: block;
-						     left: 50%;
-						     margin-left: -23px;
-						}
-				}
-			}
-		}
-	}
+
 	.component-c5, .component-c16a, .component-c60, .component-c16{
 		.component-wrapper{
 			padding:0;
@@ -7398,7 +7338,7 @@
 			margin: 0 auto 40px;
 			form{
 				>div{
-					padding: 5px;
+					padding:0 5px;
 				}
 			}
 			.btn-cont{

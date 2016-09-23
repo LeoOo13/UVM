@@ -26,16 +26,6 @@
 			.container {
 				width: 100%;
 			}
-			.component-d4, .component-d5{
-				form{
-					padding: 0 10px;
-					>div{
-						div {
-							// padding: 0 5px;
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -905,7 +895,6 @@
 			.cont-expanded{
 				.expanded-link{
 					padding: 50px 20px 10px;
-					margin: 0;
 				}
 			}
 		}
@@ -1208,7 +1197,7 @@
 @media ( max-width: 767px ) {
 	body {
 		padding-top: 60px;
- 		
+
 		&.home{
 			padding-top: 0;
 		}
@@ -1262,7 +1251,6 @@
 					margin: 40px auto 20px;
 				}
 			}
-
 			.component-cpm {
 				.in-content {
 					.divided-c {
@@ -1295,29 +1283,7 @@
 					margin-top: 0;
 				}
 			}
-			.component-c28{
-				.slider-c19{
-					>div{
-						padding:0;
-					}
-					.cont-text{
-						padding: 0 15px;
-					}
-				}
-			}
-	 		footer {
-				#more-about-cont {
-					display: none;
-					&.active {
-						display: block;
-					}
-				}
-				.footer-legals {
-					margin-top: 40px;
-					.extend-footer-btn {
-						display: inline-block;
-					}
-				}
+			footer {
 				.contac {
 					p {
 						a {
@@ -1369,13 +1335,6 @@
 				padding: 15px !important;
 			}
 			.component-c21a {
-				.cont-expanded {
-					.expanded-link {
-						.component-c28 {
-							padding: 25px 0 20px 0;
-						}
-					}
-				}
 				.buttons-zone {
 					> div {
 						padding: 15px;
@@ -1453,7 +1412,6 @@
 								background-color: $red1;
 								color:$white;
 								p{color: $white;
-									font-size:16px;
 									-webkit-transition: none;
 								    -moz-transition: none;
 								    -o-transition: none;
@@ -1500,11 +1458,6 @@
 			}
 			.component-c13{
 				display:block;
-				>div{
-					>div{
-						padding:0;
-					}
-				}
 			}
 			.component-c13, .component-c23 {
 				> div {
@@ -1731,17 +1684,13 @@
 					}
 				}
 			}
-			/*Animacion similar a la del menu para los quicklist*/
+		
 			.component-ql {
-				display:block;
-				-webkit-transform: translate3d(0, 0, 0) translateX(-800px);
-				transform: translate3d(0, 0, 0) translateX(-800px);
-				-webkit-transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
-				transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+				display: none;
 
 				&.active{
-					-webkit-transform: translate3d(0, 0, 0) translateX(0);
-          			transform: translate3d(0, 0, 0) translateX(0);}
+					display: block;
+				}
 			}
 
 			#component-cpm {
@@ -2694,17 +2643,6 @@
 					}
 				}
 			}
-			.component-c20c {
-				.cont-expanded {
-					.expanded-link {
-						.slider-c19 {
-							.swiper-container {
-								margin: 60px auto 0 auto;
-							}
-						}
-					}
-				}
-			}
 			.component-c20, .component-c20b, .component-c20c {
 				 .btn {
 				 	  margin: 10px auto 20px auto;
@@ -3431,9 +3369,6 @@
 		.component-c38, .component-c67{
 			.cont-expanded{
 				.expanded-link {
-					.slider-c19{
-						padding: 65px 0 20px 0;
-					}
 					.image-zone {
 						padding: 65px 15px 15px ;
 					}
@@ -3818,6 +3753,15 @@
 						}
 					}
 				}
+			}
+			.component-c60 {
+				 > div {
+				 	.int {
+				 		p {
+				 			min-height: 130px;
+				 		}
+				 	}
+				 }
 			}
 			.component-cp3, .cp-donde {
 				.content-cp3 {

@@ -20,9 +20,6 @@ body {
 				margin-left: -15px; margin-right: -15px; margin-bottom: 15px;
 				&:nth-last-child(1) {
 					margin-bottom: 0;
-					&.backgray-1, &.backgray-2, &.backgray-3, &.backgray-4, &.backgray-5, &.backgray-6, &.backgray-7, &.backgray-8, &.backgray-9, &.backgray-10, &.backgray-11 {
-						margin-bottom: 15px;
-					}
 				}
 				.content, .component-wrapper{
 					> .row {
@@ -1759,12 +1756,9 @@ body {
 
 		/* FOOTER */
 		footer {
-			background: $gray11; color: $white; padding: 0;
+			background: $gray11; color: $white; padding: 20px 0 0 0;
 			> .container {
 				margin-bottom: 20px;
-			}
-			#more-about-cont {
-				padding: 20px 0 0 0;
 			}
 			.footer-logo {
 				padding: 0;
@@ -1822,73 +1816,12 @@ body {
 				}
 			}
 			.footer-legals {
-				background: $gray12; padding: 10px 0; position: relative;
+				background: $gray12; padding: 10px 0;
 				p, a {
 					font-size: 12px; margin-bottom: 0;
 				}
 				.privacy-links {
 					text-align: right;
-				}
-			}
-			.extend-footer-btn {
-				display: none;
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: -20px;
-				padding: 0;
-				margin: 0 auto !important;
-				float: none;
-				text-align: center;
-
-				height: 40px;
-				width: 40px;
-				color: $white;
-				margin: auto;
-				background: $red1;
-				border-radius: 30px;
-				.icon {
-					display: inline-block;
-					height: 40px;
-					width: 40px;
-					font-size: 30px;
-					line-height: 38px;
-					overflow: hidden;
-					cursor: pointer;
-				}
-				&.active {
-					.icon {
-						line-height: 34px;
-						&:before{
-							content: "\41";
-						}
-					}
-				}
-			}
-			.go-to-top {
-				display: inline-block;
-				background: $red1;
-				text-align: center;
-				position: fixed;
-				right: 20px;
-				bottom: 30px;
-				z-index: 2;
-				opacity: 0.75;
-
-				height: 40px;
-				width: 40px;
-
-				&:hover {
-					opacity: 1;
-				}
-				.icon {
-					display: inline-block;
-					height: 40px;
-					width: 40px;
-					font-size: 30px;
-					line-height: 35px;
-					overflow: hidden;
-					cursor: pointer;
 				}
 			}
 		}
