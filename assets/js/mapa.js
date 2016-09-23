@@ -98,24 +98,14 @@ var mapaUVM = (function () {
 				});
 			},
 			reset: function(i){
-				if($(".component-c9 .iframe").length>0){
-					$('.component-c9').on( "click", ".btn-map", function(event) {
+				if($(".component-c57 .component-c9 .iframe").length>0){
+					$('.component-c57 .component-c9').on( "click", ".btn-map", function(event) {
 						event.stopPropagation();
 						var center = mapas[i].mapa.getCenter();
 						google.maps.event.trigger(mapas[i].mapa, 'resize');
 						mapas[i].mapa.setCenter(center);
 					});
 				}
-
-				if($(".componente-mi .iframe").length>0){
-					$('body').on( "click", ".fixed-menu-a >a", function(event) {
-						event.stopPropagation();
-						var center = mapas[i].mapa.getCenter();
-						google.maps.event.trigger(mapas[i].mapa, 'resize');
-						mapas[i].mapa.setCenter(center);
-					});
-				}
-
 				
 			},
 			setResize: function(i){
@@ -324,9 +314,8 @@ var mapaUVM = (function () {
 					// $(".component-c9 .main-tabss").fadeIn();
 				});
 
-				if($(".component-c57 .component-c9 .iframe").length>0 || $(".component-c64c .component-c9 .iframe").length>0){
-					$(".component-c9").on("click", ".close", function(event){
-						event.stopPropagation();
+				if($(".component-c57 .component-c9 .iframe").length>0){
+					$(".component-c9").on("click", ".close", function(){
 						setTimeout(function(){
 							$(".component-c57 .buttons-zone .flange:last-child").addClass('active');
 							$(".component-c57 .cont-expanded .expanded-link:last-child").show();

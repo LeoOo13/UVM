@@ -188,8 +188,8 @@ var comparador = ( function( window, undefined ) {
 					options.push('<option value="'+plan.id+'">'+plan.titulo+'</option>')
 				});
 
-				$main.find('.final-select').html('<select name="plan-de-estudios" class="swiper-no-swiping"><option value="0">Elige una el plan de estudios</option>'+options.join("")+'</select>');
-				$mainmobile2.find('.select-field').html('<select name="plan-de-estudios-m" class="swiper-no-swiping"><option value="0">Elige una el plan de estudios</option>'+options.join("")+'</select>');		  			
+				$main.find('.final-select').html('<select><option value="0">Elige una el plan de estudios</option>'+options.join("")+'</select>');
+				$mainmobile2.find('.select-field').html('<select><option value="0">Elige una el plan de estudios</option>'+options.join("")+'</select>');		  			
 
 				$mainmobile3.children('.title').html('<strong>'+meta.titulo+'<strong>');
 
