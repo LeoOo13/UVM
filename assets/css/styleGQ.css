@@ -87,28 +87,3 @@ body #wrapper.uvm-main-container div .block-uvm section.block-uvm .content .row,
     padding: 30px 0px 0px;
 }
 /*Fin C28*/
-/* T11*/
-.row.component-t11 .col-sm-4  a{
-   font-weight: bold;   
-}
-/* fin T11 */
-
-/* I1C */
-body #wrapper.uvm-main-container div .block-uvm section.block-uvm .content .row, body #wrapper.uvm-main-container div .block-uvm section.block-uvm .component-wrapper .row {
-    padding: 0 0px;
-}
-/* fin 1IC */
-
-/* C1 */
-
-#wrapper.uvm-main-container .block-uvm .component-c1 > div .int strong{
-    font-weight: 700;
-}
-/* fin C1 */
-
-/* c57 */
-
-#wrapper.uvm-main-container div.row.component-c57 .tabss{
-   display: none;
-}
-/* fin c57 */
