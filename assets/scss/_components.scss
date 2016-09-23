@@ -3,34 +3,6 @@
 	.component-ql {
 		position: fixed; right: 0; top: 81px; display: block; text-align: center; z-index: 102;
 		.button-container{display:none;}
-
-		#open-ql-btn{
-			border-radius: 10px 0 0 10px;
-			color: $white-80; 
-		    display: inline-block;
-		    padding: 0 10px 5px;
-		    background: $black-60;
-		    text-decoration: none;
-		    text-align: center;
-		    border:0px;
-		    width:100%;
-
-		    .to-close{
-		    	border-radius: 10px 0 0 0;
-		    	span{
-		    		border-bottom: 1px solid $white; 
-		    	}
-		    }
-
-		    span{
-		    	font-size: 25px; 
-				padding: 10px 0; 
-				
-				display: inline-block;
-			    width: 46px;
-			    text-align: center;
-		    }
-		}
 		ul {
 			padding: 0; margin: 0 auto; 
 			li {
@@ -44,7 +16,11 @@
 						border-radius: 0 0 0 10px;
 					}
 				}
-				
+				&:first-child{
+					a{
+						border-radius: 10px 0 0 0;	
+					}
+				}
 				a {
 					color: $white-80; 
 				    display: inline-block;
@@ -342,9 +318,6 @@
 	}
 	.component-v1, .component-v2, .component-v3, .component-v4{
 		margin: 30px 0;
-		.cont-iframe{
-				margin-bottom: 0 !important;
-		}
 		.description-iframe {
 			background: $gray1; padding: 0 15px 15px 0;text-align:center;
 			p {
@@ -808,10 +781,8 @@
 		>div{
 			margin-bottom: 0 !important;
 			p {
-				margin-top: 25px;
-				margin-bottom: 0;
 				&:nth-last-child(1) {
-					margin-top: 0;
+					margin-bottom: 25px;
 				}
 			}
 		}
@@ -937,20 +908,6 @@
 		}
 
 	}
-	.component-p4a{
-		>div{
-			.int{
-				height: 234px !important;
-			}
-		}
-	}
-	.component-p3a{
-		>div{
-			.int{
-				height: 334px !important;
-			}
-		}
-	}
 
 	.component-p3, .component-p3a, .component-c62{
 		>div{
@@ -1002,21 +959,11 @@
 				}
 			}
 		}
-	}
-	.component-p1a{
-		>div{
-			.int{
-				height: auto !important;
-			}
+		.cont-btn{
+			padding-top: 40px;
 		}
 	}
-	.component-p2a{
-		>div{
-			.int{
-				height: 290px !important;
-			}
-		}
-	}
+
 	.component-p2, .component-p1, .component-p2a, .component-p1a{
 		>div{
 			.int{
@@ -1281,12 +1228,8 @@
 			}
 		}
 		.cont-btn{
-			margin: 20px auto 40px!important;
-		}
-		.component-l2{
-			margin-bottom:20px !important;
-		}
-
+					margin: 40px auto 0;
+				}	
 	}
 
 	.component-c10{
@@ -1297,23 +1240,21 @@
 			.int{
 				margin-top: 30px;
 				img{
-					width: auto;
-					max-width: 100%;
-					max-height: 150px;
-					margin: 0 0 40px;
+					height: 150px;
+					margin: 50px 0;
 				}
 				strong{
 					font-family: $opensans;
-					font-size: 28px;
+					font-size: 30px;
 					font-weight: lighter;
 					color: $gray11;
 					display: block;
-					margin-bottom: 15px;
+					margin-bottom: 30px;
 				}
 				p{
-					font-size: 15px;
+					font-size: 16px;
 					color: $gray8;
-					margin-bottom: 20px;
+					margin-bottom: 30px;
 				}
 				a{
 					font-weight: bold;
@@ -1349,25 +1290,23 @@
 			margin-top: 50px;
 			padding:0;
 			.int{
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 				img{
-					width: auto;
-					max-width: 100%;
-					max-height: 150px;
-					margin: 0 0 40px;
+					height: 150px;
+					margin: 0 0 50px;
 				}
 				strong{
 					font-family: $opensans;
-					font-size: 28px;
+					font-size: 30px;
 					font-weight: lighter;
 					color: $gray11;
 					display: block;
-					margin-bottom: 15px;
+					margin-bottom: 30px;
 				}
 				p{
-					font-size: 15px;
+					font-size: 16px;
 					color: $gray8;
-					margin-bottom: 20px;
+					margin-bottom: 30px;
 				}
 				a{
 					font-weight: bold;
@@ -1523,50 +1462,27 @@
 
 	.component-c47{
 		margin-top: 30px;
-		>div{
-			&:nth-child(2){
-				.triangle-top{
-					.expanded-link{
-						&:first-child{
-							&:before{
-								left: 34%;
-								margin-left: -33px;
-							}
-						}
-						
-						&:before{
-							left: auto;
-							margin-left: 0;
-							right: 34%;
-							margin-right: -33px;
-						}
-					}
-				}
-			}
-		}
 		.buttons-zone{
 			>div{
-				margin-bottom: 15px;
+				margin-bottom: 45px;
 				text-align: center;
 				.int{
 					img{
-						width: auto;
-						max-width: 100%;
-						max-height: 150px;
-						margin: 0 0 40px;
+						height: 150px;
+						margin: 50px 0;
 					}
 					strong{
 						font-family: $opensans;
-						font-size: 28px;
+						font-size: 30px;
 						font-weight: lighter;
 						color: $gray11;
 						display: block;
-						margin-bottom: 15px;
+						margin-bottom: 30px;
 					}
 					p{
-						font-size: 15px;
+						font-size: 16px;
 						color: $gray8;
-						margin-bottom: 20px;
+						margin-bottom: 30px;
 					}
 					a{
 						font-weight: bold;
@@ -1667,9 +1583,6 @@
 	}
 
 	.component-v5{
-		.cont-iframe{
-			margin-bottom:0 !important;
-		}
 		.cont-text{
 			background-color:$gray2;
 			padding:15px;
@@ -1750,21 +1663,15 @@
 						color: $gray8;
 						margin-bottom: 5px;
 					}
-					a{
-						font-weight: bold;
-						text-transform: uppercase;
-					}
 				}
 			}
 		}
 		.cont-link{
-			margin-top: 0 !important;
-			padding-bottom: 20px;
+			margin-top: 0;
 			text-align: center;
 			a{
 				font-weight: bold;
 				text-transform: uppercase;
-
 			}
 		}
 	}
@@ -1773,22 +1680,6 @@
 		// padding-bottom: 20px;
 		+ .component-c15 {
 			padding: 0 0 30px 0;
-		}
-		.mobile-open-pop{
-
-		    &.active{
-		    	width: 100%;
-			    position: fixed;
-			    height: 100% !important;
-			    background-color: $gray1;
-			    z-index: 9999;
-			    zoom: 1;
-			    overflow: auto;
-			    top: 0;
-			    left: 0;
-			    margin-top:0;
-			    padding:0;
-		    }
 		}
 		.buttons-zone{
 			>div{
@@ -1864,7 +1755,7 @@
 			}
 
 			.expanded-link{
-				background-color:$gray1;
+				background-color:$white;
 				&:before{
 				     border-bottom: 18px solid $white;
 				}
@@ -1916,8 +1807,8 @@
 	.component-c13{
 		display: flex;
 		display: -ms-flexbox;
-		-ms-flex-pack: flex-start;
-	    align-items: flex-start;
+		-ms-flex-pack: center;
+	    align-items: center;
 	    flex-wrap: wrap;
 	    + .component-c13 {
 	    	padding: 0;
@@ -1928,10 +1819,6 @@
 	}
 	.component-c13, .component-c23{
 		>div{
-			&.btn-cont{
-				margin:0 0 20px!important;
-
-			}
 			&.component-l2{
 				margin-top: -20px;
 				margin-bottom: 30px;
@@ -1970,7 +1857,7 @@
 					width: 112px;
 				}
 				.info{
-					padding: 5px 15px 20px;
+					padding: 5px 15px;
 					strong{
 						font-family: $opensans;
 						font-size: 20px;
@@ -2016,126 +1903,6 @@
 						display: block;
 					    background-color: $gray11;
 					    margin: 20px 0;
-					    width: 40px;
-					    height: 40px;
-					    border-radius: 50%;
-					    padding: 5px 10px 0;
-					    text-decoration: none;
-					    span{
-					    	color: $white;
-					    	font-size: 20px;
-					    }
-					    &:hover{
-					    	background-color:$linkedin;
-					    	text-decoration: none;
-					    }
-					}
-					.cont-btn{
-						margin: 40px 0 20px !important;
-
-					}
-				}
-			}
-		}
-		.cont-expanded{
-			margin:0;
-		}
-	}
-	.component-c13b{
-		>div{
-			display: flex;
-			display: -ms-flexbox;
-			-ms-flex-pack: center;
-		    align-items: center;
-		    flex-wrap: wrap;
-			&.component-l2{
-				margin-top: -20px;
-				margin-bottom: 30px;
-			}
-			&.btn-cont{
-				margin:0 0 20px!important;
-
-			}
-			margin: 45px 0;
-			&:nth-child(even){
-				.int{
-					.profile{
-						background-color: $gray5;
-					}
-				}
-			}
-			&:nth-child(odd){
-				.int{
-					.profile{
-						background-color: $gray7;
-					}
-				}
-			}
-			.int{
-				background-color: $white;
-				.profile{
-					height: 262px;
-					position: relative;
-				}
-				img{
-					width: 100%;
-				}
-				.avatar{
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-					bottom:0;
-					margin: auto;
-					width: 112px;
-				}
-				.info{
-					padding: 5px 15px 20px;
-					strong{
-						font-family: $opensans;
-						font-size: 20px;
-						font-weight: lighter;
-						color: $gray11;
-						display: block;
-						position: relative;
-						padding: 20px 0;
-						margin-bottom: 15px;
-
-						&:before{
-							content: '';
-							display: block;
-							width: 80px;
-							height: 4px;
-							background-color: $red1;
-							bottom: 0;
-							left: 0;
-							position: absolute;
-						}
-					}
-					.teacher{
-						font-size: 14px;
-						font-weight: bold;
-
-						text-overflow: initial;
-						overflow: auto;
-						max-width: initial;
-						white-space: initial;
-
-					}
-					p {
-						font-size: 13px;
-						color: $gray8;
-						margin-bottom: 5px;
-
-						text-overflow: ellipsis;
-						overflow: hidden;
-						max-width: 90%;
-						white-space: nowrap;
-					}
-					.linkedin {
-						display: block;
-					    background-color: $gray11;
-					    margin: 20px 0 0;
 					    width: 40px;
 					    height: 40px;
 					    border-radius: 50%;
@@ -2281,7 +2048,6 @@
 		}
 		.cont-expanded{
 			.expanded-link{
-				background-color: $gray3;
 				.cont-info{
 					padding: 60px 70px;
 					>div{
@@ -2988,7 +2754,7 @@
 		}
 	}
 	.component-c72{
-		padding: 0;
+		padding: 30px 0;
 		position:relative;
 		.buttons-zone{
 			padding:0;
@@ -3011,7 +2777,6 @@
 					margin: 0;
 					li{
 						color:$red1;
-						font-size: 16px;
 						a{
 							margin-bottom: 3px;
 							color: $black;
@@ -3024,15 +2789,16 @@
 			}
 		}
 		.cont-expanded{
+			position:absolute;
+			top:0;
+			left: 0;
+			z-index: 1;
 			.close{
 				span{
 					color: $white;
 				}
 			}
-			.expanded-link{
-				padding:0;
-				margin: 0;
-			}
+			
 			.text-content {
 				padding:30px 30px 0;
 				h4{
@@ -3097,9 +2863,6 @@
 				margin-top: 30px;
 				background-color: $gray1;
 				padding: 20px 15px;
-				.data-write{
-					width: 23%;
-				}
 				h4{
 					color: $gray11;
 					text-align: center;
@@ -3134,10 +2897,9 @@
 					p{
 						max-width: 500px;
 						margin: 10px auto;
-						font-size: 22px;
 					}
 					.btn-cont{
-						margin: 20px auto 0;
+						margin: 25px auto 0;
 					}
 				}
 				.component-c57{
@@ -3145,14 +2907,13 @@
 					.cont-expanded{
 						.expanded-link{
 							border-bottom: 5px solid $red1;
-							margin-bottom: 15px;
 						}
 					}
 				}
 				.close-link{
 					display: inline-block;
 					a{
-						margin-top: 25px;
+						margin-top: 30px;
 						position: relative;
 						width: 100%;
 						height: auto;
@@ -3160,7 +2921,7 @@
 						min-height: auto;
 						font-family: $opensans;
 						font-weight: normal;
-						font-size: 22px;
+						font-size: 16px;
 					&:hover{
 						background-color: transparent;
 						text-decoration: underline;
@@ -3248,9 +3009,11 @@
 	}
 
 	.component-c52 {
+		padding-bottom:60px;
 		>div{
 			text-align: center;
 			.int{
+				margin-top: 50px;
 				color: $gray8;
 				>div{
 					width: 174px;
@@ -3297,7 +3060,6 @@
 			width: 100%;
 			img {
 				width: 100%;
-				margin-bottom: 0 !important;
 			}
 		}
 		.text-cont {
@@ -3307,7 +3069,7 @@
 			right: 0;
 			left: 0;
 			bottom:0;
-			margin: auto !important;
+			margin: auto;
 			height: 100px;
 			display: block;
 			text-align: center;
@@ -3346,108 +3108,7 @@
 			right: 0;
 			left: 0;
 			bottom:0;
-			margin: auto !important;
-			height: 50px;
-			display: block;
-			text-align: center;
-			font-size: 0;
-			.tittle{
-				display: inline-block;
-				vertical-align: middle;
-				font-size: 25px; 
-				font-family: $opensans; 
-				font-weight: bold; 
-				color: $white;
-				margin: 0 auto;
-				padding: 0 10px;
-				width: 70%;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-				&.gray{
-					color: $gray11;
-				}
-			}
-			.btn-cont{
-				display: inline-block;
-				vertical-align: middle;
-				width: 30%;
-				margin:0;
-			}
-		}
-	}
-	.component-i1d{
-		iframe{
-			display: block;
-			width: 100%;
-			height: auto;
-		}
-	}
-	.component-i1d {
-		position: relative;
-		&.component-i1f{
-			.text-cont{
-				.tittle{
-					width: 70%;
-				}
-				.btn-cont{
-					display: inline-block;
-					vertical-align: middle;
-					width: 30%;
-					margin:0;
-					padding: 0 15px;
-					.btn{
-						float: right;
-					}
-				}
-			}
-		}
-		.text-cont {
-			position: absolute; 
-			width: 100%;
-			left: 0;
-			bottom:20px;
-			/* background-color: $black-60; */
-			margin: 0 !important;
-			padding: 30px 0 10px;
-			display: block;
-			text-align: left;
-			font-size: 0;
-			.tittle{
-				display: inline-block;
-				vertical-align: middle;
-				font-size: 30px; 
-				font-family: $opensans; 
-				font-weight: bold; 
-				color: $white;
-				margin: 0 auto;
-				padding: 0 15px;
-				width: 100%;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-				&.gray{
-					color: $gray11;
-				}
-			}
-			
-		}
-	}
-
-	.component-i1e {
-		position: relative;
-		.back-img-cont {
-			width: 100%;
-			img {
-				width: 100%;
-			}
-		}
-		.text-cont {
-			position: absolute; 
-			width: 100%;
-			left: 0;
-			bottom:45px;
-			margin: 0 !important;
+			margin: auto;
 			height: 50px;
 			display: block;
 			text-align: center;
@@ -3482,7 +3143,6 @@
 		>div{
 			position: relative;
 			.cont-image{
-
 				img{
 					width: 100%;
 				}
@@ -3505,7 +3165,6 @@
 			position: relative;
 			padding:0;
 			.cont-image{
-
 				img{
 					width: 100%;
 				}
@@ -3535,9 +3194,7 @@
 	}
 			
 	.component-c39{
-		padding-top: 10px !important;
 		>div{
-			margin-top: 0 !important;
 			button{
 				margin:10px 0;
 				width: 100%;
@@ -3665,9 +3322,11 @@
 	}
 
 	.component-c38, .component-c67 {
+		margin-top: 45px;
 		.buttons-zone{
 			>div{
-				padding: 0 15px;
+				margin-bottom: 35px;
+				padding: 0 12px;
 				&.active{
 					.int{
 						border: 5px solid $red1;
@@ -3766,12 +3425,12 @@
 		}
 		.cont-expanded{
 			margin-top: 30px;
-			.expanded-link {
+			.expanded-link { 
 				.slider-c19{
 					padding:0 0 20px 0;
 				}
 				.image-zone {
-					padding:15px 0 15px 20px;
+					padding:35px 0 0 20px;
 					img {
 						width: 100%;
 					}
@@ -3798,7 +3457,10 @@
 
 						}
 					}
-					
+					p{
+						color: $gray8;
+						font-size: 16px;
+					}
 					.cont-btn{
 						text-align: center;
 						.btn{
@@ -3815,15 +3477,6 @@
 		+ .component-c38 {
 			padding: 0;
 		}
-		.cont-expanded{
-			.expanded-link{
-				background-color:$gray7;
-				p{
-					color: $white;
-				}
-
-			}
-		}
 	}
 	.component-c67{
 		+ .component-c67 {
@@ -3831,13 +3484,6 @@
 		}
 		.cont-expanded{
 			.expanded-link{
-				.text-content{
-					p{
-						color: $gray8;
-						font-size: 16px;
-					}
-				}
-				background-color: $gray3; 
 				&:before{
 					left: 37.5%;
 				}
@@ -4261,53 +3907,22 @@
 					}
 				}
 				.description-image {
-					background: $gray1; padding: 0 10px 15px; position: relative;
+					background: $gray1; padding: 0 10px 15px;
 					p {
 						display: inline-block; width: 100%; margin-bottom: 5px;
 					}
 					.who-i { font-size: 20px; font-weight: 100; margin-top: 20px; }
 					.what-i { font-size: 15px; font-weight: bold; }
 					.where-i { font-size: 14px; }
-					.text { font-size: 20px; font-weight: 100; margin: 20px 0 50px; }
-
 					
 				}
 
-			}
-			.right-buttons {
-				position: absolute; bottom: 0; right: 0; width: 50px;
-				ul {
-					margin: 0; padding: 0; text-align: center;
-					li {
-						margin: 0 auto; float: left; list-style: none; background: $red1-80; width: 100%; margin: 0;
-						a {
-							color: $white; padding: 7px 0; display: inline-block;
-							&:hover {
-								text-decoration: none;
-							}
-							span {
-								font-size: 25px;
-							}
-							p { font-size: 10px; text-transform: uppercase; margin: 0; }
-						}
-						-webkit-transition: all 0.25s ease-in-out;
-						-moz-transition: all 0.25s ease-in-out;
-						-o-transition: all 0.25s ease-in-out;
-						transition: all 0.25s ease-in-out;
-						&:hover {
-							background: $red1;
-							-webkit-transition: all 0.25s ease-in-out;
-							-moz-transition: all 0.25s ease-in-out;
-							-o-transition: all 0.25s ease-in-out;
-							transition: all 0.25s ease-in-out;
-						}
-					}
-				}
 			}
 		}
 	}
 
 	.component-c21{
+		padding-bottom:70px;
 		>div{
 			margin-top: 70px;
 			text-align: center;
@@ -4407,7 +4022,6 @@
 			.expanded-link{
 				padding: 20px 30px;
 				margin: 0 auto 0 auto;
-				background-color: $gray3;
 				.component-c28{
 					margin: 0;
 					padding: 20px 0;
@@ -4465,14 +4079,13 @@
 
 	.component-c31{
 		.timeline{
-			padding:0 !important;
-			margin:20px 0 !important;
+			padding:0;
+			margin:0;
 			list-style: none;
 			li{
 				width: 50%;
 				position:relative;
 				padding:20px 40px;
-				margin-bottom: 0 !important;
 				&:before{
 					content: '';
 					width: 2px;
@@ -4881,10 +4494,6 @@
 			}
 		}
 		background: $gray1;
-		margin-top: 20px;
-		&.fixed-element{
-			margin-top: 0;
-		}
 		.container { 
 			padding: 0; 
 			margin: 0 auto; 
@@ -5413,42 +5022,18 @@
 				.data-write{
 					width: 100%;
 				}
-				.component-d1{
-					div{
-						padding:0;
-					}
-				}
 			}
 			.text-content {
 				padding: 0;
 			}
 			.expanded-link {
 				margin-bottom: 25px;
-				padding: 15px;
+				padding: 15px 20px;
 			}
 		}
 	}
-	.component-c17{
-		>div{
-			.int{
-				.inf{
-					min-height: 120px;
-				}
-			}
-		}
 
-	}
 
-	.component-c3, .component-c18, .component-i6{
-		>div{
-			.int{
-				.inf{
-					min-height: 190px;
-				}
-			}
-		}
-
-	}
 
 	.component-c3, .component-c17, .component-c18, .component-i6{
 		>div{
@@ -5479,7 +5064,7 @@
 				margin: 0 auto;
 				display: block;
 				font-weight: bold;
-				margin-bottom: 20px;
+				margin-bottom: 50px;
 			}
 			.int{
 				background-color: $white;
@@ -5487,6 +5072,7 @@
 				
 				.inf{
 					padding: 20px 12px;
+					min-height: 190px;
 					position: relative;
 					h3 {
 						overflow: hidden;
@@ -5511,7 +5097,7 @@
 
 	.component-c17 {
 		> div {
-			
+			margin: 0 auto !important;
 			.int {
 				margin-bottom: 30px;
 			}
@@ -5543,7 +5129,6 @@
 	}
 
 	.component-c56{
-		margin-top: 20px !important;
 		.image-content{
 			padding: 20px 20px 0 20px;
 			img{
@@ -5560,6 +5145,7 @@
 			    position: relative;
 			    padding-bottom: 20px;
 			    display: block;
+	    		margin: 0 0 20px 0;	
 			    &:before{
 			    	content: '';
 				    display: block;
@@ -5574,10 +5160,6 @@
 			p{
 				font-size: 16px;
 	    		font-weight: lighter;
-				margin-top: 20px !important; 
-			}
-			.btn{
-				margin: 15px 0;
 			}
 		}
 	}
@@ -5913,8 +5495,8 @@
 
 	.component-t4{
 		position:relative;
-		padding: 0 15px !important;
-		margin-top: 20px !important;
+		padding: 0 15px;
+		margin: 30px 0;
 		h3{
 			font-size: 25px;
 		    position: relative;
@@ -5958,7 +5540,7 @@
 				}
 				p{
 					font-size: 16px;
-					margin: 25px 0;
+					margin: 30px 0;
 					color: $gray8;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -5976,9 +5558,10 @@
 				strong{
 					font-family: $opensans;
 					font-size: 20px;
-					font-weight: bold;
+					font-weight: lighter;
 					position: relative;
-					padding-bottom: 15px;
+					padding-bottom: 25px;
+					margin-bottom: 25px;
 					margin-top: 25px;
 					display: block;
 					&:before{
@@ -6155,27 +5738,9 @@
 			}
 		}
 	}
-	.component-c5b, .component-c5c{
-		.component-wrapper{
-			margin-top: 0 !important;
-			>div{
-				margin-top: 0 !important;
-				>div{
-					margin-top: 0 !important;
-				}
-			}
-		}
+	.component-c5b{
 		.buttons-zone{
 			>div{
-				.int{
-					cursor: pointer;
-					&:hover{
-						>div{
-							background-color: $red1;
-						}	
-					}
-					
-				}
 				&.active{
 					border: 5px solid $red1;
 						&:before{
@@ -6196,16 +5761,6 @@
 			}
 		}
 	}
-	.component-c64c{
-		.component-c5{
-			.cont-expanded{
-				.expanded-link{
-					border-bottom: 5px solid $white;
-				}
-			}
-			
-		}
-	}
 	.component-c5, .component-c16a, .component-c60, .component-c16{
 		.component-wrapper{
 			padding:0;
@@ -6216,19 +5771,9 @@
 		>div{
 			&.cont-expanded{
 				height:auto;
-				.expanded-link{
-					border-top: 0;
-				}
 			}
 			text-align: center;
 			height: 215px;
-			.active{
-				.int{
-					>div{
-						background-color: $red1;
-					}
-				}
-			}
 			.int{
 				margin-top: 10px;
 				min-height: 215px;
@@ -6386,9 +5931,9 @@
 	}
 
 	.component-c41{
-		padding-top: 0 !important;
 		>div{
-			margin-top: 0 !important;
+			margin-top: 60px;
+			margin-bottom: 80px;
 			div{
 				padding: 9px;
 				a{
@@ -6509,13 +6054,10 @@
 			}
 		}
 		.cont-expanded{
-			/* padding:0 1.5%; */
+			padding:0 1.5%;
 			.expanded-link {
 				padding:0;
-				background-color: $gray3;
-				border-left: 35px solid $red1;
-				border-right: 35px solid $red1;
-				border-bottom:35px solid $red1;
+				width: 97%;
 				.image-zone {
 					padding:0;
 					img {
@@ -6618,7 +6160,7 @@
 
 	.component-c49{
 		padding:0;
-		margin:30px 0;
+		margin:30px 10px;
 			.close{
 				span{
 					color: $white;
@@ -6712,7 +6254,6 @@
 		}
 		.back-img-cont {
 			width: 100%;
-			
 			img {
 				width: 100%; 
 			}
@@ -6758,34 +6299,31 @@
 		.up-text-cont {
 			position: absolute; 
 			left:0;
-			top:0;
-			margin: 0;
-			height: 100%; 
-			width: 100%;
-			padding: 15px 0 30px; 
+			top:50%;
+			margin-top: -90px;
+			height: 180px; 
+			width: 100%; 
 			text-align: center;
-			display: flex;
-			display: -ms-flexbox;
-			-ms-flex-pack: center;
-		    align-items: center;
-		    flex-wrap: wrap;
+			&:before{
+				content: '';
+				width: .1%;
+				height: 180px;
+				display: inline-block;
+				vertical-align: middle;
+			}
 			.i1a-tittle{
 				font-size: 50px; 
 				margin: 0; 
 				padding: 0 40px; 
 				font-weight: bold;
 				color: $white;
-				width: 100%;
-				&.light{
+				width: 98%;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+				span{
 					background-color: $black-60;
 					padding: 0 5px;
-				}
-				span{
-					display: block;
-					font-size: 20px;
-					font-weight: normal;
-					margin-top: 10px;
-
 				}
 			}
 		}
@@ -6793,10 +6331,8 @@
 
 	.component-f3{
 		position: relative;
-
-
 		.right-buttons {
-			position: absolute; bottom: 0; right: 0; width: 60px; margin: 30px auto 0 auto;
+			position: absolute; top: 30px; left: 0; width: 60px; margin: 30px auto 0 auto;
 			ul {
 				margin: 0 auto; padding: 0; text-align: center;
 				li {
@@ -6825,31 +6361,9 @@
 				}
 			}
 		}
-		.close{
-			position: absolute;
-		    right: 0;
-		    top: 0;
-		    padding:10px;
-		    z-index: 1;
-		    width: 50px;
-		    height: 50px;
-		    opacity: 1;
-		    margin:0;
-		    span {
-				color: $red1; 
-				font-size: 30px;
-				text-shadow: none;
-			}
-			&:hover {
-				background-color: $red1;
-				span {
-					color: $white;
-				}
-			}
-		}
 		.component-i1a{
 			padding: 0;
-			height: 520px;
+			height: 460px;
 			overflow: hidden;
 			.back-img-cont{
 				height: 100%;
@@ -6866,7 +6380,7 @@
 		.active-form{
 				position: absolute;
 			    top: 50%;
-			    margin-top: -10px !important;
+			    margin-top: -25px;
 			    right: 15px;
 			    .btn{
 			    	float: right;
@@ -6874,16 +6388,6 @@
 			    }
 			}
 		.content-f3 {
-			overflow: hidden;
-			margin-top: 0 !important;
-
-			&.opened+.right-buttons{
-				display: none;
-			}
-
-
-
-
 			.right-buttons{
 					width: 50px;
 					ul{
@@ -7040,18 +6544,15 @@
 	}
 	.component-c12, .component-c12a {
 		position: relative; padding-top:0 !important;
-		margin: 20px 0 !important;
+		margin-bottom:30px !important;
 		.back-img-cont {
 			width: 100%; overflow: hidden; margin:0; 
-			margin-top: 0 !important;
 			img {
 				width: 100%;
-				margin-bottom: 0 !important;
 			}
 		}
 		.up-text-cont {
-			position: absolute; top: 0; height: 100%; width: 100%; margin:0 !important;
-
+			position: absolute; top: 0; height: 100%; width: 100%; margin:0;
 			&:before {
 				display: table;
 				content: " ";
@@ -7079,7 +6580,6 @@
 			.number-highlight {
 
 				padding: 0 40px 0 80px; height: 100%;
-				margin-bottom: 0 !important;
 				>div{
 					padding-top: 100px; 
 					height: 100%; 
@@ -7117,9 +6617,6 @@
 				-webkit-box-orient: vertical;
 
 			}
-			.text-highlight{
-				margin-bottom: 0 !important;
-			}
 			.exta-details {
 				position: absolute; right: 0; bottom: 0; color: $white; font-weight: bold; padding: 10px; font-size: 14px; max-width: 50%; overflow: hidden; display: block;
 				text-overflow: ellipsis;
@@ -7143,21 +6640,21 @@
 
 	.component-q1 {
 		.img-person {
-			height: 255px; width: 255px; border: 11px solid $gray3; overflow: hidden; border-radius: 300px; margin:0 auto;
+			height: 255px; width: 255px; border: 11px solid $gray3; overflow: hidden; border-radius: 300px; margin: 60px auto 0 auto;
 
 			img {
 				width: 100%; display: block; background: $gray1; height: auto;
 			}
 		}
 		.img-person-2 {
-			height: 255px; width: 255px;  overflow: hidden;  margin:0 auto;
+			height: 255px; width: 255px;  overflow: hidden;  margin: 60px auto 0 auto;
 			
 			img {
 				width: 100%; display: block;  height: auto;
 			}
 		}
 		.text-cont {
-			 width: 80%;
+			margin-top: 70px; width: 80%;
 			p {
 				font-size: 16px;
 				&.tittle-q {
@@ -7196,7 +6693,7 @@
 		}
 		.cont-tittle{
 			margin-bottom: 10px;
-			margin-top: 70px !important;
+			margin-top: 70px;
 
 		}
 		.form-white-bg {
@@ -7209,7 +6706,7 @@
 		}
 		p{
 			text-align: center;
-			margin-bottom: 0 !important;
+			margin-bottom: 40px;
 			font-family: $opensans;
 			font-weight: lighter;
 			font-size: 20px;
@@ -7249,8 +6746,7 @@
 		}
 	}
 	.component-c7, .component-c7a {
-		margin-top: 40px !important ;
-		margin-bottom: 40px !important ;
+		margin-top: 40px !important;
 		&.doble-gray{
 			margin-bottom: 60px;
 			.up-text-cont{
@@ -7263,10 +6759,9 @@
 		}
 		position: relative;
 		.back-img-cont {
-			width: 100%; height: 330px; overflow: hidden; margin-top:0 !important;
+			width: 100%; height: 330px; overflow: hidden;
 		}
 		.up-text-cont {
-			margin-top:0 !important;
 			header {
 				padding: 0;
 				height: 0;
@@ -7328,15 +6823,11 @@
 
 
 	.component-c9 {
-		background: url(../img/back-component-c9.png); background-size: cover; background-position: center; margin-top:20px !important; margin-bottom:20px !important;
+		background: url(../img/back-component-c9.png); background-size: cover; background-position: center; margin-top:40px !important;
 		> header {
 			&:before {
 				display: none !important;
 			}
-			margin-bottom: 0 !important;
-		}
-		.main-tabss{
-			margin-top: 0 !important;
 		}
 		.subtitle-c9 {
 			font-size: 20px; font-weight: 100;
@@ -7519,7 +7010,7 @@
 							a {
 								font-weight: 100; color: $gray10; padding:0;
 								&:hover, &:active {
-									color: $red1; text-decoration: underline !important;
+									color: $red1; text-decoration: underline;
 								}
 							}
 						}
@@ -7571,7 +7062,7 @@
 	}
 
 	.component-c4 {
-		position: relative; margin-bottom: 20px !important; min-height: 800px; overflow:hidden;
+		position: relative; margin-bottom: 60px; min-height: 800px; overflow:hidden;
 		.stripe-up {
 			padding: 40px 0 20px 0; text-align: left;
 			&:before {
@@ -7608,7 +7099,7 @@
 			margin: 25px auto 10px auto;  display: block;
 		}
 		.dialogue-circle {
-			width: 210px; height: 100px; position: absolute; bottom: 80px; left: 170px; z-index: 1;
+			width: 210px; height: 100px; position: absolute; bottom: 60px; left: 170px; z-index: 1;
 			p {
 				font-size: 20px; color: $gray10; line-height: 1.2;
 				overflow: hidden;
@@ -7653,7 +7144,7 @@
 			}
 		}
 		.right-buttons {
-			position: absolute; bottom: 20px; right: 0; width: 60px;
+			position: absolute; bottom: 0; right: 0; width: 60px;
 			ul {
 				margin: 0; padding: 0; text-align: center;
 				li {
@@ -7684,8 +7175,7 @@
 		}
 	}
 	.component-i12{
-		padding: 20px 15px !important;
-		margin-bottom: -20px !important;
+		padding: 50px 15px;
 		.a-part {
 			position: relative; margin:0; background: $white;
 			> div {
@@ -8124,11 +7614,10 @@
 	}
 		
 	.component-t7 {
-		padding: 0 15px !important;
 		> div {
 			border-right: 4px solid $gray1; padding: 0 50px;
-			&:first-child {
-				border-left: 4px solid $gray1;
+			&:nth-last-child(1) {
+				border-right: none;
 			}
 		}
 		header {
@@ -8160,16 +7649,10 @@
 		}
 	}
 
-	.component-d4, .component-d5, .component-d5b, .component-d6 {
+	.component-d4, .component-d5, .component-d6 {
 		margin: 20px auto;
 		.form-white-bg {
 			form {
-				.type{
-					p{
-						font-size: 16px;
-						margin: 14px auto;
-					}
-				}
 				p { font-size: 20px; color: $gray9; margin: 10px auto; display: inline-block;}
 				.data-write {
 					width: 100%;
@@ -8192,60 +7675,13 @@
 	.component-d6 {
 		margin-bottom: 30px !important;
 		.form-white-bg {
-			>div{
-				margin-top: 30px !important;
-			}
-			form{
-				>div{
-					width: 29%;
-					&:nth-child(4){
-						width: 13%;
-						.btn{
-							float: right;
-						}
-					}
-					>div{
-						&:nth-child(1){
-							>div{
-								&:nth-child(1){
-									padding-left:15px;
-								}
-							}
-						}
-						>div{
-							&:nth-child(1){
-								padding:0;
-							}
-						}
-					}
-
-				}
-			}
-		}
-	}
-
-	.component-d5b {
-		.form-white-bg {
-			form{
-				>div{
-					width: 22%;
-					&:nth-child(5){
-						width: 12%;
-						padding:0;
-						.btn-cont{
-							margin: 0;
-							.btn{
-								float: right;
-							}
-						}
-					}
-					>div{
-						>div{
-							padding-left: 0;
-							&.type{
-								padding:0;
-							}
-						}
+			form {
+				.cont-btn{
+					margin-top: 20px;
+					.btn{
+						width: 100%;
+						min-height: 50px;
+						height: auto;
 					}
 				}
 			}
@@ -8253,7 +7689,7 @@
 	}
 
 	.component-br {
-		margin: 20px auto 0 !important;
+		margin: 25px auto;
 		p {
 			display: inline-block; font-size: 12px; vertical-align: middle; margin: 0 auto;
 			&:nth-child(1){
@@ -8304,12 +7740,12 @@
 		}
 		.text-content {
 			position: absolute; bottom: 0; left: 0; width: 100%; background: $black-60; padding: 30px; color: $white;
-			h2 {
-				font-size: 40px; font-family: $montserrat; font-weight: bold;
+			h3 {
+				font-size: 50px; font-family: $montserrat; font-weight: bold;
 				text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
 			}
 			p {
-				font-size: 30px; font-family: $montserrat; font-weight: normal; text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+				font-size: 40px; font-family: $montserrat; font-weight: normal; text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
 			}
 		}
 	}
@@ -8325,12 +7761,6 @@
 	}
 
 	.component-cp-prepa{
-		.elemento-componente-comparador{
-			>div{
-				margin-bottom: 0;
-				padding: 0;
-			}
-		}
 		.cp-donde{
 			padding-left:20px;
 			padding-right:20px;
@@ -8340,13 +7770,9 @@
 				top:14px !important;
 			}
 		}
-		.component-cp3{
-			.incontent-cp3{
-				position:relative;
-				padding: 90px 0 40px;
-			}
+		.incontent-cp3{
+			position:relative;
 		}
-		
 		.video-container{
 			margin:20px 0 40px;
 			.description-iframe{
@@ -8363,22 +7789,6 @@
 		}
 		.component-wrapper, .row{
 			padding: 0;
-		}
-		#component-cpm-prepa {		
-			.component-wrapper {
-				.component-cpm {
-					.step {
-						.in-content {
-							.limit-content {
-								.actionStep {
-									max-width: 500px;
-									margin: 0 auto;
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 	.component-d3{display:inline-block; width:100%;}
@@ -8498,12 +7908,10 @@
 		// background: $white;
 		.incontent-cp2 {
 			position: relative;
-			float: left;
-			background-color: $white;
 			&:before {
 				position: absolute;
 				left: 50%;
-				top: 0;
+				top: 30px;
 				border-style: solid;
 				border-width: 70px 615px 0 0;
 				border-color: $gray1 transparent transparent transparent;
@@ -8516,7 +7924,7 @@
 			&:after {
 				position: absolute;
 				right: 50%;
-				top: 0;
+				top: 30px;
 				border-style: solid;
 				border-width: 0 615px 70px 0;
 				border-color: transparent $gray1 transparent transparent;
@@ -8627,7 +8035,7 @@
 				}	
 				&:nth-child(2){
 					.content-cp3{
-					padding: 30px 15px 30px 50px;
+					padding: 30px 30px 30px 60px;
 					}
 				}
 			}
@@ -8673,7 +8081,7 @@
 						font-weight: 100; color: $gray8;
 						strong{
 							font-size: 30px;
-							color: $green1;
+							color: $gray9;
 							font-weight: bold;
 						}
 					}
@@ -8824,7 +8232,6 @@
 			 max-width: none;
 			.data-write {
 				width: 100%;
-				margin: 10px 0;
 				input, select {
 					padding: 1px 40px 1px 15px; width: 100%;
 				}
@@ -8852,20 +8259,12 @@
 			}
 		}
 		a {
-			display: block; text-transform: uppercase; font-weight: bold; font-size:16px;
-		}
-		.btn{
-			width: 100%;
-			margin: 10px 0;
+			display: block; text-transform: uppercase;
 		}
 	}
 
 	.component-b2 {
 
-		.btn-cont{
-			margin-top: 0 !important;
-			margin-bottom:20px !important;
-		}
 		// Clase Clearfix
 		&:before, &:after {
 			display: table;
@@ -8960,7 +8359,7 @@
 		}
 
 		.left-text-cont {
-			position: absolute; bottom: 20px; left: 0; width: 460px; background: $black-60; color: $white; height: 190px; margin: 0 auto;
+			position: absolute; bottom: 0; left: 0; width: 460px; background: $black-60; color: $white; height: 190px; margin: 0 auto;
 			&:before {
 				height: 200px; width: 100%; position: absolute; bottom: 100%; left: 0; background: $black-60; content: ""; border-top-right-radius: 100%;
 			}
@@ -8985,7 +8384,7 @@
 			}
 		}
 		.right-buttons {
-			position: absolute; bottom: 20px; right: 0; width: 80px;
+			position: absolute; bottom: 0; right: 0; width: 80px;
 			ul {
 				margin: 0; padding: 0; text-align: center;
 				li {
@@ -9052,13 +8451,13 @@
 				font-size: 15px; color: $gray10;
 			}
 			&:hover, &.active {
-				background: $red1; color: $white; margin-bottom: 20px;
+				background: $red1; color: $white;
 				span, p { color: $white; }
 				&:after {
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 14px 14px 0 14px;
+					border-width: 14px 7px 0 7px;
 					border-color: $red1 transparent transparent transparent;
 					position: absolute;
 					bottom: -14px; left: 0; right: 0; margin: auto;
@@ -9079,14 +8478,13 @@
 	}
 
 	.component-c65 {
-		margin-bottom: 20px !important;
+		padding-bottom:60px;
 		.cont-btn{
 			height: auto;
 			margin:0;
 		}
 		>div{
-			text-align: center; 
-			// height: 250px;
+			text-align: center; height: 250px;
 				margin-bottom: 50px;
 
 			.int{
@@ -9108,7 +8506,7 @@
 					font-size: 15px;
 					color: $gray8;
 					margin-top: 25px;
-					height: 65px;
+					max-height: 65px;
 
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -9255,15 +8653,13 @@
 		}
 	}
 	#component-c20-more{
-		padding-top:0;
 		.component-c20{
 			padding-top:0;
-			margin-bottom: 0;
 		}
 	}
 	.component-c20, .component-c20b, .component-c20c {
 		.btn-cont{
-			margin:0 !important;
+			margin:0;
 		}
 		.btn{
 			white-space: normal;
@@ -9365,9 +8761,7 @@
 			}
 		}
 		.expanded-link {
-			padding: 45px; 
-			position: relative;
-			background-color: $gray3;
+			padding: 45px; position: relative;
 			.slider-c20{
 				>div{
 					padding: 10px 0 0 0;
@@ -9513,7 +8907,6 @@
 					&.active {
 						text-decoration:none;
 						background: $white;
-						margin-bottom: 20px;
 						&:before{
 						     border-top: 20px solid $white;
 						}
@@ -9868,24 +9261,20 @@
 							>div{
 								width: 50%;
 								float: left;
-								text-align: center;
 								ul{
-									margin: 0; padding:0 0 0 0px; display: inline-block;
+									margin: 0; padding:0 0 0 0px;
 									.tittle{
 										list-style: none;
 										font-size: 16px;
 										margin: 0;
-
 										p{
 											font-weight: bold;
 											color: $gray11;
 											margin-bottom: 5px;	
-											text-align: left;
 										}
 									}
 									li{
 										color: $red1;
-										text-align: left;
 											a{
 												text-transform: none;
 												color: $black;
