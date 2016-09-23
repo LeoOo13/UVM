@@ -119,13 +119,14 @@
 	    	width: 100%;
 		    position: fixed;
 		    height: 100% !important;
-		    background-color: $gray1;
+		    background-color: $gray3;
 		    z-index: 9999;
 		    zoom: 1;
 		    overflow: auto;
 		    top: 0;
-		    margin-top:0;
-		    padding:0;
+		    left: 0;
+		    margin-top:0 !important;
+		    padding:0 !important;
 	    }
 	}
 	.nav-section{
@@ -206,9 +207,13 @@
 .componente-mi{
 	.row{
 		margin:0;
+		>div{
+			margin-bottom: 20px;
+		}
 	}
 	.iframe{
 		height:400px;
+		border: 5px solid $gray5;
 	}
 }
 #map-canvas, #map-canvas-single{
