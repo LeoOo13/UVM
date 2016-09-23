@@ -14,14 +14,15 @@
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+    <body>
+  <div class="uvm-main-container">
 
   <div class="container">
     <section class="block-uvm">
       <header>
         <h2>Listado de componentes</h2>
       </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-links">
             <div class="col-sm-12 cont-searcher">
               <div class="col-sm-10 col-sm-offset-1 type-search">
@@ -46,15 +47,27 @@
       </section>
     </div>
    <h1 id="componente-m1home" class="name">Componente M1 home</h1> <!-- nombre del componente -->
+
   <!-- M1 HOME-->
   <div class="container">
     <div class="row header-home">
       <div class="col-sm-12">
-        <div class="col-sm-12 cont-slider-home">
-          <img src="../assets/img/back-home.jpg">
+        <div class="component-slider-full col-sm-12 cont-slider-home">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-img="../assets/img/back-home.jpg" data-titulo="Título 1" data-subtitulo="Subtitulo 1"></div>
+                <div class="swiper-slide" data-img="https://placeholdit.imgix.net/~text?txtsize=33&txt=imagen&w=1280&h=681" data-titulo="Título 2" data-subtitulo="Subtitulo 2"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+          </div>
         </div>
+<!--         <div class="col-sm-12 cont-slider-home">
+          <img src="../assets/img/back-home.jpg">
+        </div> -->
         <div class="col-sm-12 cont-nav-home">
-           <!-- M1a -->
+          <!-- M1a -->
           <nav class="navbar-header-min">
             <div class="container">
               <div class="row">
@@ -106,12 +119,15 @@
                               <span class="icon i-angle-down"></span>
                           </a>
                           <div class="data-languages">
-                            <a href="#" class="option-1">
+                            <div>
                               <span class="icon i-world"></span>
-                              <span class="type">Español</span>
+                              <span class="type">Idioma</span>
                               <span class="icon i-angle-down"></span>
+                            </div>
+                            <a href="#" class="option-1">
+                              <span class="type">Español</span>
                             </a>
-                            <a href="#" class="option-2">
+                            <a href="#">
                               <span class="type">Inglés</span>
                             </a>
                           </div>
@@ -121,7 +137,10 @@
                             <span class="icon i-search"></span>
                           </a>
                           <div class="data-write">
-                            <input type="text" placeholder="Lorem ipsum dolor">
+                            <form>
+                              <input type="text" placeholder="Buscar en UVM">
+                              <button type="submit">Buscar</button>
+                            </form>
                           </div>
                         </li>
                       </ul>
@@ -131,23 +150,25 @@
 
                 <div class="col-md-12 mobile-head">
                   <div class="container">
-                    <div class="col-xs-2 backgray-2">
+                    <div class="col-xs-2">
                       <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a>
                     </div>
-                    <div class="col-xs-2">
-                      <a href="#" class="icon i-compass"></a>
+                    <div class="col-xs-8 logo-container">
+                      <span class="logo">
+                        <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+                      </span>
                     </div>
                     <div class="col-xs-2">
-                      <a href="#" class="icon i-dates"></a>
-                    </div>
-                    <div class="col-xs-2">
-                      <a href="#" class="icon i-calc"></a>
-                    </div>
-                    <div class="col-xs-2">
-                      <a href="#" class="icon i-signlist"></a>
-                    </div>
-                    <div class="col-xs-2 backgray-2">
                       <a href="#" class="icon i-search"></a>
+                    </div>
+                    
+                    <div class="mobile-search-container col-sm-12 col-xs-12">
+                      <div class="data-write"> 
+                        <form>
+                          <input type="text" placeholder="Buscar en UVM">
+                          <button type="submit">Buscar</button>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -420,7 +441,6 @@
               </div>
             </div>
           </nav>
-          <div class="back-black" id="bg-popup"></div>
           <!-- FIN M1b -->
         </div>
       </div>
@@ -439,393 +459,1091 @@
    <h1 id="componente-m1" class="name">Componente M1</h1> <!-- nombre del componente -->
 
     <!-- M1 -->
-    <!-- M1a -->
-    <nav class="navbar-header-min">
-      <div class="container">
-        <div class="row">
-        <!-- M1 logo -->
-          <div class="col-md-3 main-logo">
-            <span class="logo">
-              <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
-            </h1>
-          </div>
-        <!-- FIN M1 logo -->
-          <div class="col-md-9 superior-bar">
-            <div class="container">
-              <div class="col-sm-12 col-md-8 aditional-topics">
-                <ul>
-                  <li>
-                    <a class="special" href="#">Aspirantes</a>
-                  </li>
-                  <li>
-                    <a class="active" href="#">Alumnos</a>
-                  </li>
-                  <li>
-                    <a href="#">Egresados</a>
-                  </li>
-                  <li>
-                    <a href="#">Académicos</a>
-                  </li>
-                  <li>
-                    <a href="#">Administrativos</a>
-                  </li>
-                  <li>
-                    <a href="#">Empresas</a>
-                  </li>
-                </ul>
+      <!-- M1a -->
+      <nav class="navbar-header-min">
+        <div class="container">
+          <div class="row">
+          <!-- M1 logo -->
+            <div class="col-md-3 main-logo">
+              <span class="logo">
+                <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+              </span>
+            </div>
+          <!-- FIN M1 logo -->
+            <div class="col-md-9 superior-bar">
+              <div class="container">
+                <div class="col-sm-12 col-md-8 aditional-topics">
+                  <ul>
+                    <li>
+                      <a class="special" href="#">Aspirantes</a>
+                    </li>
+                    <li>
+                      <a class="active" href="#">Alumnos</a>
+                    </li>
+                    <li>
+                      <a href="#">Egresados</a>
+                    </li>
+                    <li>
+                      <a href="#">Académicos</a>
+                    </li>
+                    <li>
+                      <a href="#">Administrativos</a>
+                    </li>
+                    <li>
+                      <a href="#">Empresas</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 less-imp-topics"> 
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <span class="icon i-chat"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="icon i-telephone"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="icon i-mail"></span>
+                      </a>
+                    </li>
+                    <li class="language">
+                      <a href="#" class="option-1">
+                          <span class="icon i-world"></span>
+                          <span class="current">Español</span>
+                          <span class="icon i-angle-down"></span>
+                      </a>
+                      <div class="data-languages">
+                        <div>
+                          <span class="icon i-world"></span>
+                          <span class="type">Idioma</span>
+                          <span class="icon i-angle-down"></span>
+                        </div>
+                        <a href="#" class="option-1">
+                          <span class="type">Español</span>
+                        </a>
+                        <a href="#">
+                          <span class="type">Inglés</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="search">
+                      <a href="#">
+                        <span class="icon i-search"></span>
+                      </a>
+                      <div class="data-write">
+                        <form>
+                          <input type="text" placeholder="Buscar en UVM">
+                          <button type="submit">Buscar</button>
+                        </form>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-sm-12 col-md-4 less-imp-topics"> 
-                <ul>
-                  <li>
-                    <a href="#">
-                      <span class="icon i-chat"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="icon i-telephone"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="icon i-mail"></span>
-                    </a>
-                  </li>
-                  <li class="language">
-                          <a href="#" class="option-1">
-                              <span class="icon i-world"></span>
-                              <span class="current">Español</span>
-                              <span class="icon i-angle-down"></span>
-                          </a>
-                          <div class="data-languages">
-                            <a href="#" class="option-1">
-                              <span class="icon i-world"></span>
-                              <span class="type">Español</span>
-                              <span class="icon i-angle-down"></span>
-                            </a>
-                            <a href="#" class="option-2">
-                              <span class="type">Inglés</span>
-                            </a>
-                          </div>
+            </div>
+
+            <div class="col-md-12 mobile-head">
+              <div class="container">
+                <div class="col-xs-2">
+                  <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a>
+                </div>
+                <div class="col-xs-6 logo-container">
+                  <span class="logo">
+                    <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+                  </span>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-search"></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-quicklink menu-mobile-ql"></a>
+                </div>
+                <div class="mobile-search-container col-sm-12 col-xs-12">
+                  <div class="data-write"> 
+                    <form>
+                      <input type="text" placeholder="Buscar en UVM">
+                      <button type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+      <!-- FIN M1a -->
+
+      <!-- M1b -->
+      <nav class="nav-section">
+        <div class="container">    
+          <ul class="clearfix">
+            <li class="col-xs-12 cancel-zone">
+              <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span>
+              <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span>
+            </li>
+            <li class="col-xs-12 col-md-2 menu-change-soy not-on-menu-soy not-desktop-menu" id="menu-change-soy">
+              <a class="anchor-a">Soy aspirante</a>
+            </li>
+            <li class="not-on-menu-soy not-desktop-menu">
+              <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm">
+              <a href="#">Acerca de UVM</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-1">
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
                         </li>
-                  <li class="search">
-                    <a href="#">
-                      <span class="icon i-search"></span>
-                    </a>
-                    <div class="data-write">
-                      <input type="text" placeholder="Lorem ipsum dolor">
+                      </ul>
                     </div>
-                  </li>
-                </ul>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos">
+              <a href="#">Programas Académicos</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-2">
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia">
+              <a href="#">Academia</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm">
+              <a href="#">¿Por qué UVM?</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus">
+              <a href="#">Campus</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas">
+              <a href="#">Financiamiento y Becas</a>
+            </li>
+          </ul>
+          <ul class="clearfix topicss" id="menu-soy">
+            <li class="col-xs-12" data-soy="publico-en-general">
+              <a href="#">Soy Público en General</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="aspirante">
+              <a href="#">Soy Aspirante</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="alumno">
+              <a href="#">Soy Alumno</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="egresado">
+              <a href="#">Soy Egresado</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="staff">
+              <a href="#">Soy Staff</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="padre-de-familia">
+              <a href="#">Soy Padre de Familia</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="organizacion">
+              <a href="#">Soy Organización</a>
+            </li>
+          </ul>
+          <div class="container change-lenguage not-on-menu-soy">
+            <div class="col-xs-6 l-espanol">
+              <a href="#">Español</a>
+            </div>
+            <div class="col-xs-6 l-english">
+              <a href="#">English</a>
+              <span class="circle-form">
+                <span class="glyphicon glyphicon-globe"></span>
+              </span>
             </div>
           </div>
-
-          <div class="col-md-12 mobile-head">
-            <div class="container">
-              <div class="col-xs-2 backgray-2">
-                <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#" class="icon i-compass"></a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#" class="icon i-dates"></a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#" class="icon i-calc"></a>
-              </div>
-              <div class="col-xs-2">
-                <a href="#" class="icon i-signlist"></a>
-              </div>
-              <div class="col-xs-2 backgray-2">
-                <a href="#" class="icon i-search"></a>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </nav>
-    <!-- FIN M1a -->
+      </nav>
+      <!-- FIN M1b -->
 
-    <!-- M1b -->
-    <nav class="nav-section">
-      <div class="container">    
-        <ul class="clearfix">
-          <li class="col-xs-12 cancel-zone">
-            <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span>
-            <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span>
+      <!-- QL -->
+      <nav class="component-ql">
+        <div class="button-container"><span class="glyphicon glyphicon-remove menu-mobile-ql"></span></div>
+        <button id="open-ql-btn"><span class="icon i-arrow-left"></span></button>
+        <ul>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-compass"></span>
+              <p>Conoce tus habilidades</p>
+            </a>
           </li>
-          <li class="col-xs-12 col-md-2 menu-change-soy not-on-menu-soy not-desktop-menu" id="menu-change-soy">
-            <a class="anchor-a">Soy aspirante</a>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-dates"></span>
+              <p>Visita tu campus</p>
+            </a>
           </li>
-          <li class="not-on-menu-soy not-desktop-menu">
-            <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-calc"></span>
+              <p>Calcula tu colegiatura</p>
+            </a>
           </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm">
-            <a href="#">Acerca de UVM</a>
-            <div class="submenu clearfix">
-              <div class="col-md-3 big-news">
-                <div class="in-content">
-                  <p>Ve nuestros centros especializados</p>
-                  <a href="" class="btn btn-red">CONOCE MÁS</a>
-                </div>
-              </div>
-              <div class="col-md-9 opc-1">
-                <div class="col-md-4">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Aguascalientes (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Cumbres</a>
-                      </li>
-                      <li>
-                        <a href="#">Centro</a>
-                      </li>
-                      <li>
-                        <a href="#">Otumba</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Aguascalientes (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Cumbres</a>
-                      </li>
-                      <li>
-                        <a href="#">Centro</a>
-                      </li>
-                      <li>
-                        <a href="#">Otumba</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Aguascalientes (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Cumbres</a>
-                      </li>
-                      <li>
-                        <a href="#">Centro</a>
-                      </li>
-                      <li>
-                        <a href="#">Otumba</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán (4)</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos">
-            <a href="#">Programas Académicos</a>
-            <div class="submenu clearfix">
-              <div class="col-md-3 big-news">
-                <div class="in-content">
-                  <p>Ve nuestros centros especializados</p>
-                  <a href="" class="btn btn-red">CONOCE MÁS</a>
-                  <p>Ve nuestros centros especializados</p>
-                  <a href="" class="btn btn-red">CONOCE MÁS</a>
-                </div>
-              </div>
-              <div class="col-md-9 opc-2">
-                <div class="col-md-3">
-                  <div class="particular-item">
-                    <p class="inner-item">Aguascalientes</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Cumbres</a>
-                      </li>
-                      <li>
-                        <a href="#">Centro</a>
-                      </li>
-                      <li>
-                        <a href="#">Otumba</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                      <li>
-                        <a href="#">Tlaltipac</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="particular-item">
-                    <p class="inner-item">Yucatán</p>
-                    <ul class="children-item">
-                      <li>
-                        <a href="#">Mérida</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia">
-            <a href="#">Academia</a>
-          </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm">
-            <a href="#">¿Por qué UVM?</a>
-          </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus">
-            <a href="#">Campus</a>
-          </li>
-          <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas">
-            <a href="#">Financiamiento y Becas</a>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-signlist"></span>
+              <p>Inicia tu inscripción</p>
+            </a>
           </li>
         </ul>
-        <ul class="clearfix topicss" id="menu-soy">
-          <li class="col-xs-12" data-soy="publico-en-general">
-            <a href="#">Soy Público en General</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="aspirante">
-            <a href="#">Soy Aspirante</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="alumno">
-            <a href="#">Soy Alumno</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="egresado">
-            <a href="#">Soy Egresado</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="staff">
-            <a href="#">Soy Staff</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="padre-de-familia">
-            <a href="#">Soy Padre de Familia</a>
-          </li>
-          <li class="col-xs-12 col-md-2" data-soy="organizacion">
-            <a href="#">Soy Organización</a>
-          </li>
-        </ul>
-        <div class="container change-lenguage not-on-menu-soy">
-          <div class="col-xs-6 l-espanol">
-            <a href="#">Español</a>
+      </nav>
+      <!-- FIN QL -->
+
+      <!-- BR -->
+      <div class="container">
+        <section class="block-uvm">
+          <div class="component-wrapper">
+            <div class="row component-br">
+              <p><a href=""><span class="glyphicon glyphicon-home"></span></a></p>
+              <p><a href="">Experiencia estudiantil</a></p>
+              <p><a href="">Noticias</a></p>
+            </div>
           </div>
-          <div class="col-xs-6 l-english">
-            <a href="#">English</a>
-            <span class="circle-form">
-              <span class="glyphicon glyphicon-globe"></span>
-            </span>
-          </div>
-        </div>
+        </section>
       </div>
-    </nav>
-    <div class="back-black" id="bg-popup"></div>
-    <!-- FIN M1b -->
-    <!-- BR -->
-    <div class="container">
-      <section class="block-uvm">
-        <div class="content">
-          <div class="row component-br">
-            <p><a href=""><span class="glyphicon glyphicon-home"></span></a></p>
-            <p><a href="">Experiencia estudiantil</a></p>
-            <p><a href="">Noticias</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FIN BR -->
+      <!-- FIN BR -->
     <!-- FIN M1 -->
     
 
     <div class="description backgray-11"> <!-- Descripción del componente -->
       <h3>Componente M1</h3>
+      <strong>Descripción:</strong>
+      <p></p>
+      <strong>Secciones:</strong>
+      <p>1, 2, 3, 4, 5, 6, 7</p>
+    </div>
+
+    <h1 id="componente-m1-1" class="name">Componente M1-1</h1> <!-- nombre del componente -->
+
+    <!-- M1-1 -->
+      <!-- M1a -->
+      <nav class="navbar-header-min">
+        <div class="container">
+          <div class="row">
+          <!-- M1 logo -->
+            <div class="col-md-3 main-logo">
+              <span class="logo">
+                <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+              </span>
+            </div>
+          <!-- FIN M1 logo -->
+
+            <div class="col-md-12 mobile-head">
+              <div class="container">
+                <div class="col-xs-2">
+                  <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a>
+                </div>
+                <div class="col-xs-6 logo-container">
+                  <span class="logo">
+                    <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+                  </span>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-search"></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-quicklink menu-mobile-ql"></a>
+                </div>
+                <div class="mobile-search-container col-sm-12 col-xs-12">
+                  <div class="data-write"> 
+                    <form>
+                      <input type="text" placeholder="Buscar en UVM">
+                      <button type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+      <!-- FIN M1a -->
+
+      <!-- M1b -->
+      <nav class="nav-section">
+        <div class="container">    
+          <ul class="clearfix">
+            <li class="col-xs-12 cancel-zone">
+              <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span>
+              <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span>
+            </li>
+            <li class="col-xs-12 col-md-2 menu-change-soy not-on-menu-soy not-desktop-menu" id="menu-change-soy">
+              <a class="anchor-a">Soy aspirante</a>
+            </li>
+            <li class="not-on-menu-soy not-desktop-menu">
+              <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm">
+              <a href="#">Acerca de UVM</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-1">
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos">
+              <a href="#">Programas Académicos</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-2">
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia">
+              <a href="#">Academia</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm">
+              <a href="#">¿Por qué UVM?</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus">
+              <a href="#">Campus</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas">
+              <a href="#">Financiamiento y Becas</a>
+            </li>
+          </ul>
+          <ul class="clearfix topicss" id="menu-soy">
+            <li class="col-xs-12" data-soy="publico-en-general">
+              <a href="#">Soy Público en General</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="aspirante">
+              <a href="#">Soy Aspirante</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="alumno">
+              <a href="#">Soy Alumno</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="egresado">
+              <a href="#">Soy Egresado</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="staff">
+              <a href="#">Soy Staff</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="padre-de-familia">
+              <a href="#">Soy Padre de Familia</a>
+            </li>
+            <li class="col-xs-12 col-md-2" data-soy="organizacion">
+              <a href="#">Soy Organización</a>
+            </li>
+          </ul>
+          <div class="container change-lenguage not-on-menu-soy">
+            <div class="col-xs-6 l-espanol">
+              <a href="#">Español</a>
+            </div>
+            <div class="col-xs-6 l-english">
+              <a href="#">English</a>
+              <span class="circle-form">
+                <span class="glyphicon glyphicon-globe"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- FIN M1b -->
+
+      <!-- BR -->
+      <div class="container">
+        <section class="block-uvm">
+          <div class="component-wrapper">
+            <div class="row component-br">
+              <p><a href=""><span class="glyphicon glyphicon-home"></span></a></p>
+              <p><a href="">Experiencia estudiantil</a></p>
+              <p><a href="">Noticias</a></p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- FIN BR -->
+    <!-- FIN M1-1 -->
+    
+
+    <div class="description backgray-11"> <!-- Descripción del componente -->
+      <h3>Componente M1-1</h3>
+      <strong>Descripción:</strong>
+      <p></p>
+      <strong>Secciones:</strong>
+      <p>1, 2, 3, 4, 5, 6, 7</p>
+    </div>
+
+    <h1 id="componente-m1-1" class="name">Componente M1-2</h1> <!-- nombre del componente -->
+
+    <!-- M1-2 -->
+      <!-- M1a -->
+      <nav class="navbar-header-min">
+        <div class="container">
+          <div class="row">
+          <!-- M1 logo -->
+            <div class="col-md-3 main-logo">
+              <span class="logo">
+                <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+              </span>
+            </div>
+          <!-- FIN M1 logo -->
+
+            <div class="col-md-12 mobile-head">
+              <div class="container">
+                <div class="col-xs-2">
+                  <a href="#" class="glyphicon glyphicon-menu-hamburger menu-mobile-button"></a>
+                </div>
+                <div class="col-xs-6 logo-container">
+                  <span class="logo">
+                    <a href="#" title="Universidad Del Valle De México">Universidad Del Valle De México</a>
+                  </span>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-search"></a>
+                </div>
+                <div class="col-xs-2">
+                  <a href="#" class="icon i-quicklink menu-mobile-ql"></a>
+                </div>
+                <div class="mobile-search-container col-sm-12 col-xs-12">
+                  <div class="data-write"> 
+                    <form>
+                      <input type="text" placeholder="Buscar en UVM">
+                      <button type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+      <!-- FIN M1a -->
+
+      <!-- M1b -->
+      <nav class="nav-section">
+        <div class="container">    
+          <ul class="clearfix">
+            <li class="col-xs-12 cancel-zone">
+              <span class="wide-b" id="menu-close-container"><span class="glyphicon glyphicon-remove like-anchor menu-mobile-button"></span></span>
+              <span class="wide-a back like-anchor t-center menu-change-soy" id="menu-back-container"><span class="glyphicon glyphicon-chevron-left"></span><span>Volver al Menú</span></span>
+            </li>
+            <li class="not-on-menu-soy not-desktop-menu">
+              <a href="" class="anchor-b">Test Vocacional<span class="glyphicon glyphicon-menu-right"></span></a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-acerca-de-uvm">
+              <a href="#">Acerca de UVM</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-1">
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán (4)</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-programas-academicos">
+              <a href="#">Programas Académicos</a>
+              <div class="submenu clearfix">
+                <div class="col-md-3 big-news">
+                  <div class="in-content">
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                    <p>Ve nuestros centros especializados</p>
+                    <a href="" class="btn btn-red">CONOCE MÁS</a>
+                  </div>
+                </div>
+                <div class="col-md-9 opc-2">
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Aguascalientes</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Cumbres</a>
+                        </li>
+                        <li>
+                          <a href="#">Centro</a>
+                        </li>
+                        <li>
+                          <a href="#">Otumba</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                        <li>
+                          <a href="#">Tlaltipac</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="particular-item">
+                      <p class="inner-item">Yucatán</p>
+                      <ul class="children-item">
+                        <li>
+                          <a href="#">Mérida</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy m-academia">
+              <a href="#">Academia</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-por-que-uvm">
+              <a href="#">¿Por qué UVM?</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-campus">
+              <a href="#">Campus</a>
+            </li>
+            <li class="col-xs-12 col-md-2 not-on-menu-soy menu-financiamiento-y-becas">
+              <a href="#">Financiamiento y Becas</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- FIN M1b -->
+
+      <!-- QL -->
+      <nav class="component-ql">
+        <div class="button-container"><span class="glyphicon glyphicon-remove menu-mobile-ql"></span></div>
+        <ul>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-compass"></span>
+              <p>Conoce tus habilidades</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-dates"></span>
+              <p>Visita tu campus</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-calc"></span>
+              <p>Calcula tu colegiatura</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="topic-links">
+              <span class="icon i-signlist"></span>
+              <p>Inicia tu inscripción</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- FIN QL -->
+
+      <!-- BR -->
+      <div class="container">
+        <section class="block-uvm">
+          <div class="component-wrapper">
+            <div class="row component-br">
+              <p><a href=""><span class="glyphicon glyphicon-home"></span></a></p>
+              <p><a href="">Experiencia estudiantil</a></p>
+              <p><a href="">Noticias</a></p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- FIN BR -->
+    <!-- FIN M1-2 -->
+    
+
+    <div class="description backgray-11"> <!-- Descripción del componente -->
+      <h3>Componente M1-2</h3>
       <strong>Descripción:</strong>
       <p></p>
       <strong>Secciones:</strong>
@@ -866,7 +1584,7 @@
             <h2 class="text-center">¿Qué aprenderás?</h2>
             <p>Te contamos nuestro plan de estudios</p>
           </header>
-          <div class="content">
+          <div class="component-wrapper">
             <div class="row component-q1">
               <div class="col-md-4">
                 <div class="img-person">
@@ -903,7 +1621,7 @@
           <h2>¿Por qué elegir UVM?</h2>
           <p>Te brindamos las mejores opciones pensando en ti</p>
         </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-c47">
             <div class="buttons-zone">
               <div class="col-sm-4">
@@ -1020,7 +1738,7 @@
           <h2>¿Quién te va a enseñar?</h2>
           <p>Profesorado de reconocido prestigio internacional</p>
         </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-c13">
             <div class="col-sm-4">
               <div class="int">
@@ -1074,7 +1792,7 @@
           <h2>¿Es para tí?</h2>
           <p>Te brindamos las mejores opciones pensando en ti</p>
         </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-c14">
             <div class="col-sm-4">
               <div class="int">
@@ -1112,7 +1830,7 @@
     <!-- C9 -->
     <div class="container">
       <section class="block-uvm" id="donde-estudiar">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-c9">
             <header>
               <h2>¿Dónde estudiar?</h2>
@@ -1237,7 +1955,6 @@
                 <div class="c9-tab tab-map">
                   <div class="col-md-12">
                     <div class="iframe" id="map-canvas">
-                      <img src="../assets/img/component-c9-map.png">
                     </div>
                   </div>
                 </div>
@@ -1353,7 +2070,7 @@
     <!-- C4 -->
     <div class="container">
         <section class="block-uvm" id="cuanto-cuesta">
-          <div class="content">
+          <div class="component-wrapper">
             <div class="row component-c4">
               <div class="col-md-4">
                 <header class="stripe-up">
@@ -1503,7 +2220,7 @@
           <h2>¿Cómo inscribirte?</h2>
           <p> Lleva tus documentos a Campus y tu consejero se encargará de hacer todos los trámites en la SEP, para que nuestra Secretaría Técnica emita el dictamen </p>
         </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-c6">
             <div class="col-sm-4">
               <div class="int">
@@ -1764,12 +2481,763 @@
 
     </div>
 
+<h1 id="componente-m4a" class="name">Componente M4A</h1> <!-- nombre del componente -->
     
+    <!--M4A -->
+    <nav class="component-m4a">
+      <div class="container">
+        <div class="buttons-zone">
+          <div class="cont-button">
+            <a href="#">
+              <p>Diplomado</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Curso</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Otros eventos</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Dlplomado</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Curso</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Otros eventos</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Otros eventos</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-zone cont-expanded">
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 from-content">
+              <form class="col-sm-12 col-md-10 form-gray-bg">
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Quiero estudiar...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige una carrera</option>
+                        <option>Administración de Empresas (semestral)</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>En el campus...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write select-field">
+                      <select>
+                        <option>Elige un campus</option>
+                        <option>Lomas Verdes</option>
+                      </select>
+                      <label class="icon-label"><span class="icon i-mappin"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Me llamo...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input type="text" name="nombre" placeholder="Escribe tu nombre">
+                      <label class="icon-label"><span class="icon i-person"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <p>Mi teléfono con lada es...</p>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="data-write">
+                      <input placeholder="Escribe tu teléfono con lada">
+                      <label class="icon-label"><span class="icon i-telephone"></span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="cont-checkbox">
+                      <input type="checkbox" name="aviso_privacidad" id="aviso_privacidad">
+                      <label for="aviso_privacidad">Acepto el <a href="">Aviso de Privacidad</a></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-5"></div>
+                  <div class="col-sm-7">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Comenzar el test</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- FIN M4A -->
+    
+
+
+<h1 id="componente-m5" class="name">Componente M5</h1> <!-- nombre del componente -->
+    
+    <!-- M5 -->
+    <nav class="component-m5">
+      <div class="container">
+        <div class="buttons-zone">
+          <div class="cont-button">
+            <a href="#">
+              <p>Diplomado</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Curso</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Otros eventos</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Dlplomado</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Curso</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-zone cont-expanded">
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- FIN M5 -->
+    
+
+ <div class="description function backgray-11"> <!-- Descripción del componente -->
+      <h3>Componente M5</h3>
+      <strong>Descripción:</strong>
+      <p></p>
+      <strong>Secciones:</strong>
+      <p>5, 6, 7</p>
+
+      <div class="estructura">
+        <strong class="ejemplo">Este componente presenta funcionamiento.</strong> <a href="../funcionamientos-estructura.html#componente-m4" class="ejemplo">Ver reglas de funcionamiento 
+        </a>
+      </div>
+
+    </div>
+
+    <h1 id="componente-m6" class="name">Componente M6</h1> <!-- nombre del componente -->
+    
+    <!-- M6 -->
+    <nav class="component-m6">
+      <div class="container">
+        <div class="buttons-zone">
+          <div class="cont-button">
+            <a href="#">
+              <p>Diplomado</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Curso</p>
+            </a>
+          </div>
+          <div class="cont-button">
+            <a href="#">
+              <p>Otros eventos</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-zone cont-expanded">
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 expanded-link ">
+            <div class="col-sm-12 text-content">
+              <p>
+                5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo ravida dolor sit amet lacus accumsan et viverra.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- FIN M6 -->
+    
+
+ <div class="description function backgray-11"> <!-- Descripción del componente -->
+      <h3>Componente M6</h3>
+      <strong>Descripción:</strong>
+      <p></p>
+      <strong>Secciones:</strong>
+      <p>5, 6, 7</p>
+
+      <div class="estructura">
+        <strong class="ejemplo">Este componente presenta funcionamiento.</strong> <a href="../funcionamientos-estructura.html#componente-m4" class="ejemplo">Ver reglas de funcionamiento 
+        </a>
+      </div>
+
+    </div>
+
+    <h1 id="componente-mi" class="name">Componente MI</h1> <!-- nombre del componente -->
+      
+      <!-- MAPA -->
+        <div class="componente-mi">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+              <div class="iframe" data-markers='[{ "lat": "59.3", "lon": "18.1", "titulo" : "UVM Veterinaria", "info" : "Cheesecake liquorice chocolate cake candy canes bear claw cotton candy marshmallow jelly-o soufflé" },{ "lat": "59.9", "lon": "10.8", "titulo" : "UVM Campus Villahermosa Norte", "info": "Cheesecake liquorice chocolate cake candy canes bear claw cotton candy marshmallow jelly-o soufflé" }]'>   
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MAPA FIN -->
+      <div class="description function backgray-11"> <!-- Descripción del componente -->
+      <h3>Componente MI</h3>
+      <strong>Descripción:</strong>
+      <p>Mapa Individual</p>
+      <strong>Secciones:</strong>
+      <p></p>
+
+      <div class="estructura">
+        <strong class="ejemplo">Este componente presenta funcionamiento.</strong> <a href="../funcionamientos-estructura.html#componente-mi" class="ejemplo">Ver reglas de funcionamiento 
+        </a>
+      </div>
+
+    </div>
+
+
 
     
     <div class="container">
     <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-links">
             <div class="col-sm-12 cont-searcher">
               <div class="col-sm-10 col-sm-offset-1 type-search">
@@ -1800,5 +3268,6 @@
 
     <script src="../assets/js/vendors.min.js"></script>
     <script src="../assets/js/main.min.js"></script>
-  </body>
+    <script src="../assets/js/mapa.js"></script>
+  </div></body>
 </html>

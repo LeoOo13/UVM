@@ -14,14 +14,15 @@
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+    <body>
+  <div class="uvm-main-container">
 
   <div class="container">
     <section class="block-uvm">
       <header>
         <h2>Listado de componentes</h2>
       </header>
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-links">
             <div class="col-sm-12 cont-searcher">
               <div class="col-sm-10 col-sm-offset-1 type-search">
@@ -50,14 +51,14 @@
     <!-- D1 -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d1">
             <div class="col-sm-12 form-white-bg">
               <form>
                 <div class="col-sm-6">
                   <div class="data-write select-field">
                     <select>
-                      <option>Todas las categorias</option>
+                      <option>Elige la categoria</option>
                       <option>Categoría 1</option>
                     </select>
                   </div>
@@ -83,14 +84,14 @@
     <!-- D2 -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d2">
             <div class="col-sm-12 form-white-bg">
               <form>
                 <div class="col-sm-4">
                   <div class="data-write select-field">
                     <select>
-                      <option>Todas las categorias</option>
+                      <option>Elige la categoria</option>
                       <option>Categoría 1</option>
                     </select>
                   </div>
@@ -116,7 +117,7 @@
     <!-- D3 -->
     <div class="container">
       <section class="block-uvm backgray-1">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d3">
             <div class="col-sm-12 cont-select">
               <div class="col-sm-6">
@@ -181,26 +182,31 @@
     <!-- D4 -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d4">
             <div class="form-white-bg">
               <form>
-                <div class="col-sm-12 col-md-3">
-                  <p>Filtrar por:</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías" id="selectd41">
+                  <div class="col-sm-12">
+                    <p>Filtrar por:</p>
                   </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías B" data-dependant = "#selectd41" id="selectd42">
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías" id="selectd41">
+                    </div>
                   </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                  <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías C" data-dependant = "#selectd42" id="selectd43">
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías B" data-dependant = "#selectd41" id="selectd42">
+                    </div>
                   </div>
-                </div>
-              </form>
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="data-write select-field" data-source= "http://multiplicamx.com/cliente/2016/UVM/servicios/select.php" data-title = "Todas Categorías C" data-dependant = "#selectd42" id="selectd43">
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="btn-cont">
+                      <button class="btn btn-red">Buscar</button>
+                    </div>
+                  </div>
+                </form>
             </div>
           </div>
         </div>
@@ -227,7 +233,7 @@
     <!-- D5 -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d5">
             <div class="form-white-bg">
               <form>
@@ -267,7 +273,7 @@
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-2">
-                  <div class="cont-btn">
+                  <div class="btn-cont">
                     <button class="btn btn-red">Buscar</button>
                   </div>
                 </div>
@@ -286,13 +292,147 @@
     <strong>Secciones:</strong>
     <p>3, 4, 5, 6, 7</p>
   </div>
+  <h1 id="componente-d5a" class="name">Componente D5A </h1> <!-- nombre del componente -->
+
+    <!-- D5A -->
+    <div class="container">
+      <section class="block-uvm">
+        <div class="component-wrapper">
+          <div class="row component-d5">
+            <div class="form-white-bg">
+              <form>
+                <div class="col-sm-3">
+                  <p>Filtrar por:</p>
+                </div>
+                <div class="col-xs-12 col-sm-3 ">
+                  <div class="data-write select-field">
+                    <select>
+                      <option>Elige categoria</option>
+                      <option>Categoría 1</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                  <div class="data-write select-field">
+                    <select>
+                      <option>Elige categoria</option>
+                      <option>Categoría 1</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-3">
+                  <div class="btn-cont">
+                    <button class="btn btn-red">Buscar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- FIN D5A -->
+
+  <div class="description backgray-11"> <!-- Descripción del componente -->
+    <h3>Componente D5A</h3>
+    <strong>Descripción:</strong>
+    <p>Select dependientes 4 columnas</p>
+    <strong>Secciones:</strong>
+    <p>3, 4, 5, 6, 7</p>
+  </div>
+
+  <h1 id="componente-d5b" class="name">Componente D5B </h1> <!-- nombre del componente -->
+
+    <!-- D5B -->
+    <div class="container">
+      <section class="block-uvm">
+        <div class="component-wrapper">
+          <div class="row component-d5b">
+            <div class="form-white-bg">
+              <form>
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4 type">
+                      <p>Nivel:</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                      <div class="data-write select-field">
+                        <select>
+                          <option>Elige la categoria</option>
+                          <option>Categoría 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4 type">
+                      <p>Programa:</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                      <div class="data-write select-field">
+                        <select>
+                          <option>Elige la categoria</option>
+                          <option>Categoría 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4 type">
+                      <p>Campus:</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                      <div class="data-write select-field">
+                        <select>
+                          <option>Elige la categoria</option>
+                          <option>Categoría 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4 type">
+                      <p>Tipo:</p>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                      <div class="data-write select-field">
+                        <select>
+                          <option>Elige la categoria</option>
+                          <option>Categoría 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- FIN D5B -->
+
+  <div class="description backgray-11"> <!-- Descripción del componente -->
+    <h3>Componente D5B</h3>
+    <strong>Descripción:</strong>
+    <p>Select dependientes con 3 botones de descarga</p>
+    <strong>Secciones:</strong>
+    <p></p>
+  </div>
 
   <h1 id="componente-d6" class="name">Componente D6 </h1> <!-- nombre del componente -->
 
     <!-- D6 -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d6">
             <div class="form-white-bg">
               <form>
@@ -304,7 +444,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -319,7 +459,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -334,7 +474,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -381,7 +521,7 @@
     <!-- D6A -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d6">
             <div class="form-white-bg">
               <form>
@@ -393,7 +533,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -408,7 +548,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -423,7 +563,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -432,7 +572,7 @@
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
+                    <div class="col-sm-4 col-sm-offset-2">
                       <div class="cont-btn">
                         <button class="btn btn-red">Descarga Calendario Escolar</button>
                       </div>
@@ -465,7 +605,7 @@
     <!-- D6B -->
     <div class="container">
       <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-d6">
             <div class="form-white-bg">
               <form>
@@ -477,7 +617,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -492,7 +632,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -507,7 +647,7 @@
                     <div class="col-sm-12 col-md-8">
                       <div class="data-write select-field">
                         <select>
-                          <option>Todas las categorias</option>
+                          <option>Elige la categoria</option>
                           <option>Categoría 1</option>
                         </select>
                       </div>
@@ -516,7 +656,7 @@
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
-                    <div class="col-sm-4 col-sm-offset-8">
+                    <div class="col-sm-4 col-sm-offset-4">
                       <div class="cont-btn">
                         <button class="btn btn-red">Descarga Calendario Escolar</button>
                       </div>
@@ -541,7 +681,7 @@
 
     <div class="container">
     <section class="block-uvm">
-        <div class="content">
+        <div class="component-wrapper">
           <div class="row component-links">
             <div class="col-sm-12 cont-searcher">
               <div class="col-sm-10 col-sm-offset-1 type-search">
@@ -572,5 +712,5 @@
 
     <script src="../assets/js/vendors.min.js"></script>
     <script src="../assets/js/main.min.js"></script>
-  </body>
+  </div></body>
 </html>
