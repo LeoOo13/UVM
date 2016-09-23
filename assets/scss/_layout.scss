@@ -4,6 +4,8 @@ body {
 	.uvm-main-container{
 		font-family: $opensans;
 		font-size: 16px;
+		max-width: 1280px;
+		margin: 0 auto;
 
 		* {word-wrap: break-word;}
 
@@ -17,26 +19,69 @@ body {
 				}
 			}
 			.block-uvm {
-				margin-left: -15px; margin-right: -15px; margin-bottom: 15px;
-				&:nth-last-child(1) {
-					margin-bottom: 0;
-					&.backgray-1, &.backgray-2, &.backgray-3, &.backgray-4, &.backgray-5, &.backgray-6, &.backgray-7, &.backgray-8, &.backgray-9, &.backgray-10, &.backgray-11 {
-						margin-bottom: 15px;
+				margin-left: -15px; margin-right: -15px; 
+				&.backgray-1, &.backgray-2, &.backgray-3, &.backgray-4, &.backgray-5, &.backgray-6, &.backgray-7, &.backgray-8, &.backgray-9, &.backgray-10, &.backgray-11, &.backred{
+					margin-top: 20px;
+					margin-bottom: 20px;
+					&.special{
+						margin-top: -20px;
 					}
 				}
+
 				.content, .component-wrapper{
+					&.backgray-1, &.backgray-2, &.backgray-3, &.backgray-4, &.backgray-5, &.backgray-6, &.backgray-7, &.backgray-8, &.backgray-9, &.backgray-10, &.backgray-11{
+						margin-top: 20px;
+						margin-bottom: 20px;
+					}
+					&.backred{
+						margin-top: 40px;
+						margin-bottom: 20px;
+					}
 					> .row {
-						margin-left: 0; margin-right: 0;
+						margin: 0;
+						padding: 0;
+
+						>.buttons-zone, >.tab-zone{
+							padding:0;
+						}
+						&:nth-child(1){
+							>div, >ul{
+								margin-top: 20px;
+							}
+						}
+						>div, >ul{
+							margin-top: 0;
+							margin-bottom: 0;
+							&.cont-expanded{
+								margin-top: 0;
+								 &.tab-zone{
+									margin-top: 20px;
+								}
+								.expanded-link{
+									padding-top: 50px;
+								}
+							}
+							&.form-white-bg, &.form-gray-bg{
+								margin-bottom: 20px;	
+							}
+							>div, >iframe, >p, >img, >li{
+								margin-top: 0;
+								margin-bottom: 20px;
+								&.expanded-link{
+									margin-bottom: 0;
+								}
+							}
+						}
 					}
 	 			}
 	 			section {
 	 				&.block-uvm {
 	 					margin: 0 auto;
-	 					.content, .component-wrapper{
+	 					/* .content, .component-wrapper{
 	 						.row {
 	 							padding: 0 15px;
 	 						}
-	 					}
+	 					} */
 	 				}
 	 			}
 	 			> div {
@@ -427,39 +472,32 @@ body {
 			text-align: center;
 			color: $white;
 		}
-		section{
-			/* SE TIENE QUE BORRAR */
-			// &.backgray-1, &.backgray-11, &.backred{
-			// 		margin-top: 20px;
-			// 	    margin-bottom: 20px;
-			// 	    display: inline-block;
-			// 	    width: 100%;
-			// }
-			.content, .component-wrapper{
-				.cont-expanded{
-					margin: 0;
-				}
-				>div{
-					padding-top: 30px;
-					margin: 0;
-					>div{
-						&.buttons-zone{
-							margin: 0;
-							>div{
-								margin-bottom: 30px;
-								margin-top: 0;
-							}
-						}
-						margin-bottom: 30px;
-						margin-top: 0;
-						// &.component-f3,
-						&.component-i1a {
-							margin: 0 auto;
-						}
-					}
-				}
-			}
-		}
+		// section{
+		// 	.content, .component-wrapper{
+		// 		.cont-expanded{
+		// 			margin: 0;
+		// 		}
+		// 		>div{
+		// 			padding-top: 30px;
+		// 			margin: 0;
+		// 			>div{
+		// 				&.buttons-zone{
+		// 					margin: 0;
+		// 					>div{
+		// 						margin-bottom: 30px;
+		// 						margin-top: 0;
+		// 					}
+		// 				}
+		// 				margin-bottom: 30px;
+		// 				margin-top: 0;
+		// 				// &.component-f3,
+		// 				&.component-i1a {
+		// 					margin: 0 auto;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 		/* FIN ELEM HTML */
 
 		/* COLORES */
@@ -470,7 +508,7 @@ body {
 			}
 			header{
 				&:before{
-					background-color:$white;
+					background-color:$white !important;
 				}
 			}
 			.expanded-link {
@@ -710,9 +748,17 @@ body {
 					}
 				}
 			}
+			.component-wrapper{
+				>.row{
+					&.component-t2{
+						padding: 20px;
+						margin: 20px 0 40px;
+					}
+				}
+			}
 			header, .component-t2{
 				position: relative;
-				padding: 40px 20px 20px;
+				padding: 20px;
 				margin: 0 0 20px;
 				text-align: center;
 				&:before{
@@ -1007,7 +1053,7 @@ body {
 		/* HEADER */
 		nav {
 			&.navbar-header-min {
-				overflow: hidden; position: relative;
+				overflow: hidden; position: relative; z-index: 99;
 				ul {
 					padding: 0; margin: 0 auto; text-align: right;
 					li {
@@ -1020,7 +1066,7 @@ body {
 				.main-logo {
 					padding: 0 0 0 15px;
 					.logo {
-						margin: 35px auto 25px auto;
+						margin: 20px auto; 
 						display: block;
 						a {
 							display: inline-block; text-indent: -999999px; height: 70px; font-size: 22px; background: url('#{$img-path}sprite.png') no-repeat; width: 170px; background-position: 0 0;
@@ -1075,7 +1121,7 @@ body {
 							font-size: 0;
 							li {
 								&.language{
-									position:relative; min-width: 120px;
+									position:relative; min-width: 120px; text-align:left;
 									.data-languages{
 										display:none;
 									}
@@ -1090,11 +1136,11 @@ body {
 
 											a, div{
 												display: block; font-family: $montserrat; border-top: 3px solid $red1;
-												padding: 6px 0; margin: 0; background-color: $white; text-align:center;
+												margin: 0; background-color: $white; text-align:center;
 												text-transform: uppercase;font-size: 11px; 
 												background-color: $gray2;
 												color: $black;
-												padding:13px; cursor:pointer;
+												padding:8px; cursor:pointer;
 
 												&:hover{
 													background-color: #CCCCCC;
@@ -1221,6 +1267,25 @@ body {
 				.like-anchor {
 					cursor: pointer;
 				}
+
+			&+.m1-fixed-space{
+				display: none;
+				width: 100%;
+				height: 60px;
+				padding: 0;
+				margin: 0;
+				background: none;
+				position: relative;
+			}
+
+			&.fixed-element{
+				position: fixed;
+				&+.m1-fixed-space{
+					display: block;
+				}
+			}
+
+
 				ul {
 					padding: 0; margin: 0 auto; position: relative;
 					li {
@@ -1288,7 +1353,7 @@ body {
 									}
 								}
 							}
-							.opc-1 {
+							.opc-1, .opc-2 {
 								padding: 0 15px 5px 15px;
 								> div {
 									margin: 20px auto 5px auto; padding: 0 15px;
@@ -1397,120 +1462,120 @@ body {
 								}
 							}
 
-							.opc-2 {
-								padding: 0 15px 5px 15px;
-								a, a:hover {
-									-o-transition-property: none !important;
-									-moz-transition-property: none !important;
-									-ms-transition-property: none !important;
-									-webkit-transition-property: none !important;
-									transition-property: none !important;
-								}
-								> div {
-									margin: 20px auto 5px auto; padding: 0 0 0 15px;
-									&:before {
-										content: '';
-										display: block;
-										width: 122px;
-										height: 3px;
-										background-color: $red1;
-										top: 0;
-										left: 0;
-										right: 0;
-										margin: auto;
-										position: absolute;
-									}
-								}
-								.particular-item {
-									position: relative; padding: 10px 0; text-align: left;
-									&:nth-child(1) {
-										margin-top: 3px;
-									}
-									.inner-item {
-										display: inline-block; font-size: 20px; color: $gray12; position: relative; margin-left: 20px;
-										&:after {
-											content: "\6d"; font-size: 18px; position: absolute; top: 0; bottom: 0; left: -25px; margin: auto;
-											font-family: "uvm-icons" !important;
-											font-style: normal !important;
-											font-weight: normal !important;
-											font-variant: normal !important;
-											text-transform: none !important;
-											speak: none;
-											vertical-align: bottom;
-											-webkit-font-smoothing: antialiased;
-											-moz-osx-font-smoothing: grayscale;
-										}
-										&:hover {
-											color: $red1; cursor: pointer;
-										}
-									}
-									// &.active {
-									// 	background: $white; padding: 25px 10px 25px 25px;
-									// 	.inner-item {
-									// 		color: $red1;
-									// 	}
-									// 	.children-item {
-									// 		display: block;
-									// 	}
-									// }
-									.children-item {
-										// display: none;
-										font-size: 15px; margin-left: 10px;
-										li {
-											height: auto; display: inline-block; width: 100%;
-											a {
-												padding: 5px 0 10px 15px; text-transform: none; position: relative; font-size: 15px;
-												&:after {
-													position: absolute;
-													content: "\2022";
-													background: transparent;
-													color: $red1;
-													width: 10px;
-													font-size: 22px;
-													height: 10px;
-													line-height: 10px;
-													display: block;
-													right: auto;
-													left: 2px;
-													top: 10px;
-												}
-												&:hover {
-													background: transparent; 
-													color: $red1 !important;
-													&:after {
-														display: block;
-													}
-												}
-												&:before {
-													content: "\63"; float: right; margin: 0 10px; font-weight: bold;
-													font-family: "uvm-icons" !important;
-													font-style: normal !important;
-													font-weight: normal !important;
-													font-variant: normal !important;
-													text-transform: none !important;
-													speak: none;
-													vertical-align: bottom;
-													-webkit-font-smoothing: antialiased;
-													-moz-osx-font-smoothing: grayscale;
-												}
-											}
-											&:hover {
-												> a {
-													color: $gray9;
-													background: transparent;
-												}
-											}
-											&:nth-last-child(1){
-												a {				
-													&:after {
-														display: block;
-													}
-												} 
-											}
-										}
-									}
-								}
-							}
+							// .opc-2 {
+							// 	padding: 0 15px 5px 15px;
+							// 	a, a:hover {
+							// 		-o-transition-property: none !important;
+							// 		-moz-transition-property: none !important;
+							// 		-ms-transition-property: none !important;
+							// 		-webkit-transition-property: none !important;
+							// 		transition-property: none !important;
+							// 	}
+							// 	> div {
+							// 		margin: 20px auto 5px auto; padding: 0 0 0 15px;
+							// 		&:before {
+							// 			content: '';
+							// 			display: block;
+							// 			width: 122px;
+							// 			height: 3px;
+							// 			background-color: $red1;
+							// 			top: 0;
+							// 			left: 0;
+							// 			right: 0;
+							// 			margin: auto;
+							// 			position: absolute;
+							// 		}
+							// 	}
+							// 	.particular-item {
+							// 		position: relative; padding: 10px 0; text-align: left;
+							// 		&:nth-child(1) {
+							// 			margin-top: 3px;
+							// 		}
+							// 		.inner-item {
+							// 			display: inline-block; font-size: 20px; color: $gray12; position: relative; margin-left: 20px;
+							// 			&:after {
+							// 				content: "\6d"; font-size: 18px; position: absolute; top: 0; bottom: 0; left: -25px; margin: auto;
+							// 				font-family: "uvm-icons" !important;
+							// 				font-style: normal !important;
+							// 				font-weight: normal !important;
+							// 				font-variant: normal !important;
+							// 				text-transform: none !important;
+							// 				speak: none;
+							// 				vertical-align: bottom;
+							// 				-webkit-font-smoothing: antialiased;
+							// 				-moz-osx-font-smoothing: grayscale;
+							// 			}
+							// 			&:hover {
+							// 				color: $red1; cursor: pointer;
+							// 			}
+							// 		}
+							// 		// &.active {
+							// 		// 	background: $white; padding: 25px 10px 25px 25px;
+							// 		// 	.inner-item {
+							// 		// 		color: $red1;
+							// 		// 	}
+							// 		// 	.children-item {
+							// 		// 		display: block;
+							// 		// 	}
+							// 		// }
+							// 		.children-item {
+							// 			// display: none;
+							// 			font-size: 15px; margin-left: 10px;
+							// 			li {
+							// 				height: auto; display: inline-block; width: 100%;
+							// 				a {
+							// 					padding: 5px 0 10px 15px; text-transform: none; position: relative; font-size: 15px;
+							// 					&:after {
+							// 						position: absolute;
+							// 						content: "\2022";
+							// 						background: transparent;
+							// 						color: $red1;
+							// 						width: 10px;
+							// 						font-size: 22px;
+							// 						height: 10px;
+							// 						line-height: 10px;
+							// 						display: block;
+							// 						right: auto;
+							// 						left: 2px;
+							// 						top: 10px;
+							// 					}
+							// 					&:hover {
+							// 						background: transparent; 
+							// 						color: $red1 !important;
+							// 						&:after {
+							// 							display: block;
+							// 						}
+							// 					}
+							// 					&:before {
+							// 						content: "\63"; float: right; margin: 0 10px; font-weight: bold;
+							// 						font-family: "uvm-icons" !important;
+							// 						font-style: normal !important;
+							// 						font-weight: normal !important;
+							// 						font-variant: normal !important;
+							// 						text-transform: none !important;
+							// 						speak: none;
+							// 						vertical-align: bottom;
+							// 						-webkit-font-smoothing: antialiased;
+							// 						-moz-osx-font-smoothing: grayscale;
+							// 					}
+							// 				}
+							// 				&:hover {
+							// 					> a {
+							// 						color: $gray9;
+							// 						background: transparent;
+							// 					}
+							// 				}
+							// 				&:nth-last-child(1){
+							// 					a {				
+							// 						&:after {
+							// 							display: block;
+							// 						}
+							// 					} 
+							// 				}
+							// 			}
+							// 		}
+							// 	}
+							// }
 						}
 					}
 					.not-desktop-menu, .cancel-zone {
@@ -1621,17 +1686,17 @@ body {
 					>div{
 						// padding: 5px 0;
 						// height: 52px;
-						&.col-xs-2{ width: 16%; }
-						&.col-xs-6{ width: 52%; }
+						// &.col-xs-2{ width: 16%; }
+						// &.col-xs-6{ width: 52%; }
 
 						&:nth-child(1) {
 							background: $red2;
 						}
 						&:nth-child(2) {
-							background: $red3;
+							background: $red1;
 						}
 						&:nth-child(3) {
-							background: $red4;
+							background: $red3;
 						}
 						&:nth-child(4) {
 							background: $red2;
@@ -1669,8 +1734,24 @@ body {
 				position:relative;
 				.cont-slider-home{
 					padding:0;
-					img{
+					.image-content {
 						width: 100%;
+						margin-bottom: 0;
+						img {
+							width: 100%;
+						}
+					}
+					.text-content {
+						position: absolute; bottom: 0; left: 0; width: 100%; background: $black-60; padding: 20px; color: $white;
+						h2 {
+							font-size: 36px; font-family: $montserrat; font-weight: bold;
+							text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+							margin: 0 0 5px;
+						}
+						p {
+							font-size: 20px; font-family: $montserrat; font-weight: normal; text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+							margin: 0;
+						}
 					}
 				}
 				.cont-nav-home{
@@ -1682,6 +1763,7 @@ body {
 					nav {
 						&.navbar-header-min {
 							.main-logo {
+
 								.logo {
 									text-align: center;
 									a {
@@ -1691,6 +1773,7 @@ body {
 							}
 							.superior-bar{
 								background-color: $black-60;
+								width: 100%;
 
 								.aditional-topics {
 									ul {
@@ -1726,6 +1809,32 @@ body {
 							}
 						}
 						&.nav-section {
+							&.fixed-element{
+								background-color: $gray1;
+								ul{
+									li{
+										&.hover{
+											>a{
+												background-color: $red1;
+												color: $white;
+											}
+										}
+										>a{
+											color: $gray9;
+										}
+										.submenu{
+											background-color:$gray1;
+											a{
+												color: $gray9;
+											}
+											.btn{
+												color:$white;
+											}
+
+										}
+									}
+								}
+							}
 							background: transparent;
 							ul{
 								li{
@@ -1758,8 +1867,8 @@ body {
 
 
 		/* FOOTER */
-		footer {
-			background: $gray11; color: $white; padding: 0;
+		footer {;
+			background: $gray11; color: $white; padding: 0; margin-top:20px;
 			> .container {
 				margin-bottom: 20px;
 			}
@@ -1767,7 +1876,7 @@ body {
 				padding: 20px 0 0 0;
 			}
 			.footer-logo {
-				padding: 0;
+				padding-left: 15px;
 				a {
 					display: block; height: 60px; width: 140px;
 					img{
@@ -1813,7 +1922,7 @@ body {
 				}
 			}
 			.esr{
-				padding: 0;
+				padding-left:15px;
 				>div{
 					width: 120px;
 					img{

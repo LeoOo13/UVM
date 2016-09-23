@@ -399,7 +399,283 @@
             )
           )
         ),
-         array(
+        array(
+          "puntos" => array(
+              array(
+                "titulo" => "Absolutamente si tienes...",
+                "color" => "backred-7", 
+                "thumb" =>"icon i-lamp", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              ),
+              array(
+                "titulo" => "Especialmente si quieres...",
+                "color" => "backred-5", 
+                "thumb" =>"icon i-doctor", 
+                "descripcion" =>"P2 Desarrollar la capacidad para la toma de decisio- nes, gestión, investigación, e innovación en las organizaciones y para optimizar sus recursos con organizaciones de calidad."
+              ),
+              array(
+                "titulo" => "Dónde podrás trabajar...",
+                "color" => "backred-3", 
+                "thumb" =>"icon i-building2", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              )
+          ),
+          "liga" => "#",
+          "colegiatura" => array("monto" => "4,000", "colegiatura" => "#", "programa" => "#"),
+          "campus" => array(
+            array(
+              "titulo" => "DF y Área Metropolitana",
+              "campus" => array(
+                array(
+                  "titulo" =>"Chapultepec",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Coyoacán",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Roma",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Tlalpán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Jalisco",
+              "campus" => array(
+                array(
+                  "titulo" =>"Guadalajara",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Zapopán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Veracruz",
+              "campus" => array(
+                array(
+                  "titulo" =>"Boca del río",
+                  "liga" => "#"
+                )
+              )
+            )
+          )
+        ),
+        array(
+          "puntos" => array(
+              array(
+                "titulo" => "Absolutamente si tienes...",
+                "color" => "backred-7", 
+                "thumb" =>"icon i-lamp", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              ),
+              array(
+                "titulo" => "Especialmente si quieres...",
+                "color" => "backred-5", 
+                "thumb" =>"icon i-doctor", 
+                "descripcion" =>"P2 Desarrollar la capacidad para la toma de decisio- nes, gestión, investigación, e innovación en las organizaciones y para optimizar sus recursos con organizaciones de calidad."
+              ),
+              array(
+                "titulo" => "Dónde podrás trabajar...",
+                "color" => "backred-3", 
+                "thumb" =>"icon i-building2", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              )
+          ),
+          "liga" => "#",
+          "colegiatura" => array("monto" => "4,000", "colegiatura" => "#", "programa" => "#"),
+          "campus" => array(
+            array(
+              "titulo" => "DF y Área Metropolitana",
+              "campus" => array(
+                array(
+                  "titulo" =>"Chapultepec",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Coyoacán",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Roma",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Tlalpán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Jalisco",
+              "campus" => array(
+                array(
+                  "titulo" =>"Guadalajara",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Zapopán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Veracruz",
+              "campus" => array(
+                array(
+                  "titulo" =>"Boca del río",
+                  "liga" => "#"
+                )
+              )
+            )
+          )
+        ),
+        array(
+          "puntos" => array(
+              array(
+                "titulo" => "Absolutamente si tienes...",
+                "color" => "backred-7", 
+                "thumb" =>"icon i-lamp", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              ),
+              array(
+                "titulo" => "Especialmente si quieres...",
+                "color" => "backred-5", 
+                "thumb" =>"icon i-doctor", 
+                "descripcion" =>"P2 Desarrollar la capacidad para la toma de decisio- nes, gestión, investigación, e innovación en las organizaciones y para optimizar sus recursos con organizaciones de calidad."
+              ),
+              array(
+                "titulo" => "Dónde podrás trabajar...",
+                "color" => "backred-3", 
+                "thumb" =>"icon i-building2", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              )
+          ),
+          "liga" => "#",
+          "colegiatura" => array("monto" => "4,000", "colegiatura" => "#", "programa" => "#"),
+          "campus" => array(
+            array(
+              "titulo" => "DF y Área Metropolitana",
+              "campus" => array(
+                array(
+                  "titulo" =>"Chapultepec",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Coyoacán",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Roma",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Tlalpán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Jalisco",
+              "campus" => array(
+                array(
+                  "titulo" =>"Guadalajara",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Zapopán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Veracruz",
+              "campus" => array(
+                array(
+                  "titulo" =>"Boca del río",
+                  "liga" => "#"
+                )
+              )
+            )
+          )
+        ),
+        array(
+          "puntos" => array(
+              array(
+                "titulo" => "Absolutamente si tienes...",
+                "color" => "backred-7", 
+                "thumb" =>"icon i-lamp", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              ),
+              array(
+                "titulo" => "Especialmente si quieres...",
+                "color" => "backred-5", 
+                "thumb" =>"icon i-doctor", 
+                "descripcion" =>"P2 Desarrollar la capacidad para la toma de decisio- nes, gestión, investigación, e innovación en las organizaciones y para optimizar sus recursos con organizaciones de calidad."
+              ),
+              array(
+                "titulo" => "Dónde podrás trabajar...",
+                "color" => "backred-3", 
+                "thumb" =>"icon i-building2", 
+                "descripcion" =>"P2 Iniciativa, Capacidad de síntesis, proactividad, crea- tividad, valores éticos, suficiencia oral y escrita, dis- posición para trabajar en equipo e interés por la investigación."
+              )
+          ),
+          "liga" => "#",
+          "colegiatura" => array("monto" => "4,000", "colegiatura" => "#", "programa" => "#"),
+          "campus" => array(
+            array(
+              "titulo" => "DF y Área Metropolitana",
+              "campus" => array(
+                array(
+                  "titulo" =>"Chapultepec",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Coyoacán",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Roma",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Tlalpán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Jalisco",
+              "campus" => array(
+                array(
+                  "titulo" =>"Guadalajara",
+                  "liga" => "#"
+                ),
+                array(
+                  "titulo" =>"Zapopán",
+                  "liga" => "#"
+                )
+              )
+            ),
+            array(
+              "titulo" => "Veracruz",
+              "campus" => array(
+                array(
+                  "titulo" =>"Boca del río",
+                  "liga" => "#"
+                )
+              )
+            )
+          )
+        ),
+        array(
           "puntos" => array(
               array(
                 "titulo" => "Absolutamente si tienes...",
