@@ -148,6 +148,22 @@ body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .row:nth-ch
 .aui .breadcrumb li span.divider {
     display: none;   
 }
+
+#wrapper.uvm-main-container .component-br{
+    margin: 0px !important;
+}
+
+body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .component-br.row:nth-child(1) > ul{
+    margin: 0px;
+}
+
+body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .component-br.row > ul > li{
+    margin: 0px;
+}
+
+body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .component-br.row > ul{
+    padding: 0px;
+}
 /* fin breadcrumbs */
 
 /* c29 */
@@ -157,3 +173,23 @@ body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .row:nth-ch
 }
 
 /* fin C29 */
+
+body #wrapper.uvm-main-container div.container .block-uvm .component-wrapper > .row.component-c29:nth-child(1) > ul li a.active:before{
+   content: '';
+   width: 0;
+   height: 0;
+   border-right: 20px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-left: 20px solid transparent;
+   border-top: 20px solid transparent;
+   position: absolute;
+   bottom: -40px;
+   left: 50%;
+   top: initial;
+   margin-left: -20px;
+   border-top: 20px solid #fff;
+}
+
+body .uvm-main-container div a:hover{
+    text-decoration: none;
+}
