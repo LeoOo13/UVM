@@ -193,3 +193,11 @@ body #wrapper.uvm-main-container div.container .block-uvm .component-wrapper > .
 body .uvm-main-container div a:hover{
     text-decoration: none;
 }
+
+/*PHA*/
+
+#wrapper.uvm-main-container .component-pha > .cont-expanded > .expanded-link .cont-text p{
+	font-weight: normal;
+}
+
+/*FIN PHA*/
