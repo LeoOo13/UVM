@@ -157,3 +157,8 @@ body #wrapper.uvm-main-container div .block-uvm .component-wrapper > .row:nth-ch
 }
 
 /* fin C29 */
+/* P3 */
+.row.component-p3a :before {
+    box-sizing: border-box;
+}
+/* P3 */
