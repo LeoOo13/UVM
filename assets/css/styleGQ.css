@@ -212,3 +212,12 @@ body .uvm-main-container div a:hover{
     bottom: 45px;
 }
 /* C69 */
+
+/*T4*/
+#wrapper.uvm-main-container .component-t4.text-center:before{
+  left:46.5%;
+}
+#wrapper.uvm-main-container .component-t4.text-right:before{
+  right:15px;
+}
+/*FIN T4*/
