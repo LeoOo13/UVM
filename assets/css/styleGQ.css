@@ -214,10 +214,23 @@ body .uvm-main-container div a:hover{
 /* C69 */
 
 /*T4*/
-#wrapper.uvm-main-container .component-t4.text-center:before{
-  left:46.5%;
+body #wrapper.uvm-main-container .block-uvm header.text-left{
+    text-align: left;
+}
+body #wrapper.uvm-main-container .block-uvm header.text-right{
+    text-align: right;
+}
+#wrapper.uvm-main-container .component-t4.text-left:before{
+  left:20px;
+  margin-left: 0px;
 }
 #wrapper.uvm-main-container .component-t4.text-right:before{
-  right:15px;
+  right:20px;
 }
 /*FIN T4*/
+
+@media (max-width: 767px){
+   .aui body{
+       padding:0px;
+   }
+}
