@@ -237,6 +237,17 @@ body #wrapper.uvm-main-container .block-uvm header.text-right{
 }
 /*FIN T4*/
 
+/*C32*/
+#wrapper.uvm-main-container .component-c32 .fc-content-skeleton table tbody tr td a{
+    color: #ffffff;
+}
+#wrapper.uvm-main-container .fc-content-skeleton table tbody tr td a {
+    background-color: #d1292f;
+    border: 0;
+    border-radius: 5px;
+}
+/*FIN C32*/
+
 @media (max-width: 767px){
    .aui body{
        padding:0px;
