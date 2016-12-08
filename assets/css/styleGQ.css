@@ -253,3 +253,14 @@ body #wrapper.uvm-main-container .block-uvm header.text-right{
        padding:0px;
    }
 }
+
+.swiper-container.swiper-container-horizontal.swiper-container-autoheight.swiper-container-fade .swiper-wrapper 
+.swiper-slide.swiper-slide-active .text-content{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #ffffff;   
+}
