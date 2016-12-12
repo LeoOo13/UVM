@@ -265,21 +265,12 @@ body #wrapper.uvm-main-container .block-uvm header.text-right{
     color: #ffffff;   
 }
 
-
+/* menu 8 secciones*/
+body #wrapper.uvm-main-container nav.nav-section ul li a {
+  padding: 0 39px!important;
+}
 /*wizi*/
 div.wiz *{
     width: 100%!important;
 }
 
-/* menu 8 secciones */
-.nav-section .container .clearfix .lfr-nav-item.dropdown.col-xs-12.col-md-1.not-on-menu-soy
-{
-    padding: 0 39px!important;
-
-}
-
-.col-sm-12.cont-nav-home .nav-section .container .clearfix .lfr-nav-item.dropdown.col-xs-12.col-md-1.not-on-menu-soy
-{
-    padding: 0 32px!important;
-
-}
