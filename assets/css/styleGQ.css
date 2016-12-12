@@ -274,3 +274,6 @@ div.wiz *{
     width: 100%!important;
 }
 
+body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li a {
+    padding: 0 32px!important;
+}
