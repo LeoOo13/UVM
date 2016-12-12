@@ -277,8 +277,3 @@ div.wiz *{
 body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li a {
     padding: 0 32px!important;
 }
-
-li.lfr-nav-item.selected.active.col-xs-12.col-md-1.not-on-menu-soy {
-    display: none!important;
-   
-}
