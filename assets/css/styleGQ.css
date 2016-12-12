@@ -265,11 +265,9 @@ body #wrapper.uvm-main-container .block-uvm header.text-right{
     color: #ffffff;   
 }
 
-/* menu 8 secciones*/
-body #wrapper.uvm-main-container nav.nav-section ul li a {
-  padding: 0 39px!important;
-}
+
 /*wizi*/
 div.wiz *{
     width: 100%!important;
 }
+
