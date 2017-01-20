@@ -277,3 +277,12 @@ div.wiz *{
 body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li a {
     padding: 0 32px!important;
 }
+.logoESR{
+  margin-right: 20px;
+}
+
+.logos{
+  display: inline-block;
+  max-width: 42px;
+  margin-right: 20px;
+}
