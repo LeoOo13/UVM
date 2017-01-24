@@ -288,8 +288,3 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
   margin-right: 20px;
 }
 
-.row.component-b1 > div{
-   padding:0px!important; 
-   margin-right: 20px!important;  
-   max-width: 560px!important;
-}
