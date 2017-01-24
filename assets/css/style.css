@@ -22873,7 +22873,8 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     }
     body #wrapper.uvm-main-container section .content > div.component-br,
     body #wrapper.uvm-main-container section .component-wrapper > div.component-br {
-        padding: 15px 0 5px;
+          padding: 15px 0 5px;
+        margin-top:25px!important;
     }
     body #wrapper.uvm-main-container .component-d6 .form-white-bg form > div {
         width: 100%;
