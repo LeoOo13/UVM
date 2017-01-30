@@ -15,7 +15,7 @@ var mapaUVM = (function () {
 
 				// Petición para obtener el script del mapa
 				$.ajax({
-				  url: 'https://maps.googleapis.com/maps/api/js?v=3.exp&#038;signed_in=true',
+				  url: 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAYM3iwZi1N-87WYv94lGiNCbpnX3w-XqQ&signed_in=true',
 				  dataType: "script"
 				}).
 				// Al ser satisfactoria inicializamos el mapa
@@ -74,7 +74,7 @@ var mapaUVM = (function () {
 				mapas.push({ id : mapId ,mapa: map, markers: [], infowindows:[] });
 
 				google.maps.event.addListenerOnce(mapas[i].mapa, 'idle', function(){
-				    console.log('finish loading');
+				    //console.log('finish loading');
 				    //$('.'+mapId).hide();
 				    $(this).find('.loader').hide();
 				});

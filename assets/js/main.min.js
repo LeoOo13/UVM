@@ -6,7 +6,7 @@ $.fn.isBefore = function(sel) {
 }
 
 $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e) {
-  console.log('aker');
+  //console.log('aker');
   e.stopPropagation();
 });
 
@@ -550,11 +550,11 @@ var funcionamientos = ( function( window, undefined ) {
 	  				height = ($('.component-m2.fixed-element').length > 0) ? $('.component-m2.fixed-element').height() : $('.nav-section.fixed-element').height();
 	  			}
 
-	  			console.log(height);
+	  			//console.log(height);
 	  			return  height;
 	  		}
 
-	  	console.log(element.offset().top, $('.component-m2, .nav-section').offset().top);
+	  	//console.log(element.offset().top, $('.component-m2, .nav-section').offset().top);
 
 
   		// Si hay menú mobile se cambia la adición al alto del menú (el menú fixed m2 desaparece)
@@ -1356,7 +1356,7 @@ function initComparadorPreparatoria(){
 		var innerContainers = [''];
 		var meta = {};
 		$.each( licenciaturas, function( key, val ) {
-			console.log(source);
+			//console.log(source);
 			$.getJSON( source , {
 		    id: val
 		  },function( data ) {
@@ -1365,12 +1365,12 @@ function initComparadorPreparatoria(){
 
 
 			}).always(function() {
-				console.log(meta);
+				//console.log(meta);
 
 				var $main = $('.component-cp1 .content-cp').eq(key);
 				var $main2 = $('.component-cp2 .content-cp').eq(key);
 
-				console.log($main);
+				//console.log($main);
 				var $mainmobile1 = $('.step-4 .one .divided-c .halff').eq(key);
 				var $mainDuracionMobile = $('.step-4 .two .divided-c .halff').eq(key);
 				var $mainmobile3 = $('.step-4 .three .divided-c .halff').eq(key);
@@ -2317,11 +2317,11 @@ function initComparadorGeneral(){
 		function updateSliders(element){
 
 			sliders_inside = element.find('.swiper-container');
-			console.log(sliders_inside.length);
+			//console.log(sliders_inside.length);
 			//Ciclo para cada slider
 			for (var i = 0; i < sliders_inside.length; i++) {
 				var i_slider = $(sliders_inside[i]).data('slider-id');
-				console.log(i_slider);
+				//console.log(i_slider);
 				// Si se tiene el indice del slider y ese indice existe en el arreglo de sliders, se posiciona en 0 y con diferenciacion de tiempo se ejecuta una actualización del slider
 				if (i_slider && sliders[i_slider]){
 					sliders[i_slider].slideTo(0);
@@ -2415,20 +2415,21 @@ function initComparadorGeneral(){
 
   	 	var $inExtended = $selector.parent().closest('.expanded-link');
 
-  	 	console.log($selector);
+  	 	//console.log($selector);
 
   		if($inExtended.length>0)
   			initialPosition.top = initialPosition.top + $inExtended.height();
 
 		$(window).scroll(function(){
-			//genera conflicto con la opción de menú
-			/*if ($(this).scrollTop() > initialPosition.top){
+			///Yahir: genera conflicto con la opción de menú
+			//Guillermo: nunca debió comentarse esta línea, necesaria para el funcionamiento del M2
+			if ($(this).scrollTop() > initialPosition.top){
 
 				$selector.addClass('fixed-element')
 			}
 			else{
 				$selector.removeClass('fixed-element')
-			}*/
+			}
 
 			if(!$('body').hasClass('fixed-scroll')){
 				setCurrentElement();
