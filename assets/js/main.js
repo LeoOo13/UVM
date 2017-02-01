@@ -65,7 +65,8 @@ var funcionamientos = ( function( window, undefined ) {
     if (typeof YTPlayer != "undefined") {
       $('#video').YTPlayer({
           fitToBackground: true,
-          videoId: 'LSmgKRx5pBo'
+          videoId: 'LSmgKRx5pBo',
+          mute: true
       });
     }
 
