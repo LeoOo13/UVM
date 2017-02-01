@@ -63,12 +63,11 @@ var funcionamientos = ( function( window, undefined ) {
 		}
 
     if (typeof YTPlayer != "undefined") {
-    	console.log("Configuracion del video....");
-	      var videoHome =$('#video').YTPlayer({
+	      var videoHome = $('#video').YTPlayer({
 	          fitToBackground: true,
 	          videoId: 'LSmgKRx5pBo',
+	          playerVars: {'mute':0}
 	      });
-	      videoHome.mute()
     }
 
 
