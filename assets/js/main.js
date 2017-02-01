@@ -66,7 +66,6 @@ var funcionamientos = ( function( window, undefined ) {
 	      var videoHome = $('#video').YTPlayer({
 	          fitToBackground: true,
 	          videoId: 'LSmgKRx5pBo',
-	          playerVars: {'mute':0}
 	      });
     }
 
