@@ -71,7 +71,7 @@ if (typeof Object.create !== "function") {
     defaults: {
       ratio: 16 / 9,
       videoId: 'LSmgKRx5pBo',
-      mute: true,
+      mute: false,
       repeat: true,
       width: $(window).width(),
       playButtonClass: 'YTPlayer-play',
