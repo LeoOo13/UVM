@@ -17657,7 +17657,23 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     margin: 0;
     position: relative;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input:after {
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad .input {
+    background-color: transparent !important; 
+}
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked {
+    height: 300px;
+    overflow: scroll;
+    margin: 0;
+}
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
+    width: 100%;
+    text-align: left;
+}
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_n_interes_ls .input:after, 
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_campus_interes .input:after, 
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_tel_fono_principal__c .input:after{
     height: 20px;
     width: 20px;
     content: "\61";
