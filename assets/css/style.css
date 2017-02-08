@@ -9046,7 +9046,7 @@ body #wrapper.uvm-main-container::-webkit-file-upload-button {
 body #wrapper.uvm-main-container a.btn {
     padding: 12px 25px;
 }
-body #wrapper.uvm-main-container .btn {
+/*body #wrapper.uvm-main-container .btn {
     min-height: 50px;
     border-radius: 8px;
     text-transform: uppercase;
@@ -9058,7 +9058,21 @@ body #wrapper.uvm-main-container .btn {
     padding: 10px 25px;
     white-space: normal;
     line-height: 50px;
+}*/
+
+body #wrapper.uvm-main-container .btn {
+   min-height: 50px;
+   border-radius: 8px;
+   text-transform: uppercase;
+   font-size: 15px;
+   font-family: "montserrat_uvm";
+   color: #ffffff;
+   display: block;
+   margin: 0 auto;
+   padding: 10px 25px;
+   white-space: normal;
 }
+
 body #wrapper.uvm-main-container .btn:hover,
 body #wrapper.uvm-main-container .btn:visited,
 body #wrapper.uvm-main-container .btn:hover,
@@ -10092,7 +10106,7 @@ body #wrapper.uvm-main-container nav.nav-section ul li a:hover:after,
 body #wrapper.uvm-main-container nav.nav-section ul li a.active:after {
     display: none;
 }
-body #wrapper.uvm-main-container nav.nav-section ul li a:after {
+/*body #wrapper.uvm-main-container nav.nav-section ul li a:after {
     content: "";
     font-size: 30px;
     background: #ffffff;
@@ -10105,7 +10119,28 @@ body #wrapper.uvm-main-container nav.nav-section ul li a:after {
     bottom: auto;
     margin: auto;
     left: auto;
+}*/
+
+body #wrapper.uvm-main-container nav.nav-section ul li a:after {
+   content: "";
+   background: #ffffff;
+   position: absolute;
+   height: 15px;
+   width: 2px;
+   right: -2px;
+   top: 50%;
+   margin-top: -7.5px;
 }
+
+body #wrapper.uvm-main-container nav.nav-section ul li a .lfr-nav-child-toggle{
+   display: block;
+   line-height: 0;
+}
+
+body #wrapper.uvm-main-container nav.nav-section ul li a .lfr-nav-child-toggle >i{
+   line-height: .5;
+}
+
 body #wrapper.uvm-main-container nav.nav-section ul li a.btn {
     height: 50px;
 }
@@ -10400,11 +10435,30 @@ body #wrapper.uvm-main-container nav.nav-section ul .not-desktop-menu,
 body #wrapper.uvm-main-container nav.nav-section ul .cancel-zone {
     display: none;
 }
-body #wrapper.uvm-main-container nav.nav-claro {
+/*body #wrapper.uvm-main-container nav.nav-claro {
     background-color: rgba(255, 255, 255, 0.4) !important;
     z-index: 100;
     position: relative;
+}*/
+
+body #wrapper.uvm-main-container nav.nav-claro {
+   background-color: rgba(102, 102, 102, 0.4) !important;
+   z-index: 100;
+   position: relative;
 }
+
+body #wrapper.uvm-main-container nav.nav-claro.fixed-element {
+   background-color: #EEEEEE !important;
+}
+
+body #wrapper.uvm-main-container nav.nav-claro.fixed-element ul li a{
+   color: #545454 !important;
+}
+
+body #wrapper.uvm-main-container nav.nav-claro.fixed-element ul li.hover a{
+   color: #ffffff !important;
+}
+
 body #wrapper.uvm-main-container nav.nav-oscuro {
     background-color: #EEEEEE !important;
     z-index: 100;
@@ -17596,17 +17650,21 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 #wrapper.uvm-main-container .component-f3 {
     position: relative;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form {
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form {
     height: 86%;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form {
+   height: 86%;
+   padding: 20px 0 !important;
 }
+
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix {
     position: relative;
     padding: 20px 0;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked {
-    height: 300px;
-    overflow: scroll;
-}
+
+
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked .hs_submit {
     position: absolute;
     width: 100%;
@@ -17642,9 +17700,9 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     height: auto;
     margin-top: 0;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
     width: 100%;
-}
+}*/
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field label {
     margin-bottom: 0;
     font-weight: 300;
@@ -17661,17 +17719,29 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad .input {
     background-color: transparent !important; 
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked {
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked {
     height: 300px;
     overflow: scroll;
     margin: 0;
-}
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
-    width: 100%;
-    text-align: left;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form.stacked {
+   height: 330px;
+   overflow: scroll;
+   margin: 0;
 }
 
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_n_interes_ls .input:after, 
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
+    width: 100%;
+    text-align: left;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field {
+   text-align: left;
+   padding: 0 5px;
+}
+
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_n_interes_ls .input:after, 
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_campus_interes .input:after, 
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_tel_fono_principal__c .input:after{
     height: 20px;
@@ -17692,21 +17762,79 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     right: 15px;
     font-size: 23px;
     color: #D9272E;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_n_interes_ls .input:after, 
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_campus_interes .input:after,
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_tel_fono_principal__c .input:after,
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_nivel_acad_mico .input:after ,
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_asunto .input:after, 
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field.hs_estado_procedencia .input:after{
+   height: 20px;
+   width: 20px;
+   content: "\61";
+   font-family: "uvm-icons";
+   font-weight: 400;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   display: block;
+   pointer-events: none;
+   position: absolute;
+   margin: auto;
+   left: auto;
+   top: 0;
+   bottom: 0;
+   right: 9px;
+   font-size: 23px;
+   color: #D9272E;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input input {
+
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input input {
     font-weight: 100;
     font-size: 16px;
     height: 30px;
     width: 100%;
     max-width: none;
     background-color: #EEEEEE;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input input {
+   font-weight: 100;
+   font-size: 14px;
+   height: 25px;
+   width: 100%;
+   max-width: none;
+   background-color: #EEEEEE;
 }
-#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input select {
+
+/*#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input select {
     height: 30px;
     width: 100%;
     max-width: none;
     background: transparent;
+}*/
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input select {
+   height: 25px;
+   width: 100%;
+   max-width: none;
+   background: transparent;
+   padding: 1px 15px 1px 0;
+   font-size: 14px;
 }
+
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .input textarea {
+   font-weight: 100;
+   font-size: 14px;
+   height: 25px;
+   width: 100%;
+   max-width: none;
+   background-color: #EEEEEE;
+   border: 0 !important;
+   box-shadow: none;
+}
+
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs-form-field .hs-error-msgs {
     padding: 0;
     margin: 0;
@@ -18704,7 +18832,7 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     margin: 0 !important;
     position: relative;
 }
-#wrapper.uvm-main-container .component-i1 .back-img-cont:after {
+/*#wrapper.uvm-main-container .component-i1 .back-img-cont:after {
     content: '';
     display: block;
     position: absolute;
@@ -18713,17 +18841,18 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     width: 100%;
     height: 100%;
     background: -moz-linear-gradient(top, black 0%, rgba(222, 222, 222, 0) 87%, rgba(255, 255, 255, 0) 100%);
-    /* FF3.6-15 */
+    /* FF3.6-15 
     
     background: -webkit-linear-gradient(top, black 0%, rgba(222, 222, 222, 0) 87%, rgba(255, 255, 255, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
+    /* Chrome10-25,Safari5.1-6 
     
     background: linear-gradient(to bottom, black 0%, rgba(222, 222, 222, 0) 87%, rgba(255, 255, 255, 0) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff', GradientType=0);
-    /* IE6-9 */
-}
+    /* IE6-9 
+}*/
+
 #wrapper.uvm-main-container .component-i1 .back-img-cont img {
     width: 100%;
     display: block;
@@ -18739,7 +18868,12 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     text-align: center;
     margin: 0;
 }
-#wrapper.uvm-main-container .component-i1 .up-text-cont h1 {
+
+#wrapper.uvm-main-container .component-i1 .up-text-cont h1.light {
+   background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*#wrapper.uvm-main-container .component-i1 .up-text-cont h1 {
     font-size: 60px;
     color: #ffffff;
     font-family: "montserrat_uvm";
@@ -18749,7 +18883,21 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}*/
+
+#wrapper.uvm-main-container .component-i1 .up-text-cont h1 {
+   font-size: 60px;
+   color: #ffffff;
+   font-family: "montserrat_uvm";
+   font-weight: bold;
+   margin: 50px auto 0 auto;
+   max-width: 95%;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   display: inline-block;
 }
+
 #wrapper.uvm-main-container .component-i1 .right-buttons {
     position: absolute;
     bottom: 20px;
