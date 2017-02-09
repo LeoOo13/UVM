@@ -1,19 +1,18 @@
-//validaciones Hubspot Rene Delgadillo 24/08/2015
- 
+
 $(document).ready(function() {
         
     //funcion para iniciar campos de formularios 
-    inicializarCampos = setInterval(function ()
+    inicializarCampos = setInterval(function () 
     {
                 if ($('.hs-form').length > 0) {
             
             // Form is rendered, stop looking
-            clearInterval(inicializarCampos);   
+            clearInterval(inicializarCampos);    
             
-            $('input[name="trackid"]').val(getUrlParameter('trackid')).change();
-            $('input[name="utm_source_custom"]').val(getUrlParameter('utm_source')).change();
-            $('input[name="utm_medium_custom"]').val(getUrlParameter('utm_medium')).change();
-            $('input[name="utm_campaign_custom"]').val(getUrlParameter('utm_campaign')).change();
+            
+            
+            //Asignar variable de sesion al campo oculto de trackid (Omar Rojas Rodriguez Febrero 2017)
+            $('input[name="trackid"]').val(sessvars.trackid).change();
      
           
             //Agregado por Camilo: Noviembre 11
@@ -57,12 +56,12 @@ $(document).ready(function() {
             })
             
             // ACEPTA SOLO LETRAS
-            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keypress(function(event)
-            {                                                 
+            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keypress(function(event) 
+            {                                                  
                 /*inputValue = (event.which) ? event.which : event.keyCode;
-                                               
+                                                
                 teclado = String.fromCharCode(inputValue).toLowerCase();
-                teclas = "abcdefghijklmnñopqrstuvwxyz";
+                teclas = "abcdefghijklmn�opqrstuvwxyz";
                 especiales = "8-32-37-38-46-164";
                 teclado_especial = false;
                 
@@ -100,7 +99,7 @@ $(document).ready(function() {
                     espacio = true;
                     return;
                 }                
-                else if(validoT ==true){   
+                else if(validoT ==true){    
                     if(tecla == 32 && espacio== true){
                         espacio = false;
                         return true;
@@ -123,7 +122,7 @@ $(document).ready(function() {
             });
             
             //LA PRIMERA LETRA EN MAYUSCULA
-            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keyup(function(){               
+            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keyup(function(){                
                 caps = this.value;
                 objts = this;
                 capitalized = caps.charAt(0).toUpperCase() + caps.substring(1);
@@ -153,24 +152,24 @@ $(document).ready(function() {
                 }
                 
             });//Termina validacion de solo Numeros
-           
+            
             
             // Aqui estan las validaciones pero ligadas al metodo blur
             //REVISMOS LA LONGITUD DE LA CADENA Y REVISAMOS PALABRAS BASURA
-                                $('input[name=firstname], input[name=segundo_nombre],input[name=lastname],input[name=apellido_materno__c]').blur(function (event)
+                                $('input[name=firstname], input[name=segundo_nombre],input[name=lastname],input[name=apellido_materno__c]').blur(function (event) 
                                                   {
                                                                   //console.log('Paso por el blur 2');                                                                          
                                                                   var $nombre = $('input[name=firstname]').val();
                                                                   var $segundoNombre = $('input[name=segundo_nombre]').val();
                                                                   var $apellidoPaterno = $('input[name=lastname]').val();
                                                                   var $apellidoMaterno = $('input[name=apellido_materno__c]').val();
-                                                                 
+                                                                  
                                                                   var longitud = $nombre.length;
-                                                               
+                                                                
             
-                                                                                if ((longitud<3)||(longitud>30))
+                                                                                if ((longitud<3)||(longitud>30)) 
                                                                                 {
-                                                                                                alert('Error: el nombre debe tener de más de 2 letras y menos de 30');
+                                                                                                alert('Error: el nombre debe tener de m�s de 2 letras y menos de 30');
                                                                                                 setTimeout(function() {
                                                                                                                 $('input[name=firstname]').focus();
                                                                                                 }, 10);
@@ -179,7 +178,7 @@ $(document).ready(function() {
                                                                                                 return false;
                                                                                 }
                                                                   // nombre
-                                                                  if (EsPalabraProhibida($nombre.toUpperCase()))
+                                                                  if (EsPalabraProhibida($nombre.toUpperCase())) 
                                                                                 {
                                                                                                 $('input[name=firstname]').val("");
                                                                                                 setTimeout(function() {
@@ -190,7 +189,7 @@ $(document).ready(function() {
                                                                                                 return false;
                                                                                 }
                                                                                 // segundo nombre
-                                                                                if (EsPalabraProhibida($segundoNombre.toUpperCase()))
+                                                                                if (EsPalabraProhibida($segundoNombre.toUpperCase())) 
                                                                                 {
                                                                                                 $('input[name=segundo_nombre]').val("");
                                                                                                 setTimeout(function() 
@@ -201,10 +200,10 @@ $(document).ready(function() {
                                                                                                 e.preventDefault();
                                                                                                 return false;
                                                                                 }
-                                                                               
+                                                                                
                                                                                 // apellido paterno
                                                                                 
-                                                                                if (EsPalabraProhibida($apellidoPaterno.toUpperCase()))
+                                                                                if (EsPalabraProhibida($apellidoPaterno.toUpperCase())) 
                                                                                 {
                                                                                                 $('input[name=lastname]').val("");
                                                                                                 setTimeout(function() {
@@ -216,7 +215,7 @@ $(document).ready(function() {
                                                                                 }
                                                                                 // apellido materno
                                                                                 
-                                                                                if (EsPalabraProhibida($apellidoMaterno.toUpperCase()))
+                                                                                if (EsPalabraProhibida($apellidoMaterno.toUpperCase())) 
                                                                                 {
                                                                                                 $('input[name=apellido_materno__c]').val("");
                                                                                                 setTimeout(function() {
@@ -226,7 +225,7 @@ $(document).ready(function() {
                                                                                                 e.preventDefault();
                                                                                                 return false;
                                                                                 }
-                                                               
+                                                                
                                                                 });
             
             //REVISAMOS EN EL BLUR DEL CAMPO APELLIDO MATERNO SI SE REPITIO LO ESCRITO EN CAMPOS ANTERIORES
@@ -238,7 +237,7 @@ $(document).ready(function() {
                 var $apellidoMaterno = $.trim($('input[name=apellido_materno__c]').val());
                                 
                 if( $nombre == $segundoNombre && $segundoNombre == $apellidoPaterno && $apellidoPaterno == $apellidoMaterno ){
-                    alert("Tus nombres no pueden ser iguales a tus apellidos.");               
+                    alert("Tus nombres no pueden ser iguales a tus apellidos.");                
                     
                     $('input[name=firstname]').val("");
                     $('input[name=segundo_nombre]').val("");
@@ -256,10 +255,10 @@ $(document).ready(function() {
                                                         e.preventDefault();
                                         });
                         });
- 
-                                }//Termina el IF de inicializacion de formulario   
+
+                                }//Termina el IF de inicializacion de formulario    
                 }, 100);//termina setInterval
- 
+
     /* ************************
         Funciones por separado
     ************************* */
@@ -270,7 +269,7 @@ $(document).ready(function() {
             return true;
         }else if(keyAnt == codigo){
             if(vecesText>=1){ 
-                return false;              
+                return false;               
             }else if(vecesText!=1){ keyAnt=codigo; vecesText= vecesText+1;
                 return true;
             }
@@ -281,11 +280,11 @@ $(document).ready(function() {
             }
         }        
     }
- 
+
     //FUNCON PARA PALABRAS BASURA
     var EsPalabraProhibida = function (palabra) 
     {
-        var myArray = [ 'ASDASD','ASDASDASD','AAA','AAD','ABC','ADS','AEA','AHH','APELLIDO','ASD','ASF','ASJ','BBB','BFJ','BJK','BVH','CCC','CDS','CHC','CJU','CSD','CVB','CXZ','DADSA','DAS','DDD','DEE','DEMO','DFG','DJF','DJJ','DND','DRH','DSE','DSF','DSS','DSX','DVC','DXX','DYY','EEE','EEH','EWF','FFF','FGG','FGH','FGT','FHG','FJG','FJH','FKJ','FNH','FRG','GFL','GGG','GHB','GHH','GHK','GJS','GVK','HAH','HCH','HDJ','HGD','HGF','HHF','HHH','HJK','HJN','HOLA','IBF','IGH','IHI','III','IJI','IOJ','IPH','JAJ','JAJA','JHG','JHJ','JHN','JHR','JHU','JJJ','JJN','JKL','JLK','JOK','KBE','KHV','KJK','KJN','KJS','KKJ','KKK','KLK','KNK','LKH','LKJ','LLJ','LLL','LOL','LUU','MKK','MMM','MPM','NALGA','NEL','NJP','NKJ','NNN','NOMB','NUL','OIF','OIO','OOO','OUO','PAA','PERSONAL','PITO','PPP','QQQ','QWE','RGT','RRR','RTR','SDA','SDF','SDS','SFJ','SSS','SWS','TRIAL','TRR','TRT','TTT','UUU','VEE','VVV','WFE','WWW','XCV','XDE','XXX','XZZ','YRT','YYY','ZXC','ZYE','ZZZ','NONE','ASAS','FDS','JNK','JLL','RRB','PERRA','PUTA','CULO','CULIADA','MARICA','MAMAR','PUTO','PENDEJO','LDK','XOXO','RAMERA','HFF','VERGA','VERGA','MARICON','SUPERM','BATMAN','BATMAN', 'ZORRA', 'ZORRA', 'FUCKYOU', 'FUCKYOU','QWERTY','QWERTYU','UYTREWQ','POIUYTR','QWERT','QAZWSX','XSWZAQ','ASDFFGH','ÑLKJH','MNBVCXZ','ZXCVBNM','ZXCV','BNM','ÑPLOKM','IJNMKO','SDFGHJKLÑ','EDCRFV','UHBYGV','TGBUHB','VFRBHU','NJICDEBUH','EDCIJN','EDCIJN','YTRUIE','AQSW','PLOK','RWEIOP','POQWIEHBF','POIUYT' , 'PRUEBA', 'ALGO', 'JOTO' ];
+        var myArray = [ 'ASDASD','ASDASDASD','AAA','AAD','ABC','ADS','AEA','AHH','APELLIDO','ASD','ASF','ASJ','BBB','BFJ','BJK','BVH','CCC','CDS','CHC','CJU','CSD','CVB','CXZ','DADSA','DAS','DDD','DEE','DEMO','DFG','DJF','DJJ','DND','DRH','DSE','DSF','DSS','DSX','DVC','DXX','DYY','EEE','EEH','EWF','FFF','FGG','FGH','FGT','FHG','FJG','FJH','FKJ','FNH','FRG','GFL','GGG','GHB','GHH','GHK','GJS','GVK','HAH','HCH','HDJ','HGD','HGF','HHF','HHH','HJK','HJN','HOLA','IBF','IGH','IHI','III','IJI','IOJ','IPH','JAJ','JAJA','JHG','JHJ','JHN','JHR','JHU','JJJ','JJN','JKL','JLK','JOK','KBE','KHV','KJK','KJN','KJS','KKJ','KKK','KLK','KNK','LKH','LKJ','LLJ','LLL','LOL','LUU','MKK','MMM','MPM','NALGA','NEL','NJP','NKJ','NNN','NOMB','NUL','OIF','OIO','OOO','OUO','PAA','PERSONAL','PITO','PPP','QQQ','QWE','RGT','RRR','RTR','SDA','SDF','SDS','SFJ','SSS','SWS','TRIAL','TRR','TRT','TTT','UUU','VEE','VVV','WFE','WWW','XCV','XDE','XXX','XZZ','YRT','YYY','ZXC','ZYE','ZZZ','NONE','ASAS','FDS','JNK','JLL','RRB','PERRA','PUTA','CULO','CULIADA','MARICA','MAMAR','PUTO','PENDEJO','LDK','XOXO','RAMERA','HFF','VERGA','VERGA','MARICON','SUPERM','BATMAN','BATMAN', 'ZORRA', 'ZORRA', 'FUCKYOU', 'FUCKYOU','QWERTY','QWERTYU','UYTREWQ','POIUYTR','QWERT','QAZWSX','XSWZAQ','ASDFFGH','�LKJH','MNBVCXZ','ZXCVBNM','ZXCV','BNM','�PLOKM','IJNMKO','SDFGHJKL�','EDCRFV','UHBYGV','TGBUHB','VFRBHU','NJICDEBUH','EDCIJN','EDCIJN','YTRUIE','AQSW','PLOK','RWEIOP','POQWIEHBF','POIUYT' , 'PRUEBA', 'ALGO', 'JOTO' ];
         
         if ($.inArray(palabra, myArray) !== -1) {
             alert('Palabra Prohibida');
@@ -295,10 +294,7 @@ $(document).ready(function() {
         }
         
     }
- 
- 
- 
- 
+
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
             sURLVariables = sPageURL.split('&'),
@@ -313,6 +309,10 @@ $(document).ready(function() {
             }
         }
     };
- 
     
+    // asignar trackid de URL a la variable de sesion sessvars.trackid
+    if(getUrlParameter('trackid')!=undefined){
+        sessvars.trackid=getUrlParameter('trackid');
+    }
 });//cerramos funcion de document.ready
+
