@@ -330,11 +330,12 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
         padding-top: 32px;
    }
 
-	body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li a{
+	body #wrapper.uvm-main-container nav.nav-section ul li a{
 		padding: 10px 15px;
 	}
-	.aui .icon-caret-down:before{
-	    content:"";
+	
+	body #wrapper.uvm-main-container nav.nav-section ul li a span.lfr-nav-child-toggle{
+		display: none;
 	}
 }
 
