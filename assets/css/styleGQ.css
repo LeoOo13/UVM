@@ -325,6 +325,7 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
 
   body #wrapper.uvm-main-container .header-home > div .cont-nav-home{
     position: fixed;
+    height: 1px;
     z-index: 1;
   }
 
