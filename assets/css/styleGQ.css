@@ -323,11 +323,11 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
 		display: none;
 	}
 
-  body #wrapper.uvm-main-container .header-home > div .cont-nav-home{
+  /*body #wrapper.uvm-main-container .header-home > div .cont-nav-home{
     position: fixed;
-    /*height: 1px;*/
+    height: 1px;
     z-index: 1;
-  }
+  }*/
 
   body #wrapper.uvm-main-container nav.nav-section{
     position: fixed;
