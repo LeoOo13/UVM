@@ -20,6 +20,16 @@
 body #wrapper.uvm-main-container .block-uvm header.portlet-topper:before{
     display: none;
 }
+.vid-container {
+    z-index: 0;
+    width: 100%;
+    height: 550px;
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .aui .portlet-content, 
 .aui .portlet-minimized .portlet-content-container{
     border: 0;
