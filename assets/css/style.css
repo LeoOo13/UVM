@@ -10444,7 +10444,7 @@ body #wrapper.uvm-main-container nav.nav-section ul .cancel-zone {
 body #wrapper.uvm-main-container nav.nav-claro {
    background-color: rgba(102, 102, 102, 0.4) !important;
    z-index: 100;
-   position: fixed;
+   position: absolute;
 }
 
 body #wrapper.uvm-main-container nav.nav-claro.fixed-element {
@@ -10462,7 +10462,7 @@ body #wrapper.uvm-main-container nav.nav-claro.fixed-element ul li.hover a{
 body #wrapper.uvm-main-container nav.nav-oscuro {
     background-color: #EEEEEE !important;
     z-index: 100;
-    position: fixed;
+    position: absolute;
 }
 body #wrapper.uvm-main-container nav.nav-oscuro ul > li > a {
     color: #545454 !important;
@@ -23536,7 +23536,7 @@ body #wrapper.uvm-main-container #component-cpm {
 body #wrapper.uvm-main-container .header-home > div .cont-nav-home {
         /*height: 800px;*/
         width: 100%;
-        overflow-y: scroll;
+        /*overflow-y: scroll;*/
         -webkit-overflow-scrolling: touch;
     }
 body #wrapper.uvm-main-container .header-home > div .cont-nav-home nav.nav-section ul li.hover a {
