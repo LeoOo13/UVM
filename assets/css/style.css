@@ -10462,7 +10462,7 @@ body #wrapper.uvm-main-container nav.nav-claro.fixed-element ul li.hover a{
 body #wrapper.uvm-main-container nav.nav-oscuro {
     background-color: #EEEEEE !important;
     z-index: 100;
-    position: relative;
+    position: fixed;
 }
 body #wrapper.uvm-main-container nav.nav-oscuro ul > li > a {
     color: #545454 !important;
