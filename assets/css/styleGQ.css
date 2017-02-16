@@ -338,9 +338,9 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
     height: 1px;
     z-index: 1;
   }*/
-  /*body #wrapper.uvm-main-container .header-home{
-    min-height: 500px;
-  }*/
+  body #wrapper.uvm-main-container .header-home{
+    min-height: 52px;
+  }
 
   .aui #heading{
     position: static;
