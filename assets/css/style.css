@@ -10444,7 +10444,7 @@ body #wrapper.uvm-main-container nav.nav-section ul .cancel-zone {
 body #wrapper.uvm-main-container nav.nav-claro {
    background-color: rgba(102, 102, 102, 0.4) !important;
    z-index: 100;
-   position: relative;
+   position: fixed;
 }
 
 body #wrapper.uvm-main-container nav.nav-claro.fixed-element {
