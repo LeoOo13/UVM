@@ -313,6 +313,10 @@ body #wrapper.uvm-main-container .col-sm-12.cont-nav-home nav.nav-section ul li 
   max-width: 42px;
   margin-right: 20px;
 }
+body #wrapper.uvm-main-container nav.nav-oscuro{
+  width: 100%;
+  position: static;
+}
 
 #banner.bannerAbs{
   position: absolute;
