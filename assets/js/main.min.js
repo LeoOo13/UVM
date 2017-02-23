@@ -1640,8 +1640,7 @@ function initComparadorGeneral(){
 				showStep(show);
 			});
 
-			$('.pick-carrer').on( "click", '>li', function(e) {
-			//$('.line-carrer, .pick-carrer').on( "click", '>li', function(e) {
+			$('.line-carrer, .pick-carrer').on( "click", '>li', function(e) {
 
 				$($(this).data('selector') + ' select').val($(this).data('value')).change();
 
