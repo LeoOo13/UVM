@@ -83,7 +83,8 @@ var comparador = ( function( window, undefined ) {
 			showStep(show);
 		});
 
-		$('.line-carrer, .pick-carrer').on( "click", '>li', function(e) {
+		$('.pick-carrer').on( "click", '>li', function(e) {
+		//$('.line-carrer, .pick-carrer').on( "click", '>li', function(e) {
 
 			$($(this).data('selector') + ' select').val($(this).data('value')).change();
 
