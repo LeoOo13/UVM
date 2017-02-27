@@ -372,3 +372,7 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
 .ytp-gradient-top {
     display:none;
 }
+
+.alert.alert-info {
+    display: none;
+}
