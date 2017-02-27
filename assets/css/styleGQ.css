@@ -359,3 +359,7 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
 }
 
   
+.ytp-chrome-top.ytp-watch-later-button-visible.ytp-share-button-visible,
+.ytp-gradient-top {
+    display:none;
+}
