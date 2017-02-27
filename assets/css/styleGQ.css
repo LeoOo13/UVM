@@ -360,6 +360,10 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
     min-height: 52px;
   }
 
+  body #wrapper.uvm-main-container section .component-wrapper > div.component-br{
+     margin-top: 65px!important;
+  }
+
 
 }
 
