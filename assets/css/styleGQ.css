@@ -376,3 +376,10 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
 .alert.alert-info {
     display: none;
 }
+
+body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .aditional-topics ul li a.special {
+    border-top: 3px solid #545454; 
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    background-color: #2EA61E;
+}
