@@ -384,3 +384,7 @@ body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .aditional-
     background-color: rgba(46, 166, 30, 0.8);
 
 }
+
+.row.component-p3a .cont-btn{
+    text-align: center!important;
+}
