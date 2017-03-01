@@ -378,8 +378,9 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
 }
 
 body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .aditional-topics ul li a.special {
-    border-top: 3px solid #D9272E;
+    border-top: 3px solid #D9272E !important;
     background: rgba(0, 0, 0, 0.2);
     color: #ffffff;
-    background-color: #2EA61E;
+    background-color: rgba(46, 166, 30, 0.8);
+
 }
