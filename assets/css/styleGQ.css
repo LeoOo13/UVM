@@ -377,6 +377,10 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
     display: none;
 }
 
+.ytp-chrome-top.ytp-share-button-visible {
+    display: none;
+  }
+
 body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .aditional-topics ul li a.special {
     border-top: 3px solid #D9272E !important;
     background: rgba(0, 0, 0, 0.2);
