@@ -392,3 +392,15 @@ body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .aditional-
 .row.component-p3a .cont-btn{
     text-align: center!important;
 }
+
+@media (max-width: 767px){
+#wrapper .nav-section.mobile-active {
+
+position: fixed !important;
+    height: 100%;
+    overflow: scroll;
+    left: 0;
+    top: 0;
+
+  }
+}
