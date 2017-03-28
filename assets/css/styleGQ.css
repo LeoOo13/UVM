@@ -404,3 +404,7 @@ position: fixed !important;
 
   }
 }
+
+.dialogue-circle{
+  z-index: 0!important;
+}
