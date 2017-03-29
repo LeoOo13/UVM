@@ -2150,7 +2150,7 @@ function initComparadorGeneral(){
 	  		var active = false;
 	  		$menuElements.each(function(i, e) {
 	  			var $element = $(e).clone();
-	  			//$(e).addClass('hidden-xs');
+	  			$(e).addClass('hidden-xs');
 				var tab = tabs.eq(i);
 
 				$element.insertBefore(tab).addClass('hidden-md hidden-lg hidden-sm visible-xs-block');
