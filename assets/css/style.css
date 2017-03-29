@@ -21990,7 +21990,7 @@ body #wrapper.uvm-main-container .component-d5 form {
 }
 @media (max-width: 1270px) {
 body #wrapper.uvm-main-container nav.nav-section ul li {
-        width: 16.4%;
+        /*width: 16.4%;*/
         float: left;
     }
 body #wrapper.uvm-main-container nav.nav-section ul li .submenu {
