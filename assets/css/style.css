@@ -24032,7 +24032,7 @@ body #wrapper.uvm-main-container .component-c27 .tab-zone {
 body #wrapper.uvm-main-container .component-c27 a {
         display: block;
         margin: 15px auto;
-        width: 10%;
+        width: 100%;
     }
 body #wrapper.uvm-main-container .component-c27 iframe {
         width: 100% !important;
