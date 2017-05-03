@@ -331,6 +331,10 @@ body #wrapper.uvm-main-container nav.nav-oscuro{
 
 
 @media (max-width: 767px){
+
+  .row.component-i1b {
+      z-index:0;
+  }  
    .aui body{
        padding:0px;
    }
