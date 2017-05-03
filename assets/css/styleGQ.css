@@ -409,9 +409,6 @@ position: fixed !important;
   }
 }
 
-.dialogue-circle{
-  z-index: 0!important;
-}
 
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset {
     max-width: none; }
