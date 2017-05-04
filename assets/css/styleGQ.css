@@ -488,3 +488,11 @@ padding: 0;
 margin: 0; }
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs-form-field .hs-error-msgs label {
 color: #D9272E; }
+
+.field.lfr-search-button{
+    width:33px!important;
+    left:240px!important;
+}
+body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .less-imp-topics ul li.search .data-write input{
+    width:100%;
+}
