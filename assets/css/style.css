@@ -25672,6 +25672,31 @@ body #wrapper.uvm-main-container .component-nt1 .bar .tittle-news p {
     z-index: 99999;
 }
 @media (max-width: 767px) {
+    body #wrapper.uvm-main-container nav .mobile-head .mobile-search-container input[type="text"] {
+    width: 70%;
+    /* height: 100%; */
+    background-color: #DDDDDD;
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+}
+form#_77_INSTANCE_abcd_fm {
+     background-color: #DDDDDD;
+}
+
+body #wrapper.uvm-main-container nav .mobile-head .mobile-search-container {
+    display: none;
+    border-top: 2px solid #ffffff;
+    /* background-color: #DDDDDD; */
+    /* color: #000000; */
+    /* height: 50px; */
+    width: 100%;
+    border-radius: 0;
+    /* padding: 10px; */
+    /* z-index: 9999; */
+    /* overflow: hidden; */
+}
 #wrapper     .fixed-menu-section {
         display: none;
         margin: 0 auto 30px auto;
