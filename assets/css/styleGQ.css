@@ -23,7 +23,7 @@ body #wrapper.uvm-main-container .block-uvm header.portlet-topper:before{
 .vid-container {
     z-index: 0;
     width: 100%;
-    height: 550px;
+    height: 720px;
     display: block;
     position: relative;
     overflow-x: hidden;
