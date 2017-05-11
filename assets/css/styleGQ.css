@@ -501,16 +501,6 @@ h2.taglib-categorization-filter.entry-title {
     font-size: 18px!important;
 }
 
-.tree-node-content.tree-expanded, .tree-node-content.tree-collapsed{
-    font-size: 20px;
-    text-shadow: 0 0 1px;
-}
-
-.tree-node-content.tree-collapsed,.tree-node-content.tree-expanded{
-    background-color: #EEEEEE !important;
-        padding: 8px;
-}
-.tree-node-content.tree-collapsed .tree-label.unselectable >span >a,
-.tree-node-content.tree-expanded .tree-label.unselectable >span >a{
-color: #545454 !important;
+.column.w25 {
+ width:100%;   
 }
