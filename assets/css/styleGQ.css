@@ -505,3 +505,8 @@ h2.taglib-categorization-filter.entry-title {
     font-size: 20px;
     text-shadow: 0 0 1px;
 }
+
+.tree-node-content.tree-collapsed,.tree-node-content.tree-expanded{
+    background-color: #EEEEEE !important;
+        padding: 8px;
+}
