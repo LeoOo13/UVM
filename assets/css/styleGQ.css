@@ -497,3 +497,11 @@ body #wrapper.uvm-main-container nav.navbar-header-min .superior-bar .less-imp-t
     width:100%;
 }
 
+h2.taglib-categorization-filter.entry-title {
+    font-size: 18px!important;
+}
+
+.tree-node-content.tree-expanded, .tree-node-content.tree-collapsed{
+    font-size: 20px;
+    text-shadow: 0 0 1px;
+}
