@@ -407,6 +407,36 @@ position: fixed !important;
     top: 0;
 
   }
+  #wrapper.uvm-main-container .component-cp .cont-select .symbol-cp, #wrapper.uvm-main-container .component-cp-prepa .cont-select .symbol-cp, #wrapper.uvm-main-container .component-d3 .cont-select .symbol-cp{
+    margin-top: 117px!important;
+}
+
+#wrapper.uvm-main-container .component-cp1 > div > div:first-child {
+border-bottom: 2px solid #EEEEEE;
+border-right:none;
+}
+
+#wrapper.uvm-main-container .component-cp2 .incontent-cp2:after{
+  z-index:0;
+}
+
+div.col-sm-12.cont-points > div.col-sm-3{
+    text-align:center!important;
+}
+#wrapper.uvm-main-container .component-cp3 .incontent-cp3:after, #wrapper.uvm-main-container .cp-donde .incontent-cp3:after{
+  z-index:0;
+}
+
+#wrapper.uvm-main-container .component-cp3 .incontent-cp3 .symbol-cp, #wrapper.uvm-main-container .cp-donde .incontent-cp3 .symbol-cp {
+    
+    top: 680px;
+    }
+#wrapper.uvm-main-container .component-cp2 .incontent-cp2 {
+  z-index: 0;
+  }
+#wrapper.uvm-main-container .component-cp3 .incontent-cp3, #wrapper.uvm-main-container .cp-donde .incontent-cp3{
+    z-index:0;
+}
 }
 
 
@@ -505,33 +535,3 @@ h2.taglib-categorization-filter.entry-title {
  width:100%;   
 }
 
-#wrapper.uvm-main-container .component-cp .cont-select .symbol-cp, #wrapper.uvm-main-container .component-cp-prepa .cont-select .symbol-cp, #wrapper.uvm-main-container .component-d3 .cont-select .symbol-cp{
-    margin-top: 117px!important;
-}
-
-#wrapper.uvm-main-container .component-cp1 > div > div:first-child {
-border-bottom: 2px solid #EEEEEE;
-border-right:none;
-}
-
-#wrapper.uvm-main-container .component-cp2 .incontent-cp2:after{
-  z-index:0;
-}
-
-div.col-sm-12.cont-points > div.col-sm-3{
-    text-align:center!important;
-}
-#wrapper.uvm-main-container .component-cp3 .incontent-cp3:after, #wrapper.uvm-main-container .cp-donde .incontent-cp3:after{
-  z-index:0;
-}
-
-#wrapper.uvm-main-container .component-cp3 .incontent-cp3 .symbol-cp, #wrapper.uvm-main-container .cp-donde .incontent-cp3 .symbol-cp {
-    
-    top: 680px;
-    }
-#wrapper.uvm-main-container .component-cp2 .incontent-cp2 {
-  z-index: 0;
-  }
-#wrapper.uvm-main-container .component-cp3 .incontent-cp3, #wrapper.uvm-main-container .cp-donde .incontent-cp3{
-    z-index:0;
-}
