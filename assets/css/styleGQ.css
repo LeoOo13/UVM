@@ -546,3 +546,10 @@ div.contentH div.portlet-boundary.portlet-boundary_77_.portlet-static{
     margin-top:250px!important;
 } 
 
+li.tree-node {
+    display:block;
+
+}
+div.tree-node-content.tree-collapsed{
+    font-size:20px;
+}
