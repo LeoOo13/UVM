@@ -24724,7 +24724,7 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     body #wrapper.uvm-main-container .component-c27 a {
         display: block;
         margin: 15px auto;
-        width: 10%;
+        width: 100%;
     }
     body #wrapper.uvm-main-container .component-c27 iframe {
         width: 100% !important;
