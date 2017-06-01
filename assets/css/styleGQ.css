@@ -437,9 +437,6 @@ div.col-sm-12.cont-points > div.col-sm-3{
 #wrapper.uvm-main-container .component-cp3 .incontent-cp3, #wrapper.uvm-main-container .cp-donde .incontent-cp3{
     z-index:0;
 }
-#wrapper.uvm-main-container section#component-comparador-prepa .cont-select .symbol-cp{
-    margin-top:90px!important;
-}
 #wrapper.uvm-main-container section#component-comparador-prepa  .cp-donde .incontent-cp3 .symbol-cp{
     margin-top:900px!important;
 }
