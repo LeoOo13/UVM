@@ -550,3 +550,6 @@ li.tree-node {
 div.tree-node-content.tree-collapsed{
     font-size:20px;
 }
+.block-uvm.backgray-1.extra-cp.component-cp-prepa .component-wrapper.visible-block-sm.visible-block-md.visible-block-lg .component-wrapper.elemento-componente-comparador .row.component-f2 .form-white-bg .data-write .icon-label{
+    z-index:0!important;
+}
