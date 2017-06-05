@@ -553,3 +553,9 @@ div.tree-node-content.tree-collapsed{
 .block-uvm.backgray-1.extra-cp.component-cp-prepa .component-wrapper.visible-block-sm.visible-block-md.visible-block-lg .component-wrapper.elemento-componente-comparador .row.component-f2 .form-white-bg .data-write .icon-label{
     z-index:0!important;
 }
+.component-wrapper.extra-cp
+ .block-uvm 
+ .component-wrapper.cuestionario-container
+ .form-white-bg .data-write .icon-label{
+    z-index:0!important;
+}
