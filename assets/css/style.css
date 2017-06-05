@@ -8936,10 +8936,10 @@ body #wrapper.uvm-main-container div .block-uvm section.block-uvm {
     margin: 0 auto;
     #wrapper
     /* .content, .component-wrapper{
-#wrapper                            .row {
-                                padding: 0 15px;
-                            }
-                        } */
+#wrapper               .row {
+                padding: 0 15px;
+              }
+            } */
 }
 body #wrapper.uvm-main-container div .block-uvm > div > div .container {
     padding: 0;
@@ -9054,6 +9054,7 @@ body #wrapper.uvm-main-container a.btn {
     padding: 12px 25px;
 }
 body #wrapper.uvm-main-container .btn {
+    border: 0;
     min-height: 50px;
     border-radius: 8px;
     text-transform: uppercase;
@@ -9237,12 +9238,27 @@ body #wrapper.uvm-main-container .cont-checkbox.one-line {
     text-align: right;
     padding: 0 10px;
 }
+body #wrapper.uvm-main-container .new-form .panel {
+    border: 0;
+}
+body #wrapper.uvm-main-container .new-form .panel .panel-body {
+    padding: 0;
+}
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset {
     max-width: none;
+}
+body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_aviso_de_privacidad label,
+body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_soy_padre_tutor label {
+    position: relative;
 }
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_aviso_de_privacidad .input,
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_soy_padre_tutor .input {
     background-color: transparent !important;
+    padding: 0 !important;
+}
+body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_aviso_de_privacidad .input .inputs-list,
+body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_soy_padre_tutor .input .inputs-list {
+    padding: 0 !important;
 }
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_aviso_de_privacidad .input .hs-form-booleancheckbox,
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs_soy_padre_tutor .input .hs-form-booleancheckbox {
@@ -9294,7 +9310,7 @@ body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs-form-field.
     left: auto;
     top: 0;
     bottom: 0;
-    right: 15px;
+    right: 6px;
     font-size: 23px;
     color: #D9272E;
 }
@@ -9339,6 +9355,8 @@ body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs-form-field 
     background-color: #EEEEEE;
     margin: 0;
     padding: 0;
+    border: 0 !important;
+    box-shadow: none;
 }
 body #wrapper.uvm-main-container .new-form form.hs-form fieldset .hs-form-field .input select {
     height: 25px;
@@ -10789,6 +10807,7 @@ body #wrapper.uvm-main-container .back-black {
     top: 0;
     z-index: 99;
     display: none;
+    left: 0;
 }
 body #wrapper.uvm-main-container .header-home {
     background: #545454;
@@ -11194,6 +11213,51 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 }
 #wrapper.uvm-main-container {
     /* Left */
+}
+#wrapper.uvm-main-container .column.w25 .results-header {
+    position: relative;
+    padding: 20px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+#wrapper.uvm-main-container .column.w25 .results-header:before {
+    content: '';
+    display: block;
+    width: 122px;
+    height: 3px;
+    background-color: #D9272E;
+    bottom: 0;
+    left: 50%;
+    margin-left: -61px;
+    position: absolute;
+}
+#wrapper.uvm-main-container .column.w25 .results-header h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+#wrapper.uvm-main-container .column.w25 .tree-node-content.tree-collapsed {
+    margin: 0 -15px 5px;
+    padding: 2px 15px;
+    background-color: #EEEEEE;
+    border-right: 1px solid #ffffff;
+    border-radius: 6px;
+}
+#wrapper.uvm-main-container .column.w25 .tree-node-content.tree-collapsed .tree-hitarea {
+    color: #D9272E;
+    font-size: 15px;
+    vertical-align: middle;
+}
+#wrapper.uvm-main-container .column.w25 .tree-node-content.tree-collapsed .tree-label {
+    margin: 0;
+    vertical-align: middle;
+}
+#wrapper.uvm-main-container .column.w25 .tree-node-content.tree-node-leaf {
+    margin-bottom: 2px;
+}
+#wrapper.uvm-main-container .column.w25 .tree-node-content.tree-node-leaf .tree-label {
+    margin: 0;
+    padding-left: 20px;
 }
 #wrapper.uvm-main-container .slider-c19.right-description .swiper-button-next {
     right: 31%;
@@ -18839,9 +18903,18 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset {
     max-width: none;
 }
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad label,
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_soy_padre_tutor label {
+    position: relative;
+}
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad .input,
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_soy_padre_tutor .input {
     background-color: transparent !important;
+    padding: 0 !important;
+}
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad .input .inputs-list,
+#wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_soy_padre_tutor .input .inputs-list {
+    padding: 0 !important;
 }
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_aviso_de_privacidad .input .hs-form-booleancheckbox,
 #wrapper.uvm-main-container .component-f3 .content-f3.new-form .form-white-bg .hs-nested-form-fix .hs-form fieldset .hs_soy_padre_tutor .input .hs-form-booleancheckbox {
@@ -18890,7 +18963,7 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     left: auto;
     top: 0;
     bottom: 0;
-    right: 15px;
+    right: 6px;
     font-size: 23px;
     color: #D9272E;
 }
@@ -24990,6 +25063,8 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
         font-size: 22px;
         display: block;
         font-weight: bold;
+        color: #000000;
+        margin: 10px 0 20px !important;
     }
     body #wrapper.uvm-main-container .extra-cp.component-cp-prepa .cont-select {
         margin: 15px 0 !important;
@@ -27014,7 +27089,6 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     body #wrapper.uvm-main-container .component-c4 .form-white-bg form {
         padding: 0;
     }
-    
     body #wrapper.uvm-main-container .component-c4 .form-white-bg form > div {
         padding: 0;
     }
