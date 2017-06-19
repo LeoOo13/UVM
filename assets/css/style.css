@@ -11320,6 +11320,7 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     font-size: 14px;
     text-transform: uppercase;
     padding: 10px 14px;
+    pointer-events: none;
 }
 #wrapper.uvm-main-container .portlet-journal-content-search .portlet-body .form .input-text-wrapper:nth-child(3) .lfr-search-button {
     background: transparent;
@@ -11332,6 +11333,10 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 #wrapper.uvm-main-container .portlet-journal-content-search .portlet-body .form .search-results {
     float: left;
     margin-top: 30px;
+    width: 100%;
+}
+#wrapper.uvm-main-container .portlet-journal-content-search .portlet-body .form .search-results .searchcontainer-content td span > a {
+    font-size: 13px;
 }
 #wrapper.uvm-main-container .portlet-journal-content-search .portlet-body .form .search-results .lfr-search-container .taglib-search-iterator-page-iterator-top .lfr-pagination-config .lfr-pagination-page-selector .btn-group .dropdown-toggle,
 #wrapper.uvm-main-container .portlet-journal-content-search .portlet-body .form .search-results .lfr-search-container .taglib-search-iterator-page-iterator-top .lfr-pagination-config .lfr-pagination-delta-selector .btn-group .dropdown-toggle,
@@ -12099,7 +12104,7 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
 }
 #wrapper.uvm-main-container .component-ql #open-ql-btn span {
     font-size: 25px;
-    padding: 10px 0;
+    padding: 2.5px 0;
     display: inline-block;
     width: 46px;
     text-align: center;
