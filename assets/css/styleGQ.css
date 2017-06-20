@@ -559,3 +559,44 @@ div.tree-node-content.tree-collapsed{
  .form-white-bg .data-write .icon-label{
     z-index:0!important;
 }
+
+span.title-text {
+    font-size: 29px;
+    font-weight: bold;
+    margin: 0;
+    font-family: "montserrat_uvm";
+    color:black;
+
+
+}
+div.accordion-toggle{
+    text-align:center;
+}
+
+.tree-hitarea.icon-plus, .tree-hitarea.icon-minus{
+    color: #D9272E;
+    font-size: 15px;
+    vertical-align: middle;
+}
+span.tree-label{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    font-family: "montserrat_uvm";
+    
+}
+
+div.accordion-toggle:before{
+    content: '';
+    display: block;
+    width: 122px;
+    height: 3px;
+    background-color: #D9272E;
+    left: 50%;
+    top:48px;
+    margin-left: -65px;
+    position: absolute;
+}
+body #wrapper.uvm-main-container ul.tree-normal>li>div.tree-node-content a{
+    color:black;
+}
