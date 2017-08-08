@@ -1,21 +1,15 @@
-
-$(document).ready(function() {
-        
+  $(document).ready(function() {      
     //funcion para iniciar campos de formularios 
     inicializarCampos = setInterval(function () 
     {
-                if ($('.hs-form').length > 0) {
-            
-            // Form is rendered, stop looking
-            clearInterval(inicializarCampos);    
-            
-            
-            
-            //Asignar variable de sesion al campo oculto de trackid (Omar Rojas Rodriguez Febrero 2017)
+            if ($('.hs-form').length > 0) {            
+              // Form is rendered, stop looking
+              clearInterval(inicializarCampos);    
+              
+              //Asignar variable de sesion al campo oculto de trackid (Omar Rojas Rodriguez Febrero 2017)
             $('input[name="trackid"]').val(sessvars.trackid).change();
-     
-          
-            //Agregado por Camilo: Noviembre 11
+
+              //Agregado por Camilo: Noviembre 11
             //Cambios en opciones de seleccion segun IDs de campus de SalesForce
             $("select[name=campus_interes] option").each(function(index,element){
                 if($(this).text()=='001o000000etAAaAAM'){$(this).text('Aguascalientes')}
@@ -54,34 +48,22 @@ $(document).ready(function() {
                 if($(this).text()=='001o000000etAAlAAM'){$(this).text('Villahermosa')};
                 if($(this).text()=='001o000000etAAsAAM'){$(this).text('Zapopan')};
             })
-            
-            // ACEPTA SOLO LETRAS
-            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keypress(function(event) 
-            {                                                  
-                /*inputValue = (event.which) ? event.which : event.keyCode;
-                                                
-                teclado = String.fromCharCode(inputValue).toLowerCase();
-                teclas = "abcdefghijklmnï¿½opqrstuvwxyz";
-                especiales = "8-32-37-38-46-164";
-                teclado_especial = false;
-                
-                for ( var i in especiales){
-                    if(inputValue == especiales [i] ){
-                        teclado_especial = true;break;
-                    }
-                }
-                
-                if(teclas.indexOf(teclado)==-1 && !teclado_especial){
-                    return false;
-                }*/
-                
-                
-                //josue
-                //if((inputValue > 47 && inputValue < 58) && (inputValue != 32) && (inputValue < 97 /* a */ || inputValue > 122 /* z */) ) {
-                  //  event.preventDefault();
-                //}
-                
-                               
+
+
+              //MODIFICACION DE ATRIBUTOS  (Omar Basurto Agosto 2017)  
+              //---------------------------------------------------------------------------
+              $('input[name=phone]').attr('maxLength','10');          
+              $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+              $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+              $('input[type=submit]').attr('class','btn btn-primary btn-block');        
+              $('select[name=campus_interes]').change(function(){
+                validaSeleccion(this.value);          
+              });
+              //---------------------------------------------------------------------------
+            }
+
+             $( 'input[name=firstname], input[name=lastname], input[name=apellido_materno__c]' ).keypress(function(event) 
+            {                                                                                                 
                 elinput= this;
                 
                 var validoT= false; 
@@ -122,20 +104,15 @@ $(document).ready(function() {
             });
             
             //LA PRIMERA LETRA EN MAYUSCULA
-            $( 'input[name=firstname], input[name=segundo_nombre], input[name=lastname], input[name=apellido_materno__c]' ).keyup(function(){                
+            $( 'input[name=firstname], input[name=lastname], input[name=apellido_materno__c]' ).keyup(function(){                
                 caps = this.value;
                 objts = this;
                 capitalized = caps.charAt(0).toUpperCase() + caps.substring(1);
-                $(objts).val(capitalized);
-                
+                $(objts).val(capitalized);                
             });
             
             // ACEPTA SOLO NUMEROS        
-            $('input[name=phone]').keypress(function(event) {
-                //var $inputValue = event.which || event.KeyCode;
-                //if (($inputValue > 64 && $inputValue < 91) || ($inputValue > 96 && $inputValue < 123)) {
-                    //event.preventDefault();
-                //}
+            $('input[name=phone]').keypress(function(event) {                
                 
                 inputValue = (event.which) ? event.which : event.keyCode;
                 if ( inputValue == 32  ){
@@ -156,110 +133,44 @@ $(document).ready(function() {
             
             // Aqui estan las validaciones pero ligadas al metodo blur
             //REVISMOS LA LONGITUD DE LA CADENA Y REVISAMOS PALABRAS BASURA
-                                $('input[name=firstname], input[name=segundo_nombre],input[name=lastname],input[name=apellido_materno__c]').blur(function (event) 
-                                                  {
-                                                                  //console.log('Paso por el blur 2');                                                                          
-                                                                  var $nombre = $('input[name=firstname]').val();
-                                                                  var $segundoNombre = $('input[name=segundo_nombre]').val();
-                                                                  var $apellidoPaterno = $('input[name=lastname]').val();
-                                                                  var $apellidoMaterno = $('input[name=apellido_materno__c]').val();
-                                                                  
-                                                                  var longitud = $nombre.length;
-                                                                
+            $('input[name=firstname]').blur(function (event) 
+            {
+              //console.log('Paso por el blur 2');                                                                          
+              var $nombre = $('input[name=firstname]').val();              
+                                         
+              var longitud = $nombre.length;
             
-                                                                                if ((longitud<3)||(longitud>30)) 
-                                                                                {
-                                                                                                alert('Error: el nombre debe tener de mï¿½s de 2 letras y menos de 30');
-                                                                                                setTimeout(function() {
-                                                                                                                $('input[name=firstname]').focus();
-                                                                                                }, 10);
-                                                                                                e.stopImmediatePropagation();
-                                                                                                e.preventDefault();
-                                                                                                return false;
-                                                                                }
-                                                                  // nombre
-                                                                  if (EsPalabraProhibida($nombre.toUpperCase())) 
-                                                                                {
-                                                                                                $('input[name=firstname]').val("");
-                                                                                                setTimeout(function() {
-                                                                                                $('input[name=firstname]').focus();
-                                                                                                }, 10);
-                                                                                                e.stopImmediatePropagation();
-                                                                                                e.preventDefault();
-                                                                                                return false;
-                                                                                }
-                                                                                // segundo nombre
-                                                                                if (EsPalabraProhibida($segundoNombre.toUpperCase())) 
-                                                                                {
-                                                                                                $('input[name=segundo_nombre]').val("");
-                                                                                                setTimeout(function() 
-                                                                                                {
-                                                                                                                $('input[name=segundo_nombre]').focus();
-                                                                                                }, 10);
-                                                                                                e.stopImmediatePropagation();
-                                                                                                e.preventDefault();
-                                                                                                return false;
-                                                                                }
-                                                                                
-                                                                                // apellido paterno
-                                                                                
-                                                                                if (EsPalabraProhibida($apellidoPaterno.toUpperCase())) 
-                                                                                {
-                                                                                                $('input[name=lastname]').val("");
-                                                                                                setTimeout(function() {
-                                                                                                $('input[name=lastname]').focus();
-                                                                                                }, 10);
-                                                                                                e.stopImmediatePropagation();
-                                                                                                e.preventDefault();
-                                                                                                return false;
-                                                                                }
-                                                                                // apellido materno
-                                                                                
-                                                                                if (EsPalabraProhibida($apellidoMaterno.toUpperCase())) 
-                                                                                {
-                                                                                                $('input[name=apellido_materno__c]').val("");
-                                                                                                setTimeout(function() {
-                                                                                                $('input[name=apellido_materno__c]').focus();
-                                                                                                }, 10);
-                                                                                                e.stopImmediatePropagation();
-                                                                                                e.preventDefault();
-                                                                                                return false;
-                                                                                }
-                                                                
-                                                                });
-            
-            //REVISAMOS EN EL BLUR DEL CAMPO APELLIDO MATERNO SI SE REPITIO LO ESCRITO EN CAMPOS ANTERIORES
-            $('input[name=apellido_materno__c]').blur(function (event){
-                
-                var $nombre = $.trim($('input[name=firstname]').val());
-                var $segundoNombre = $.trim($('input[name=segundo_nombre]').val());
-                var $apellidoPaterno = $.trim($('input[name=lastname]').val());
-                var $apellidoMaterno = $.trim($('input[name=apellido_materno__c]').val());
-                                
-                if( $nombre == $segundoNombre && $segundoNombre == $apellidoPaterno && $apellidoPaterno == $apellidoMaterno ){
-                    alert("Tus nombres no pueden ser iguales a tus apellidos.");                
-                    
-                    $('input[name=firstname]').val("");
-                    $('input[name=segundo_nombre]').val("");
-                    $('input[name=lastname]').val("");
-                    $('input[name=apellido_materno__c]').val("");
-                    
-                                                                    //$('input[name=firstname]').focus();
-                    
-                } 
+
+                            if ((longitud<3)||(longitud>30)) 
+                            {
+                                            bootbox.alert('Error: el nombre debe tener de mas de 2 letras y menos de 30');                                                                                    
+                                            return false;
+                            }                            
+                                                                                                       
             });
+
+      // apellido paterno                            
+      $('input[name=lastname]').blur(function (event) 
+            {
+              var $apellidoPaterno = $('input[name=lastname]').val();
+
+              var longitud = $apellidoPaterno.length;
             
-            //QUITAMOS LA OPCION DE PEGAR EN LOS CAMPOS DE TEXTO
-            $(function() {
-                        $('input[name=firstname], input[name=segundo_nombre],input[name=lastname],input[name=apellido_materno__c], input[name=phone]').bind("cut copy paste",function(e) {
-                                                        e.preventDefault();
-                                        });
-                        });
 
-                                }//Termina el IF de inicializacion de formulario    
-                }, 100);//termina setInterval
+                            if ((longitud<3)||(longitud>30)) 
+                            {
+                                            bootbox.alert('Error: el apellido paterno debe tener de mas de 2 letras y menos de 30');                                            
+                                                                                                                                                                                                                                    
+                                            return false;
+                            }
+           
+            });                      
+    });                                                          
+});//cerramos funcion de document.ready
+  
 
-    /* ************************
+
+/* ************************
         Funciones por separado
     ************************* */
     
@@ -281,19 +192,6 @@ $(document).ready(function() {
         }        
     }
 
-    //FUNCON PARA PALABRAS BASURA
-    var EsPalabraProhibida = function (palabra) 
-    {
-        var myArray = [ 'ASDASD','ASDASDASD','AAA','AAD','ABC','ADS','AEA','AHH','APELLIDO','ASD','ASF','ASJ','BBB','BFJ','BJK','BVH','CCC','CDS','CHC','CJU','CSD','CVB','CXZ','DADSA','DAS','DDD','DEE','DEMO','DFG','DJF','DJJ','DND','DRH','DSE','DSF','DSS','DSX','DVC','DXX','DYY','EEE','EEH','EWF','FFF','FGG','FGH','FGT','FHG','FJG','FJH','FKJ','FNH','FRG','GFL','GGG','GHB','GHH','GHK','GJS','GVK','HAH','HCH','HDJ','HGD','HGF','HHF','HHH','HJK','HJN','HOLA','IBF','IGH','IHI','III','IJI','IOJ','IPH','JAJ','JAJA','JHG','JHJ','JHN','JHR','JHU','JJJ','JJN','JKL','JLK','JOK','KBE','KHV','KJK','KJN','KJS','KKJ','KKK','KLK','KNK','LKH','LKJ','LLJ','LLL','LOL','LUU','MKK','MMM','MPM','NALGA','NEL','NJP','NKJ','NNN','NOMB','NUL','OIF','OIO','OOO','OUO','PAA','PERSONAL','PITO','PPP','QQQ','QWE','RGT','RRR','RTR','SDA','SDF','SDS','SFJ','SSS','SWS','TRIAL','TRR','TRT','TTT','UUU','VEE','VVV','WFE','WWW','XCV','XDE','XXX','XZZ','YRT','YYY','ZXC','ZYE','ZZZ','NONE','ASAS','FDS','JNK','JLL','RRB','PERRA','PUTA','CULO','CULIADA','MARICA','MAMAR','PUTO','PENDEJO','LDK','XOXO','RAMERA','HFF','VERGA','VERGA','MARICON','SUPERM','BATMAN','BATMAN', 'ZORRA', 'ZORRA', 'FUCKYOU', 'FUCKYOU','QWERTY','QWERTYU','UYTREWQ','POIUYTR','QWERT','QAZWSX','XSWZAQ','ASDFFGH','ï¿½LKJH','MNBVCXZ','ZXCVBNM','ZXCV','BNM','ï¿½PLOKM','IJNMKO','SDFGHJKLï¿½','EDCRFV','UHBYGV','TGBUHB','VFRBHU','NJICDEBUH','EDCIJN','EDCIJN','YTRUIE','AQSW','PLOK','RWEIOP','POQWIEHBF','POIUYT' , 'PRUEBA', 'ALGO', 'JOTO' ];
-        
-        if ($.inArray(palabra, myArray) !== -1) {
-            alert('Palabra Prohibida');
-            return true;
-        }else{
-            return false;    
-        }
-        
-    }
 
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -309,10 +207,160 @@ $(document).ready(function() {
             }
         }
     };
-    
+
     // asignar trackid de URL a la variable de sesion sessvars.trackid
     if(getUrlParameter('trackid')!=undefined){
         sessvars.trackid=getUrlParameter('trackid');
     }
-});//cerramos funcion de document.ready
 
+  
+  //METODO PARA VALIDAR LA SELECCION DE CAMPUS
+  //---------------------------------------------------------------------------
+  function validaSeleccion(idValue){      
+  
+  $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+  $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+
+
+  //Aguascalientes , Chapultepec, Chihuahua , Coyoacan ,Cuernavaca,Cumbres,Guadalajara Norte,Guadalajara Sur,Hermosillo
+  //,Hispano,Lago De Guadalupe,Lomas Verdes,Merida,Mexicali,Monterrey,Nogales,Puebla,Queretaro,Reynosa,Roma,Saltillo
+  //,San Angel,San Luis Potosi,San Rafael,Santa Fe,Tampico,Texcoco,Tlalpan,Toluca,Torreon,Tuxtla,Veracruz,Victoria
+  //,Villahermosa,Zapopan
+
+    if(idValue == "001o000000etAAaAAM" || idValue == "001o000000etBQkAAM" || idValue == "001o000000etAAxAAM" || idValue == "001o000000etAAyAAM" || idValue == "001o000000etAAVAA2" || idValue == "001o000000etAAtAAM" || idValue == "001o000000etAAYAA2" || idValue == "001o000000etAAbAAM" || idValue == "001o000000etAAhAAM" || idValue == "001o000000etAAcAAM" || idValue == "001o000000etAArAAM" || idValue == "001o000000etAAXAA2" || idValue == "001o000000etAAoAAM" || idValue == "001o000000etAAqAAM" || idValue == "001o000000etAAUAA2" || idValue == "001o000000etAAZAA2" || idValue == "001o000000etAAgAAM" || idValue == "001o000000etAATAA2" || idValue == "001o000000etAAdAAM" || idValue == "001o000000etAAjAAM" || idValue == "001o000000etAAfAAM" || idValue == "001o000000etAAmAAM" || idValue == "001o000000etAAzAAM" || idValue == "001o000000etAAsAAM" ){                
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",
+                  "Licenciatura": "Licenciatura",
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+    
+    //GUADALAJARA NORTE
+    }else if(idValue == "001o000000etAAnAAM"){  
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",                
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+
+    
+    }else if(idValue == "001o000000etAAkAAM"){
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",
+                  "Licenciatura": "Licenciatura",
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",                  
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+
+    }else if(idValue == "001o000000etAAuAAM"){
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",
+                  "Licenciatura": "Licenciatura",                  
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+
+    }else if(idValue == "001o000000etAAiAAM"){
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",                  
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",                  
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+
+    }else if(idValue == "001o000000etAAWAA2" || idValue == "001o000000etAASAA2"  ){
+
+      var obj = {        
+                  "Licenciatura": "Licenciatura",
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+
+    }else if(idValue == "001o000000etAApAAM"){
+
+      var obj = {              
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+      
+  }else if(idValue == "001o000000etAAwAAM" || idValue == "001o000000etAAvAAM"){
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",
+                  "Licenciatura": "Licenciatura",                
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+    
+  }else {
+
+      var obj = {        
+                  "Preparatoria": "Preparatoria",
+                  "Licenciatura": "Licenciatura",
+                  "Licenciatura Ejecutiva": "Licenciatura Ejecutiva",
+                  "Posgrado": "Posgrado",
+                  "Online LX": "Licenciatura Ejecutiva Online",
+                  "Online Posgrado" : "Posgrado Online",
+                  "Tecnico Superior" : "Técnico Superior"
+                };
+      $.each( obj, function( key, value ) {
+
+        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="' + key + '"  data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$ ' + key + '">' + value + '</option>'); 
+        
+      });
+  }                                      
+}
