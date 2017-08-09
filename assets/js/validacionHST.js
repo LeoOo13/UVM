@@ -143,7 +143,7 @@
 
                             if ((longitud<3)||(longitud>30)) 
                             {
-                                            bootbox.alert('Error: el nombre debe tener de mas de 2 letras y menos de 30');                                                                                    
+                                            alert('Error: el nombre debe tener de mas de 2 letras y menos de 30');                                                                                    
                                             return false;
                             }                            
                                                                                                        
@@ -159,7 +159,7 @@
 
                             if ((longitud<3)||(longitud>30)) 
                             {
-                                            bootbox.alert('Error: el apellido paterno debe tener de mas de 2 letras y menos de 30');                                            
+                                            alert('Error: el apellido paterno debe tener de mas de 2 letras y menos de 30');                                            
                                                                                                                                                                                                                                     
                                             return false;
                             }
