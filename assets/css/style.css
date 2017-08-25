@@ -8756,6 +8756,9 @@ body #wrapper.uvm-main-container {
     /* PÁG COMPONENTES */
     /* FIN PÁG COMPONENTES */
 }
+body #wrapper.uvm-main-container .form-home{
+	z-index: 1;
+}
 body #wrapper.uvm-main-container .vid-container {
     height: auto;
 }
@@ -10714,7 +10717,7 @@ body #wrapper.uvm-main-container nav .change-lenguage .l-english:hover a {
 body #wrapper.uvm-main-container nav .mobile-head {
     padding: 0;
     display: none;
-    z-index: 99;
+    z-index: 9999;
 }
 body #wrapper.uvm-main-container nav .mobile-head .logo-container {
     line-height: 0;
