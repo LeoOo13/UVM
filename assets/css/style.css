@@ -23267,8 +23267,8 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     }
     body #wrapper.uvm-main-container .component-ql {
         display: block;
-        -webkit-transform: translate3d(0, 0, 0) translateX(1000px);
-        transform: translate3d(0, 0, 0) translateX(1000px);
+        -webkit-transform: translate3d(0, 0, 0) translateX(1032px);
+        transform: translate3d(0, 0, 0) translateX(1032px);
         -webkit-transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
         transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
     }
@@ -23952,8 +23952,8 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
         display: block;
     }
     body #wrapper.uvm-main-container .nav-section {
-        -webkit-transform: translate3d(0, 0, 0) translateX(-992px);
-        transform: translate3d(0, 0, 0) translateX(-992px);
+        -webkit-transform: translate3d(0, 0, 0) translateX(-1024px);
+        transform: translate3d(0, 0, 0) translateX(-1024px);
         -webkit-transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
         transition: all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98);
     }
