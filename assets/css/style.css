@@ -23259,7 +23259,10 @@ body #wrapper.uvm-main-container .component-links .type-search ul li span a:hove
     }
 }
 @media (max-width: 1024px) {
-    body #wrapper {
+    header#banner{
+        z-index: 1;
+    }
+    body #wrapper .contentH{
         padding-top: 60px !important;
     }
     body #wrapper.uvm-main-container .component-ql #open-ql-btn {
