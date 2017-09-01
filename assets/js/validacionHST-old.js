@@ -3,7 +3,7 @@ $(document).ready(function() {
        
 
     //funcion para iniciar campos de formularios
-
+//hola
     inicializarCampos = setInterval(function ()
 
     {
