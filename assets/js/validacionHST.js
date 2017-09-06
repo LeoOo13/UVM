@@ -3,8 +3,8 @@ window.onload = function(e){
             $('input[name=lastname], input[name=apellido_materno__c]').attr('disabled','disabled');
             $('input[name=firstname], input[name=lastname], input[name=apellido_materno__c]' ).attr('maxLength','30');                    
                             
-            $('input[name=phone]').attr('maxLength','10');                                
-
+            $('input[name=phone]').attr('maxLength','10');    
+            
             $("select[name=campus_interes] option").each(function(index,element){
                 if($(this).text()=='001o000000etAAaAAM'){$(this).text('Aguascalientes')}
                 if($(this).text()=='001o000000etBQkAAM'){$(this).text('Chapultepec')}
@@ -205,8 +205,26 @@ window.onload = function(e){
     inicializarCampos = setInterval(function (){
         clearInterval(inicializarCampos); 
         $('input[name="trackid"]').val(sessvars.trackid).change();
-        console.log( $('input[name="trackid"]').val() );
+         
+
+        if($('#exploradorxxx').length){
+           trackid=sessvars.trackid; 
+           document.getElementById("exploradorxxx").src="https://universidaduvm.secure.force.com/calculadora/carrercruisingmicrositio?trackid="+trackid;
+           console.log('trackid : ' + trackid); 
+        }
+
+        if ($('#calculadoraxxx').length) {
+           trackid=sessvars.trackid; 
+           document.getElementById("calculadoraxxx").src="https://universidaduvm.secure.force.com/calculadora?trackid="+trackid;
+           console.log('trackid : ' + trackid);
+        } else {
+           console.log('trackisNormal : ' + $('input[name="trackid"]').val() );
+        }
+                            
     }, 100);//termina setInterval
+
+
+
 
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -269,6 +287,10 @@ window.onload = function(e){
     }                                      
 
 
+
+    
+
+
     function validaSeleccion(idValue){          
     
     //Aguascalientes , Chapultepec, Chihuahua , Coyoacan ,Cuernavaca,Cumbres,Guadalajara Norte,Guadalajara Sur,Hermosillo
@@ -278,99 +300,99 @@ window.onload = function(e){
 
     if(idValue == "001o000000etAAaAAM" || idValue == "001o000000etBQkAAM" || idValue == "001o000000etAAxAAM" || idValue == "001o000000etAAyAAM" || idValue == "001o000000etAAVAA2" || idValue == "001o000000etAAtAAM" || idValue == "001o000000etAAYAA2" || idValue == "001o000000etAAbAAM" || idValue == "001o000000etAAhAAM" || idValue == "001o000000etAAcAAM" || idValue == "001o000000etAArAAM" || idValue == "001o000000etAAXAA2" || idValue == "001o000000etAAoAAM" || idValue == "001o000000etAAqAAM" || idValue == "001o000000etAAUAA2" || idValue == "001o000000etAAZAA2" || idValue == "001o000000etAAgAAM" || idValue == "001o000000etAATAA2" || idValue == "001o000000etAAdAAM" || idValue == "001o000000etAAjAAM" || idValue == "001o000000etAAfAAM" || idValue == "001o000000etAAmAAM" || idValue == "001o000000etAAzAAM" || idValue == "001o000000etAAsAAM" ){
       
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
         
     //GUADALAJARA NORTE
     }else if(idValue == "001o000000etAAnAAM"){  
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
         
     }else if(idValue == "001o000000etAAkAAM"){
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
         
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');      
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');      
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
         
     }else if(idValue == "001o000000etAAuAAM"){
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
         
     }else if(idValue == "001o000000etAAiAAM"){
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
         
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');      
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');      
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');      
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');      
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
         
     }else if(idValue == "001o000000etAAWAA2" || idValue == "001o000000etAASAA2"  ){
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');      
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');        
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');      
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');        
     }else if(idValue == "001o000000etAApAAM"){
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
-        $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');            
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');   
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
+        $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');            
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');   
         
     }else if(idValue == "001o000000etAAwAAM" || idValue == "001o000000etAAvAAM"){
 
-    $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+    $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
       
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');      
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');      
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
     
         
   }else {
 
-    $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').empty();
+    $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').empty();
 
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Tecnico Superior" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Tecnico Superior" >TÃ©cnico Superior</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
-      $('#nivel_de_interes-503b06c6-4374-4adf-af28-954acff43536').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="0" disabled=""  selected="selected" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.0">- Por favor, elige -</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Preparatoria" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Preparatoria">Preparatoria</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Tecnico Superior" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Tecnico Superior" >TÃ©cnico Superior</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura" >Licenciatura</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Licenciatura Ejecutiva" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Licenciatura Ejecutiva" >Licenciatura Ejecutiva</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online LX" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online LX" >Licenciatura Ejecutiva Online</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Posgrado" >Posgrado</option>');
+      $('#nivel_de_interes-11e6e66b-5c31-41ff-ac59-16e8c8b69218').append('<option value="Online Posgrado" data-reactid=".hbspt-forms-0.0:$2.1:$nivel_de_interes.$nivel_de_interes.0.1:$Online Posgrado" >Posgrado Online</option>');
 
   }                                      
 }
