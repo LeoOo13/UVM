@@ -221,13 +221,7 @@ window.onload = function(e){
            console.log('trackisNormal : ' + $('input[name="trackid"]').val() );
         }
       
-    function enviar()
-    {
-             trackid=sessvars.trackid;
-             var programa='diplomado-business-intelligence-and-analytics';
-             location.href='http://landing.universidaduvm.mx/diplomados-cursos-informes?trackid='+trackid+'&programa='+programa;
-     }      
-      
+   
       
                             
     }, 100);//termina setInterval
