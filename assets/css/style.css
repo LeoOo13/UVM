@@ -7617,7 +7617,7 @@ body #wrapper .fc {
     padding: 0 1px;
 }
 #wrapper .fc-day-grid-event .fc-content {
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
 }
 #wrapper .fc-day-grid-event .fc-time {
